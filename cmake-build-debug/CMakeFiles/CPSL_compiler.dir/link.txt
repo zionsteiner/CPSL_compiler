@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/CPSL_compiler.dir/main.cpp.o  -o CPSL_compiler 
