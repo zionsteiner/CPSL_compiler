@@ -14,12 +14,12 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${EXTRA_COMPILE_FLAGS}")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS}")
 
 set(CPSL_compiler_srcs
-        scanner.l
-        symbol_table.hpp
-        symbol_table.cpp
-        ${BISON_Parser_OUTPUTS}
-        ${FLEX_Scanner_OUTPUTS}
-        )
+    scanner.l
+    symbol_table.hpp
+    symbol_table.cpp
+    ${BISON_Parser_OUTPUTS}
+    ${FLEX_Scanner_OUTPUTS}
+        classes/expr.h classes/const.cpp classes/const.h)
 source_group("CPSL_compiler" FILES ${CPSL_compiler_srcs})
 
 add_executable(CPSL_compiler ${CPSL_compiler_srcs})
