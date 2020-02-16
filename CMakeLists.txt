@@ -19,7 +19,7 @@ set(CPSL_compiler_srcs
     symbol_table.cpp
     ${BISON_Parser_OUTPUTS}
     ${FLEX_Scanner_OUTPUTS}
-        classes/expr.h classes/const.cpp classes/const.h)
+        classes/Expr.h classes/Const.cpp classes/Const.h classes/Type.cpp classes/Type.h classes/Add.cpp classes/Add.h)
 source_group("CPSL_compiler" FILES ${CPSL_compiler_srcs})
 
 add_executable(CPSL_compiler ${CPSL_compiler_srcs})

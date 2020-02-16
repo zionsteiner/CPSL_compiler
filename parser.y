@@ -2,6 +2,8 @@
 #include <iostream>
 #include <map>
 
+typedef yy::parser::token token;
+
 extern int yylex();
 void yyerror(const char*);
 %}
@@ -97,216 +99,225 @@ Expr* exprPtr;
 %right UNARYMINUS
 
 %%
+/* TODO: re-add all optional nonterminals */
 /* CPSL Declarations */
-program: constDeclStar typeDeclStar varDeclStar procOrFuncStar block PERIOD {}
+program: constDeclOpt typeDeclOpt varDeclOpt procOrFuncStar block PERIOD {}
 
 /* 3.1.1 Constant Rules */
-constDeclStar: constDeclStar constDecl
-             |
+constDeclOpt: constDecl {}
+             | {}
              ;
 
-constDecl: CONST constAssignPlus
+constDecl: CONST constAssignPlus {}
          ;
 
-constAssignPlus: constAssignPlus constAssign
-               | constAssign
+constAssignPlus: constAssignPlus constAssign {}
+               | constAssign {}
                ;
 
-constAssign: ID EQ expr SEMICOLON
+constAssign: ID EQ expr SEMICOLON {}
            ;
 
 /* 3.1.2 Procedure and Function Rules */
-procOrFuncStar: procOrFuncStar procDecl
-              | procOrFuncStar funcDecl
-              |
+procOrFuncStar: procOrFuncStar procDecl {}
+              | procOrFuncStar funcDecl {}
+              | {}
               ;
 
-procDecl: PROCEDURE ID L_PAREN params R_PAREN SEMICOLON FORWARD SEMICOLON
-        | PROCEDURE ID L_PAREN params R_PAREN SEMICOLON body SEMICOLON
+procDecl: PROCEDURE ID L_PAREN paramsOpt R_PAREN SEMICOLON FORWARD SEMICOLON {}
+        | PROCEDURE ID L_PAREN paramsOpt R_PAREN SEMICOLON body SEMICOLON {}
 
-funcDecl: FUNCTION ID L_PAREN params R_PAREN COLON type SEMICOLON FORWARD
-        | FUNCTION ID L_PAREN params R_PAREN COLON type SEMICOLON body SEMICOLON
+funcDecl: FUNCTION ID L_PAREN paramsOpt R_PAREN COLON type SEMICOLON FORWARD {}
+        | FUNCTION ID L_PAREN paramsOpt R_PAREN COLON type SEMICOLON body SEMICOLON {}
         ;
 
-params: params SEMICOLON param
-      |
+paramsOpt: params {}
+         | {}
+         ;
+
+params: params SEMICOLON param {}
+      | param {}
       ;
 
-param: varOrRefOpt idList COLON type
+param: varOrRefOpt idList COLON type {}
      ;
 
-varOrRefOpt: VAR
-           | REF
-           |
+varOrRefOpt: VAR {}
+           | REF {}
+           | {}
            ;
 
-body: constDeclOpt typeDeclOpt varDeclOpt block
+body: constDeclOpt typeDeclOpt varDeclOpt block {}
     ;
 
-block: BEGIN statements END
+block: BEGIN statements END {}
      ;
 
 /* 3.1.3 Type Rules */
-typeDeclStar: typeDeclStar typeDecl
-            |
+typeDeclOpt: typeDecl {}
+            | {}
             ;
 
-typeDecl: TYPE typeAssignPlus
+typeDecl: TYPE typeAssignPlus {}
         ;
 
-typeAssignPlus: typeAssignPlus typeAssign
-              | typeAssign
+typeAssignPlus: typeAssignPlus typeAssign {}
+              | typeAssign {}
               ;
 
-typeAssign: ID EQ type SEMICOLON
+typeAssign: ID EQ type SEMICOLON {}
           ;
 
-type: simpleType
-    | recordType
-    | arrayType
+type: simpleType {}
+    | recordType {}
+    | arrayType {}
     ;
 
-simpleType: ID
+simpleType: ID {}
           ;
 
-recordType: RECORD varAssignStar END
+recordType: RECORD varAssignStar END {}
           ;
 
-varAssignStar: varAssignStar varAssign
-             |
+varAssignStar: varAssignStar varAssign {}
+             | {}
              ;
 
-arrayType: ARRAY L_BRACK expr COLON expr R_BRACK OF type
+arrayType: ARRAY L_BRACK expr COLON expr R_BRACK OF type {}
 
-idList: idList COMMA ID
-      | ID
+idList: idList COMMA ID {}
+      | ID {}
       ;
 
 /* 3.1.4 Variable Rules */
-varDeclStar: varDeclStar varDecl
-           |
+varDeclOpt: varDecl {}
+           | {}
            ;
 
-varDecl: VAR varAssignPlus
+varDecl: VAR varAssignPlus {}
        ;
 
-varAssignPlus: varAssignPlus varAssign
-             | varAssign
+varAssignPlus: varAssignPlus varAssign {}
+             | varAssign {}
              ;
 
-varAssign: idList COLON type SEMICOLON
+varAssign: idList COLON type SEMICOLON {}
          ;
 
 /* 3.2 CPSL Statements */
-stmts: stmts COLON stmt
-     | stmt
+stmts: stmts COLON stmt {}
+     | stmt {}
      ;
 
-stmt: assnStmt
-    | ifStmt
-    | whileStmt
-    | repeatStmt
-    | forStmt
-    | stopStmt
-    | return Stmt
-    | readStmt
-    | writeStmt
-    | procCall
-    | nullStmt
+stmt: assnStmt {}
+    | ifStmt {}
+    | whileStmt {}
+    | repeatStmt {}
+    | forStmt {}
+    | stopStmt {}
+    | return Stmt {}
+    | readStmt {}
+    | writeStmt {}
+    | procCall {}
+    | nullStmt {}
     ;
 
-assnStmt: lVal ASSIGN expr
+assnStmt: lVal ASSIGN expr {}
         ;
 
-ifStmt: IF expr THEN stmts elseIfStmtStar elseStmtOpt END
+ifStmt: IF expr THEN stmts elseIfStmtStar elseStmtOpt END {}
       ;
 
-elseIfStmtStar: elseIfStmtStar elseIfStmt
-              |
+elseIfStmtStar: elseIfStmtStar elseIfStmt {}
+              | {}
               ;
 
-elseIfStmt: ELSEIF expr THEN stmts
+elseIfStmt: ELSEIF expr THEN stmts {}
           ;
 
-elseStmtOpt: ELSE stmts
-           |
+elseStmtOpt: ELSE stmts {}
+           | {}
            ;
 
-whileStmt: WHILE expr DO stmts END
+whileStmt: WHILE expr DO stmts END {}
          ;
 
-repeatStmt: REPEAT stmts UNTIL expr
+repeatStmt: REPEAT stmts UNTIL expr {}
           ;
 
-forStmt: FOR ID ASSIGN expr toOrDownto expr DO stmts END
+forStmt: FOR ID ASSIGN expr toOrDownto expr DO stmts END {}
        ;
 
-toOrDownto: TO
-          | DOWNTO
+toOrDownto: TO {}
+          | DOWNTO {}
           ;
 
-stopStmt: STOP
+stopStmt: STOP {}
         ;
 
-returnStmt: RETURN expr
-          | RETURN
+returnStmt: RETURN expr {}
+          | RETURN {}
           ;
 
-readStmt: READ L_PAREN lVal lValStar R_PAREN
+readStmt: READ L_PAREN lValPlus R_PAREN {}
         ;
 
-lValStar: lValStar COMMA lVal
-        |
+lValPlus: lValPlus COMMA lVal {}
+        | lVal {}
         ;
 
-writeStmt: WRITE L_PAREN expr exprStar R_PAREN
+writeStmt: WRITE L_PAREN exprPlus R_PAREN {}
          ;
 
-exprStar: exprStar COMMA expr
-        |
+exprPlus: exprPlus COMMA expr {}
+        | expr {}
         ;
 
-procCall: ID L_PAREN expr exprStar R_PAREN
-        | ID L_PAREN R_PAREN
+procCall: ID L_PAREN expr exprPlusOpt R_PAREN {}
+        | ID L_PAREN R_PAREN {}
         ;
 
-nullStmt:
+exprPlusOpt: exprPlus {}
+           | {}
+           ;
+
+nullStmt: {}
         ;
 
 /* 3.3 Expressions */
-expr: expr BAR expr
-    | expr AMP expr
-    | expr EQ expr
-    | expr NEQ expr
-    | expr LEQ expr
-    | expr GEQ expr
-    | expr LT expr
-    | expr GT expr
-    | expr ADD expr
-    | expr SUB expr
-    | expr MULT expr
-    | expr DIV expr
-    | expr MOD expr
-    | INV expr
-    | SUB expr %prec UNARYMINUS
-    | L_PAREN expr R_PAREN
-    | ID L_PAREN expr exprStar R_PAREN
-    | ID L_PAREN R_PAREN
-    | CHR L_PAREN expr R_PAREN
-    | ORD L_PAREN expr R_PAREN
-    | PRED L_PAREN expr R_PAREN
-    | SUCC L_PAREN expr R_PAREN
-    | lVal
+expr: expr BAR expr { $$ = Bar.bar($1, $3) }
+    | expr AMP expr {}
+    | expr EQ expr {}
+    | expr NEQ expr {}
+    | expr LEQ expr {}
+    | expr GEQ expr {}
+    | expr LT expr {}
+    | expr GT expr {}
+    | expr ADD expr { $$ = Add.Add($1, $3) }
+    | expr SUB expr {}
+    | expr MULT expr {}
+    | expr DIV expr {}
+    | expr MOD expr {}
+    | INV expr {}
+    | SUB expr %prec UNARYMINUS {}
+    | L_PAREN expr R_PAREN {}
+    | ID L_PAREN expr exprStar R_PAREN {}
+    | ID L_PAREN R_PAREN {}
+    | CHR L_PAREN expr R_PAREN {}
+    | ORD L_PAREN expr R_PAREN {}
+    | PRED L_PAREN expr R_PAREN {}
+    | SUCC L_PAREN expr R_PAREN {}
+    | lVal {}
     ;
 
-lVal: ID dotOrIndexStar
+lVal: ID dotOrIndexStar {}
     ;
 
-dotOrIndexStar: dotOrIndexStar dotOrIndex
-              |
+dotOrIndexStar: dotOrIndexStar dotOrIndex {}
+              | {}
               ;
 
-dotOrIndex: PERIOD ID
-          | L_BRACK expr R_BRACK
+dotOrIndex: PERIOD ID {}
+          | L_BRACK expr R_BRACK {}
           ;
 %%

@@ -9,7 +9,6 @@
 struct Expr {
     virtual bool isCompVal = 0;
     virtual int compVal() = 0;
-    virtual Register emit() = 0;
     virtual void print() = 0;
 };
 
