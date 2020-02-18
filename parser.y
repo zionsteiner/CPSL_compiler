@@ -16,16 +16,10 @@ char* id
 char* chrVal;
 char* strVal;
 
+Expr* exprPtr;
 List* listPtr;
 Const* constPtr;
-Proc* procPtr;
-Func* funcPtr;
 Type* typePtr;
-Record* recordPtr;
-Array* recordPtr;
-Var* varPtr;
-Stmt* stmtPtr;
-Expr* exprPtr;
 }
 
 %token ARRAY
@@ -66,7 +60,7 @@ Expr* exprPtr;
 %token DIV
 %token AMP
 %token PIPE
-%token INV
+%token NOT
 %token EQ
 %token NEQ
 %token LT
@@ -81,8 +75,6 @@ Expr* exprPtr;
 %token R_PAREN
 %token ASSIGN
 %token MOD
-%token <int_val> OCTAL_CONST
-%token <int_val> HEX_CONST
 %token <int_val> INT_CONST
 %token <chr_val> CHR_CONST
 %token <str_val> STR_CONST
@@ -285,7 +277,7 @@ nullStmt: {}
         ;
 
 /* 3.3 Expressions */
-expr: expr BAR expr { $$ = Bar.bar($1, $3) }
+expr: expr BAR expr {}
     | expr AMP expr {}
     | expr EQ expr {}
     | expr NEQ expr {}
@@ -293,7 +285,7 @@ expr: expr BAR expr { $$ = Bar.bar($1, $3) }
     | expr GEQ expr {}
     | expr LT expr {}
     | expr GT expr {}
-    | expr ADD expr { $$ = Add.Add($1, $3) }
+    | expr ADD expr {}
     | expr SUB expr {}
     | expr MULT expr {}
     | expr DIV expr {}
@@ -308,6 +300,10 @@ expr: expr BAR expr { $$ = Bar.bar($1, $3) }
     | PRED L_PAREN expr R_PAREN {}
     | SUCC L_PAREN expr R_PAREN {}
     | lVal {}
+    | INT_CONST {$$ = new IntConst($1);}
+    | CHR_CONST {$$ = new ChrConst($1);}
+    | STR_CONST {$$ = new StrConst{$1);}
+    | ID {}
     ;
 
 lVal: ID dotOrIndexStar {}

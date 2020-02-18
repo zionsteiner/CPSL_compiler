@@ -8,8 +8,7 @@
 
 struct Expr {
     virtual bool isCompVal = 0;
-    virtual int compVal() = 0;
-    virtual void print() = 0;
+    virtual void toString() = 0;
 };
 
 

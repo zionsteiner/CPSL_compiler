@@ -1,0 +1,17 @@
+//
+// Created by zion on 2/17/20.
+//
+
+#ifndef CPSL_COMPILER_INTCONST_H
+#define CPSL_COMPILER_INTCONST_H
+
+#include "Const.h"
+
+struct IntConst: Const {
+    const int value;
+    IntConst(value);
+    void toString();
+};
+
+
+#endif //CPSL_COMPILER_INTCONST_H

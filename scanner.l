@@ -46,7 +46,7 @@
 "/" { return DIV ;}
 "&" { return AMP ;}
 "|" { return PIPE ;}
-"~" { return INV ;}
+"~" { return NOT ;}
 "=" { return EQ ;}
 "<>" { return NEQ ;}
 "<" { return LT ;}
@@ -64,8 +64,8 @@
 ":=" { return ASSIGN ;}
 "%" { return MOD ;}
 
-0[0-7]+ { yylval.int_val = atoi(yytext); return OCTAL_CONST; }
-0x[\dA-F]+ { yylval.int_val = atoi(yytext); return HEX_CONST; }
+0[0-7]+ { yylval.int_val = atoi(yytext); return INT_CONST; }
+0x[\dA-F]+ { yylval.int_val = atoi(yytext); return INT_CONST; }
 0\b|\b[1-9]{1}\d* { yylval.int_val = atoi(yytext); return INT_CONST; }
 
 '\\n' { yylval.chr_val = yytext[1]; return CHR_CONST; }
