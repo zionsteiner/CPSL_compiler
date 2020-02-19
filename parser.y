@@ -1,8 +1,29 @@
 %{
 #include <iostream>
 #include <map>
-
-typedef yy::parser::token token;
+#include "classes/Expr/Expr.h"
+#include "classes/Expr/Const/BoolConst.h"
+#include "classes/Expr/Const/ChrConst.h"
+#include "classes/Expr/Const/IntConst.h"
+#include "classes/Expr/Const/StrConst.h"
+#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.h"
+#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.h"
+#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.h"
+#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.h"
+#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.h"
+#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.h"
+#include "classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.h"
+#include "classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.h"
+#include "classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.h"
+#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h"
+#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/EQ.h"
+#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/GEQ.h"
+#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/GT.h"
+#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/LEQ.h"
+#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/LT.h"
+#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/NEQ.h"
+#include "classes/Expr/OpExpr/UnaryOpExpr/Not.h"
+#include "classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.h"
 
 extern int yylex();
 void yyerror(const char*);
@@ -17,7 +38,7 @@ char* chrVal;
 char* strVal;
 
 Expr* exprPtr;
-List* listPtr;
+std::vector* listPtr;
 Const* constPtr;
 Type* typePtr;
 }
@@ -81,6 +102,7 @@ Type* typePtr;
 %token COMMENT
 
 /* TODO: declare nonterminal types*/
+%type <exprPtr> expr
 
 %left BAR
 %left AMP
@@ -277,8 +299,8 @@ nullStmt: {}
         ;
 
 /* 3.3 Expressions */
-expr: expr BAR expr {}
-    | expr AMP expr {}
+expr: expr BAR expr {$$ = CmprBinOpExpr.binOp<Bar>($1, $3);}
+    | expr AMP expr {$$ = CmprBinOpExpr.binOp<Amp>($1, $3);}
     | expr EQ expr {}
     | expr NEQ expr {}
     | expr LEQ expr {}

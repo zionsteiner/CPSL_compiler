@@ -22,8 +22,8 @@ set(CPSL_compiler_srcs
         classes/Expr/Expr.h
         classes/Expr/Const/Const.cpp
         classes/Expr/Const/Const.h
-        classes/Type.cpp
-        classes/Type.h
+        classes/Type/Type.cpp
+        classes/Type/Type.h
         classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp
         classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.h
         classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp
@@ -49,7 +49,7 @@ set(CPSL_compiler_srcs
         classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.h
         classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp
         classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp
-        classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.h classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.h classes/Expr/OpExpr/BinOpExpr/CmprBinOptExpr/GEQ.cpp classes/Expr/OpExpr/BinOpExpr/CmprBinOptExpr/GEQ.h classes/Expr/OpExpr/BinOpExpr/CmprBinOptExpr/CmprBinOptExpr.cpp classes/Expr/OpExpr/BinOpExpr/CmprBinOptExpr/CmprBinOptExpr.h classes/Expr/OpExpr/BinOpExpr/CmprBinOptExpr/GT.cpp classes/Expr/OpExpr/BinOpExpr/CmprBinOptExpr/GT.h classes/Expr/OpExpr/BinOpExpr/CmprBinOptExpr/LEQ.cpp classes/Expr/OpExpr/BinOpExpr/CmprBinOptExpr/LEQ.h classes/Expr/OpExpr/BinOpExpr/CmprBinOptExpr/LT.cpp classes/Expr/OpExpr/BinOpExpr/CmprBinOptExpr/LT.h classes/Expr/OpExpr/BinOpExpr/CmprBinOptExpr/EQ.cpp classes/Expr/OpExpr/BinOpExpr/CmprBinOptExpr/EQ.h classes/Expr/OpExpr/BinOpExpr/CmprBinOptExpr/NEQ.cpp classes/Expr/OpExpr/BinOpExpr/CmprBinOptExpr/NEQ.h classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.h classes/Expr/OpExpr/UnaryOpExpr/Not.cpp classes/Expr/OpExpr/UnaryOpExpr/Not.h classes/Expr/Const/BoolConst.cpp classes/Expr/Const/BoolConst.h)
+        classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.h classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.h classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/GEQ.cpp classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/GEQ.h classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/GT.cpp classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/GT.h classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/LEQ.cpp classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/LEQ.h classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/LT.cpp classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/LT.h classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/EQ.cpp classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/EQ.h classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/NEQ.cpp classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/NEQ.h classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.h classes/Expr/OpExpr/UnaryOpExpr/Not.cpp classes/Expr/OpExpr/UnaryOpExpr/Not.h classes/Expr/Const/BoolConst.cpp classes/Expr/Const/BoolConst.h classes/Type/ArrayType.cpp classes/Type/ArrayType.h classes/Type/RecordType.cpp classes/Type/RecordType.h classes/Type/SimpleType.cpp classes/Type/SimpleType.h)
 source_group("CPSL_compiler" FILES ${CPSL_compiler_srcs})
 
 add_executable(CPSL_compiler ${CPSL_compiler_srcs})

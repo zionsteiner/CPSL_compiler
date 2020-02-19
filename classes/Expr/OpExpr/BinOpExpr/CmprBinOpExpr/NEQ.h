@@ -5,7 +5,7 @@
 #ifndef CPSL_COMPILER_NEQ_H
 #define CPSL_COMPILER_NEQ_H
 
-#include "CmprBinOptExpr.h
+#include "CmprBinOpExpr.h"
 
 struct NEQ: CmprBinOpExpr {
     NEQ(Expr*, Expr*);

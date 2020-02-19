@@ -6,7 +6,6 @@
 #define CPSL_COMPILER_UNARYMINUS_H
 
 #include "../OpExpr.h"
-
 struct UnaryMinus: OpExpr {
     const Expr* a;
 

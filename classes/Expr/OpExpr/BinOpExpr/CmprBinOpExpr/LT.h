@@ -5,7 +5,7 @@
 #ifndef CPSL_COMPILER_LT_H
 #define CPSL_COMPILER_LT_H
 
-#include "CmprBinOptExpr.h"
+#include "CmprBinOpExpr.h"
 
 struct LT: CmprBinOpExpr {
     LT(Expr*, Expr*);

@@ -2,7 +2,7 @@
 // Created by zion on 2/17/20.
 //
 
-#include "CmprBinOptExpr.h"
+#include "CmprBinOpExpr.h"
 #include "../../../Const/BoolConst.h"
 
 CmprBinOpExpr::CmprBinOpExpr(Expr* a, Expr* b): BinOpExpr(a, b) {}

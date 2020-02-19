@@ -5,7 +5,7 @@
 #ifndef CPSL_COMPILER_LEQ_H
 #define CPSL_COMPILER_LEQ_H
 
-#include "CmprBinOptExpr.h"
+#include "CmprBinOpExpr.h"
 
 struct LEQ: CmprBinOpExpr {
     LEQ(Expr*, Expr*);

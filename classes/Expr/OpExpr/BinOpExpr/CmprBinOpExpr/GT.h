@@ -5,7 +5,7 @@
 #ifndef CPSL_COMPILER_GT_H
 #define CPSL_COMPILER_GT_H
 
-#include "CmprBinOptExpr.h"
+#include "CmprBinOpExpr.h"
 
 struct GT: CmprBinOpExpr {
     GT(Expr*, Expr*);

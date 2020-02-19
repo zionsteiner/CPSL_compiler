@@ -5,7 +5,7 @@
 #ifndef CPSL_COMPILER_EQ_H
 #define CPSL_COMPILER_EQ_H
 
-#include "CmprBinOptExpr.h"
+#include "CmprBinOpExpr.h"
 
 struct EQ: CmprBinOpExpr {
     EQ(Expr*, Expr*);

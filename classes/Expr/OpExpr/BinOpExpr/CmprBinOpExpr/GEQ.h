@@ -5,7 +5,7 @@
 #ifndef CPSL_COMPILER_GEQ_H
 #define CPSL_COMPILER_GEQ_H
 
-#include "CmprBinOptExpr.h"
+#include "CmprBinOpExpr.h"
 
 struct GEQ: CmprBinOpExpr {
     GEQ(Expr*, Expr*);
