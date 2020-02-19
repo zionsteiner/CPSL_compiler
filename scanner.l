@@ -7,37 +7,37 @@
 %option noyywrap
 
 %%
-\bARRAY\b|\barray\b { return ARRAY ;}
-\bBEGIN\b|\bbegin\b { return BEGIN ;}
-\bCHR\b|\bchr\b { return CHR ;}
-\bCONST\b|\bconst\b { return CONST ;}
-\bDO\b|\bdo\b { return DO ;}
-\bDOWNTO\b|\bdownto\b { return DOWNTO ;}
-\bELSE\b|\belse\b { return ELSE ;}
-\bELSEIF\b|\belseif\b { return ELSEIF ;}
-\bEND\b|\bend\b { return END ;}
-\bFOR\b|\bfor\b { return FOR ;}
-\bFORWARD\b|\bforward\b { return FORWARD ;}
-\bFUNCTION\b|\bfunction\b { return FUNCTION ;}
-\bIF\b|\bif\b { return IF ;}
-\bOF\b|\bof\b { return OF ;}
-\bORD\b|\bord\b { return ORD ;}
-\bPRED\b|\bpred\b { return PRED ;}
-\bPROCEDURE\b|\bprocedure\b { return PROCEDURE ;}
-\bREAD\b|\bread\b { return READ ;}
-\bRECORD\b|\brecord\b { return RECORD ;}
-\bREF\b|\bref\b { return REF ;}
-\bREPEAT\b|\brepeat\b { return REPEAT ;}
-\bRETURN\b|return\b { return RETURN ;}
-\bSTOP\b|\bstop\b { return STOP ;}
-\bSUCC\b|\bsucc\b { return SUCC ;}
-\bTHEN\b|\bthen\b { return THEN ;}
-\bTO\b|\bto\b { return TO ;}
-\bTYPE\b|\btype\b { return TYPE ;}
-\bUNTIL\b|\buntil\b { return UNTIL ;}
-\bVAR\b|\bvar\b { return VAR ;}
-\bWHILE\b|\bwhile\b { return WHILE ;}
-\bWRITE\b|\bwrite\b { return WRITE ;}
+ARRAY|array { return ARRAY ;}
+BEGIN|begin { return BEGIN ;}
+CHR|chr { return CHR ;}
+CONST|const { return CONST ;}
+DO|do { return DO ;}
+DOWNTO|downto { return DOWNTO ;}
+ELSE|else { return ELSE ;}
+ELSEIF|elseif { return ELSEIF ;}
+END|end { return END ;}
+FOR|for { return FOR ;}
+FORWARD|forward { return FORWARD ;}
+FUNCTION|function { return FUNCTION ;}
+IF|if { return IF ;}
+OF|of { return OF ;}
+ORD|ord { return ORD ;}
+PRED|pred { return PRED ;}
+PROCEDURE|procedure { return PROCEDURE ;}
+READ|read { return READ ;}
+RECORD|record { return RECORD ;}
+REF|ref { return REF ;}
+REPEAT|repeat { return REPEAT ;}
+RETURN|return { return RETURN ;}
+STOP|stop { return STOP ;}
+SUCC|succ { return SUCC ;}
+THEN|then { return THEN ;}
+TO|to { return TO ;}
+TYPE|type { return TYPE ;}
+UNTIL|until { return UNTIL ;}
+VAR|var { return VAR ;}
+WHILE|while { return WHILE ;}
+WRITE|write { return WRITE ;}
 
 [a-zA-Z]{1}[\w]* { yylval.id = strdup(yytext); return ID; }
 "+" { return ADD ;}
@@ -66,11 +66,12 @@
 
 0[0-7]+ { yylval.int_val = atoi(yytext); return INT_CONST; }
 0x[\dA-F]+ { yylval.int_val = atoi(yytext); return INT_CONST; }
-0\b|\b[1-9]{1}\d* { yylval.int_val = atoi(yytext); return INT_CONST; }
+[1-9]{1}\d* { yylval.int_val = atoi(yytext); return INT_CONST; }
+0 { yylval.int_val = atoi(yytext); return INT_CONST; }
 
 '\\n' { yylval.chr_val = yytext[1]; return CHR_CONST; }
 '\\r' { yylval.chr_val = yytext[1]; return CHR_CONST; }
-'\\b' { yylval.chr_val = yytext[1]; return CHR_CONST; }
+'\' { yylval.chr_val = yytext[1]; return CHR_CONST; }
 '\\t' { yylval.chr_val = yytext[1]; return CHR_CONST; }
 '\\f' { yylval.chr_val = yytext[1]; return CHR_CONST; }
 '[\x20-\x7E]{1}' { yylval.chr_val = strdup(yytext[1]); return CHR_CONST; }

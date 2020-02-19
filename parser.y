@@ -1,6 +1,8 @@
 %{
 #include <iostream>
 #include <map>
+#include <vector>
+
 #include "classes/Expr/Expr.h"
 #include "classes/Expr/Const/BoolConst.h"
 #include "classes/Expr/Const/ChrConst.h"
@@ -24,6 +26,8 @@
 #include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/NEQ.h"
 #include "classes/Expr/OpExpr/UnaryOpExpr/Not.h"
 #include "classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.h"
+#include "classes/List/List.h"
+#include "classes/List/StrList.h"
 
 extern int yylex();
 void yyerror(const char*);
@@ -38,7 +42,7 @@ char* chrVal;
 char* strVal;
 
 Expr* exprPtr;
-std::vector* listPtr;
+StrList* strListPtr;
 Const* constPtr;
 Type* typePtr;
 }
@@ -106,7 +110,7 @@ Type* typePtr;
 
 %left BAR
 %left AMP
-%right INV
+%right NOT
 %nonassoc EQ NEQ LT LEQ GT GEQ
 %left ADD SUB
 %left MULT DIV MOD
@@ -125,11 +129,13 @@ constDeclOpt: constDecl {}
 constDecl: CONST constAssignPlus {}
          ;
 
-constAssignPlus: constAssignPlus constAssign {}
-               | constAssign {}
+constAssignPlus: constAssignPlus constAssign {$1->append($2); $$ = $1}
+               | constAssign {$$ = new ExprList($1)}
                ;
 
-constAssign: ID EQ expr SEMICOLON {}
+/* TODO: Add to symbol table */
+/* TODO: how to check if expr is an expr of type const instead of binOpExpr? */
+constAssign: ID EQ expr SEMICOLON {$$ = $3;}
            ;
 
 /* 3.1.2 Procedure and Function Rules */
@@ -199,8 +205,8 @@ varAssignStar: varAssignStar varAssign {}
 
 arrayType: ARRAY L_BRACK expr COLON expr R_BRACK OF type {}
 
-idList: idList COMMA ID {}
-      | ID {}
+idList: idList COMMA ID {$1->append($3); $$ = $1;}
+      | ID {$$ = new StrList($1);}
       ;
 
 /* 3.1.4 Variable Rules */
@@ -299,22 +305,22 @@ nullStmt: {}
         ;
 
 /* 3.3 Expressions */
-expr: expr BAR expr {$$ = CmprBinOpExpr.binOp<Bar>($1, $3);}
-    | expr AMP expr {$$ = CmprBinOpExpr.binOp<Amp>($1, $3);}
-    | expr EQ expr {}
-    | expr NEQ expr {}
-    | expr LEQ expr {}
-    | expr GEQ expr {}
-    | expr LT expr {}
-    | expr GT expr {}
-    | expr ADD expr {}
-    | expr SUB expr {}
-    | expr MULT expr {}
-    | expr DIV expr {}
-    | expr MOD expr {}
-    | INV expr {}
-    | SUB expr %prec UNARYMINUS {}
-    | L_PAREN expr R_PAREN {}
+expr: expr BAR expr {$$ = BoolBinOpExpr.binOp<Bar>($1, $3);}
+    | expr AMP expr {$$ = BoolBinOpExpr.binOp<Amp>($1, $3);}
+    | expr EQ expr {$$ = CmprBinOpExpr.binOp<EQ>($1, $3);}
+    | expr NEQ expr {$$ = CmprBinOpExpr.binOp<NEQ>($1, $3);}
+    | expr LEQ expr {$$ = CmprBinOpExpr.binOp<LEQ>($1, $3);}
+    | expr GEQ expr {$$ = CmprBinOpExpr.binOp<GEQ>($1, $3);}
+    | expr LT expr {$$ = CmprBinOpExpr.binOp<LT>($1, $3);}
+    | expr GT expr {$$ = CmprBinOpExpr.binOp<GT>($1, $3);}
+    | expr ADD expr {$$ = ArithBinOpExpr.binOp<Add>($1, $3);}
+    | expr SUB expr {$$ = ArithBinOpExpr.binOp<Sub>($1, $3);}
+    | expr MULT expr {$$ = ArithBinOpExpr.binOp<Mult>($1, $3);}
+    | expr DIV expr {$$ = ArithBinOpExpr.binOp<Div>($1, $3);}
+    | expr MOD expr {$$ = ArithBinOpExpr.binOp<Mod>($1, $3);}
+    | NOT expr {$$ = Not($2);}
+    | SUB expr %prec UNARYMINUS {$$ = UnaryMinus($2);}
+    | L_PAREN expr R_PAREN {$$ = $2;}
     | ID L_PAREN expr exprStar R_PAREN {}
     | ID L_PAREN R_PAREN {}
     | CHR L_PAREN expr R_PAREN {}
