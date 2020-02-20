@@ -10,7 +10,7 @@
 struct NEQ: CmprBinOpExpr {
     NEQ(Expr*, Expr*);
     static bool binOp(int, int);
-    void toString();
+    std::string toString() const override;
 };
 
 

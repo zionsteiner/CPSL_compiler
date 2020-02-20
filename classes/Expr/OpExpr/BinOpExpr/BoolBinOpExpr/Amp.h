@@ -9,8 +9,8 @@
 
 struct Amp: BoolBinOpExpr {
     Amp(Expr*, Expr*);
-    static void binOp(int, int);
-    void toString();
+    static bool binOp(int, int);
+    std::string toString() const override;
 };
 
 

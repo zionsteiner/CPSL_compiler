@@ -12,7 +12,6 @@ struct ArithBinOpExpr: BinOpExpr {
 
     template <typename T>
     static Expr* binOp(Expr*, Expr*);
-    virtual static int binOp(int, int);
 };
 
 

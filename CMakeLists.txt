@@ -76,11 +76,9 @@ set(CPSL_compiler_srcs
     classes/Type/SimpleType.cpp
     classes/Type/SimpleType.h
     classes/List/List.h
-    classes/List/StrList.h
-    classes/List/StrList.cpp
-    classes/List/ExprList.cpp
-    classes/List/ExprList.h
-    classes/Param.cpp classes/Param.h globals.cpp globals.h)
+        classes/List/idList.h
+        classes/List/idList.cpp
+        classes/Param.cpp classes/Param.h globals.cpp globals.h classes/VarAssign.cpp classes/VarAssign.h classes/List/VarAssignList.cpp classes/List/VarAssignList.h classes/VarDecl.cpp classes/VarDecl.h classes/Opt/VarDeclOpt.cpp classes/Opt/VarDeclOpt.h classes/Opt/Opt.h classes/Opt/Opt.cpp)
 
 source_group("CPSL_compiler" FILES ${CPSL_compiler_srcs})
 

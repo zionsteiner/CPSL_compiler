@@ -9,8 +9,8 @@
 
 struct IntConst: Const {
     const int value;
-    IntConst(value);
-    void toString();
+    explicit IntConst(int);
+    std::string toString() const override;
 };
 
 

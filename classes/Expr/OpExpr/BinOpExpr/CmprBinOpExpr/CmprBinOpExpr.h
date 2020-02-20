@@ -12,7 +12,6 @@ struct CmprBinOpExpr: BinOpExpr {
 
     template <typename T>
     static Expr* binOp(Expr*, Expr*);
-    virtual static bool binOp(int, int);
 };
 
 

@@ -5,12 +5,13 @@
 #ifndef CPSL_COMPILER_CHRCONST_H
 #define CPSL_COMPILER_CHRCONST_H
 
+#include "Const.h"
 
-struct ChrConst {
+struct ChrConst: Const {
     const char value;
 
-    ChrConst(value);
-    void toString();
+    explicit ChrConst(char);
+    std::string toString() const override;
 };
 
 

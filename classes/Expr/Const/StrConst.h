@@ -6,10 +6,13 @@
 #define CPSL_COMPILER_STRCONST_H
 
 
+#include <string>
+#include "Const.h"
+
 class StrConst: Const {
     const std::string value;
-    StrConst(value);
-    void toString();
+    StrConst(char*);
+    std::string toString() const override;
 };
 
 

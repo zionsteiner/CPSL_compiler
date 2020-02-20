@@ -11,7 +11,7 @@ struct UnaryMinus: OpExpr {
 
     UnaryMinus(Expr*);
     static int op(int);
-    void toString();
+    std::string toString() const override;
 };
 
 

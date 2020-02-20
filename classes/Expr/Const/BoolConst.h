@@ -5,13 +5,14 @@
 #ifndef CPSL_COMPILER_BOOLCONST_H
 #define CPSL_COMPILER_BOOLCONST_H
 
+#include <string>
 #include "Const.h"
 
 struct BoolConst: Const {
     const bool value;
 
-    BoolConst(value);
-    void toString();
+    explicit BoolConst(bool);
+    std::string toString() const override;
 };
 
 

@@ -10,7 +10,7 @@
 struct Mod: ArithBinOpExpr {
     Mod(Expr*, Expr*);
     static int binOp(int, int);
-    void toString();
+    std::string toString() const override;
 };
 
 

@@ -9,8 +9,8 @@
 
 struct Bar: BoolBinOpExpr {
     Bar(Expr*, Expr*);
-    static void binOp(bool, bool);
-    void toString();
+    static bool binOp(bool, bool);
+    std::string toString() const override;
 };
 
 

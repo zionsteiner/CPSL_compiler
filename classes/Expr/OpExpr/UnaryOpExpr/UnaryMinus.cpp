@@ -5,5 +5,7 @@
 #include "UnaryMinus.h"
 
 UnaryMinus::UnaryMinus(Expr* a): a(a) {}
-static int UnaryMinus::op(int a) {return -a;}
-void UnaryMinus::toString() {std::cout << '-' + a->toString();}
+int UnaryMinus::op(int a) {return -a;}
+std::string UnaryMinus::toString() const {
+    return '-' + a->toString();
+}

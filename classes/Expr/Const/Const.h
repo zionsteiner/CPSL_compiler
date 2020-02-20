@@ -7,7 +7,9 @@
 
 #include "../Expr.h"
 
-struct Const: Expr {};
+struct Const: Expr {
+    bool isCompVal() override;
+};
 
 
 #endif //CPSL_COMPILER_CONST_H

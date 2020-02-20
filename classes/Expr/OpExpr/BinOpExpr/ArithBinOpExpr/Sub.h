@@ -10,7 +10,7 @@
 struct Sub: ArithBinOpExpr {
     Sub(Expr*, Expr*);
     static int binOp(int, int);
-    void toString();
+    std::string toString() const override;
 };
 
 

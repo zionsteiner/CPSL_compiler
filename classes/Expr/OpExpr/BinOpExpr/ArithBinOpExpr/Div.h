@@ -10,7 +10,7 @@
 struct Div: ArithBinOpExpr {
     Div(Expr*, Expr*);
     static int binOp(int, int);
-    void toString();
+    std::string toString() const override;
 };
 
 

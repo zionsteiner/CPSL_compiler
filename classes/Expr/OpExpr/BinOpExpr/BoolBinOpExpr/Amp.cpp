@@ -3,9 +3,12 @@
 //
 
 #include <iostream>
+#include <sstream>
 #include "Amp.h"
 #include "BoolBinOpExpr.h"
 
 Amp::Amp(Expr* a, Expr* b): BoolBinOpExpr(a, b) {}
-static bool Amp::binOp(bool a, bool b) {return a && b;}
-void Amp::toString() {std::cout << a->toString() + '&' + b->toString();}
+bool Amp::binOp(int a, int b) {return a && b;}
+std::string Amp::toString() const {
+    return a->toString() + " & " + b->toString();
+}

@@ -4,4 +4,4 @@
 
 #include "OpExpr.h"
 
-bool Op::isCompVal() {return false;}
+bool OpExpr::isCompVal() {return false;}

@@ -5,10 +5,11 @@
 #ifndef CPSL_COMPILER_EXPR_H
 #define CPSL_COMPILER_EXPR_H
 
+#include <string>
 
 struct Expr {
-    virtual bool isCompVal = 0;
-    virtual void toString() = 0;
+    virtual bool isCompVal() = 0;
+    virtual std::string toString() const = 0;
 };
 
 

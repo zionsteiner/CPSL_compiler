@@ -28,6 +28,14 @@
 #include "classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.h"
 #include "classes/List/List.h"
 #include "classes/List/StrList.h"
+#include "classes/List/VarAssignList.h"
+#include "classes/Type/Type.h"
+#include "classes/Type/ArrayType.h"
+#include "classes/Type/RecordType.h"
+#include "classes/Type/SimpleType.h"
+#include "classes/VarAssign.h"
+#include "classes/VarDecl.h"
+#include "classes/Opt/VarDeclOpt.h"
 
 extern int yylex();
 void yyerror(const char*);
@@ -42,9 +50,13 @@ char* chrVal;
 char* strVal;
 
 Expr* exprPtr;
-StrList* strListPtr;
+List* listPtr;
 Const* constPtr;
 Type* typePtr;
+
+VarAssign* varAssignPtr;
+VarDecl* varDeclPtr;
+VarDeclOpt* varDeclOptPtr;
 }
 
 %token ARRAY
@@ -109,6 +121,16 @@ Type* typePtr;
 
 /* TODO: declare nonterminal types*/
 %type <exprPtr> expr
+%type <typePtr> type
+%type <typePtr> arrayType
+%type <typePtr> recordType
+%type <typePtr> simpleType
+%type <listPtr> idList
+%type <listPtr> varAssignPlus
+%type <listPtr> varAssignStar
+%type <varAssignPtr> varAssign
+%type <varDeclPtr> varDecl
+%type <varDeclOptPtr> varDeclOpt
 
 %left BAR
 %left AMP
@@ -119,7 +141,6 @@ Type* typePtr;
 %right UNARYMINUS
 
 %%
-/* TODO: re-add all optional nonterminals */
 /* CPSL Declarations */
 program: constDeclOpt typeDeclOpt varDeclOpt procOrFuncStar block PERIOD {}
 
@@ -131,13 +152,12 @@ constDeclOpt: constDecl {}
 constDecl: CONST constAssignPlus {}
          ;
 
-constAssignPlus: constAssignPlus constAssign {$1->append($2); $$ = $1}
-               | constAssign {$$ = new ExprList($1)}
+constAssignPlus: constAssignPlus constAssign {}
+               | constAssign {}
                ;
 
 /* TODO: Add to symbol table */
-/* TODO: how to check if expr is an expr of type const instead of binOpExpr? */
-constAssign: ID EQ expr SEMICOLON {$$ = $3;}
+constAssign: ID EQ expr SEMICOLON {}
            ;
 
 /* 3.1.2 Procedure and Function Rules */
@@ -190,9 +210,9 @@ typeAssignPlus: typeAssignPlus typeAssign {}
 typeAssign: ID EQ type SEMICOLON {}
           ;
 
-type: simpleType {}
-    | recordType {}
-    | arrayType {}
+type: simpleType {$$ = $1;}
+    | recordType {$$ = $1;}
+    | arrayType {$$ = $1;}
     ;
 
 simpleType: ID {}
@@ -201,11 +221,11 @@ simpleType: ID {}
 recordType: RECORD varAssignStar END {}
           ;
 
-varAssignStar: varAssignStar varAssign {}
-             | {}
+varAssignStar: varAssignStar varAssign {$1->append($2); $$ = $1;}
+             | {$$ = VarAssignList();}
              ;
 
-arrayType: ARRAY L_BRACK expr COLON expr R_BRACK OF type {}
+arrayType: ARRAY L_BRACK expr COLON expr R_BRACK OF type {$$ = new ArrayType($8, $3, $5);}
          ;
 
 idList: idList COMMA ID {$1->append($3); $$ = $1;}
@@ -213,18 +233,18 @@ idList: idList COMMA ID {$1->append($3); $$ = $1;}
       ;
 
 /* 3.1.4 Variable Rules */
-varDeclOpt: varDecl {}
-           | {}
+varDeclOpt: varDecl {$$ = new VarDeclOpt($1);}
+           | {$$ = new VarDeclOpt();}
            ;
 
-varDecl: VAR varAssignPlus {}
+varDecl: VAR varAssignPlus {$$ = new VarDecl($1);}
        ;
 
-varAssignPlus: varAssignPlus varAssign {}
-             | varAssign {}
+varAssignPlus: varAssignPlus varAssign {$1->append($2); $$ = $1;}
+             | varAssign {$$ = new VarAssignList(); $$->append($1);}
              ;
 
-varAssign: idList COLON type SEMICOLON {}
+varAssign: idList COLON type SEMICOLON {$$ = new VarAssign($1, $3);}
          ;
 
 /* 3.2 CPSL Statements */

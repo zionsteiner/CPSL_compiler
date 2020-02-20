@@ -12,7 +12,7 @@ struct Not: OpExpr {
 
     Not(Expr*);
     static bool op(bool);
-    void toString();
+    std::string toString() const override;
 };
 
 

@@ -12,7 +12,6 @@ struct BoolBinOpExpr: BinOpExpr {
 
     template<typename T>
     static Expr* binOp(Expr*, Expr*);
-    virtual static bool binOp(bool, bool);
 };
 
 

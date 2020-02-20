@@ -8,7 +8,7 @@
 #include "../Expr.h"
 
 struct OpExpr: Expr {
-    bool isCompVal();
+    bool isCompVal() override;
 };
 
 

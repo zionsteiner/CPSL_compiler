@@ -2,7 +2,11 @@
 // Created by zion on 2/17/20.
 //
 
+#include <iostream>
+#include <sstream>
 #include "ChrConst.h"
 
-ChrConst::ChrConst(value): value(value) {}
-void ChrConst::toString() {std::cout << value;}
+ChrConst::ChrConst(char value): value(value) {}
+std::string ChrConst::toString() const {
+    return std::string(1, value);
+}

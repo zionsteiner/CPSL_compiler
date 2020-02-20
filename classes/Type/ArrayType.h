@@ -9,12 +9,12 @@
 #include "Type.h"
 
 struct ArrayType: Type {
-    Type* type;
-    Expr* begin;
-    Expr* end;
+    const Type* type;
+    const Expr* begin;
+    const Expr* end;
 
     ArrayType(Type*, Expr*, Expr*);
-    void toString():
+    std::string toString() const override;
 };
 
 
