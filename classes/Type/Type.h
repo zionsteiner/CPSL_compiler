@@ -7,7 +7,7 @@
 
 
 struct Type {
-
+    virtual void toString();
 };
 
 

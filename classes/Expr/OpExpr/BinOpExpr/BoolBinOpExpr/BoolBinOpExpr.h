@@ -7,7 +7,10 @@
 
 #include "../BinOpExpr.h"
 
-struct BoolBinOpExpr {
+struct BoolBinOpExpr: BinOpExpr {
+    BoolBinOpExpr(Expr*, Expr*);
+
+    template<typename T>
     static Expr* binOp(Expr*, Expr*);
     virtual static bool binOp(bool, bool);
 };

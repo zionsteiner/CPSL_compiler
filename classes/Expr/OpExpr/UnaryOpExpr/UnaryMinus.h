@@ -10,7 +10,6 @@ struct UnaryMinus: OpExpr {
     const Expr* a;
 
     UnaryMinus(Expr*);
-    ~UnaryMinus();
     static int op(int);
     void toString();
 };

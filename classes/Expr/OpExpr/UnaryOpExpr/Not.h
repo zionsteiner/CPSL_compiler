@@ -11,7 +11,6 @@ struct Not: OpExpr {
     const Expr* a;
 
     Not(Expr*);
-    ~Not();
     static bool op(bool);
     void toString();
 };

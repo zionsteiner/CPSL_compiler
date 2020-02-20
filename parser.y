@@ -98,6 +98,8 @@ Type* typePtr;
 %token COLON
 %token L_PAREN
 %token R_PAREN
+%token L_BRACK
+%token R_BRACK
 %token ASSIGN
 %token MOD
 %token <int_val> INT_CONST
@@ -204,6 +206,7 @@ varAssignStar: varAssignStar varAssign {}
              ;
 
 arrayType: ARRAY L_BRACK expr COLON expr R_BRACK OF type {}
+         ;
 
 idList: idList COMMA ID {$1->append($3); $$ = $1;}
       | ID {$$ = new StrList($1);}
@@ -235,7 +238,7 @@ stmt: assnStmt {}
     | repeatStmt {}
     | forStmt {}
     | stopStmt {}
-    | return Stmt {}
+    | returnStmt {}
     | readStmt {}
     | writeStmt {}
     | procCall {}
@@ -330,7 +333,7 @@ expr: expr BAR expr {$$ = BoolBinOpExpr.binOp<Bar>($1, $3);}
     | lVal {}
     | INT_CONST {$$ = new IntConst($1);}
     | CHR_CONST {$$ = new ChrConst($1);}
-    | STR_CONST {$$ = new StrConst{$1);}
+    | STR_CONST {$$ = new StrConst($1);}
     | ID {}
     ;
 

@@ -15,15 +15,12 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS}")
 
 set(CPSL_compiler_srcs
     scanner.l
-    symbol_table.hpp
-    symbol_table.cpp
     ${BISON_Parser_OUTPUTS}
     ${FLEX_Scanner_OUTPUTS}
     classes/Expr/Expr.h
     classes/Expr/Const/Const.cpp
     classes/Expr/Const/Const.h
-    classes/Type/Type.cpp
-    classes/Type/Type.h
+        classes/Type/Type.h
     classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp
     classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.h
     classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp
@@ -77,7 +74,14 @@ set(CPSL_compiler_srcs
     classes/Type/RecordType.cpp
     classes/Type/RecordType.h
     classes/Type/SimpleType.cpp
-    classes/Type/SimpleType.h classes/List/List.h classes/List/StrList.h classes/List/StrList.cpp classes/List/ExprList.cpp classes/List/ExprList.h)
+    classes/Type/SimpleType.h
+    classes/List/List.h
+    classes/List/StrList.h
+    classes/List/StrList.cpp
+    classes/List/ExprList.cpp
+    classes/List/ExprList.h
+    classes/Param.cpp classes/Param.h globals.cpp globals.h)
+
 source_group("CPSL_compiler" FILES ${CPSL_compiler_srcs})
 
 add_executable(CPSL_compiler ${CPSL_compiler_srcs})

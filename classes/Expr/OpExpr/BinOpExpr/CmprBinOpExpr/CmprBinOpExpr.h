@@ -9,6 +9,8 @@
 
 struct CmprBinOpExpr: BinOpExpr {
     CmprBinOpExpr(Expr*, Expr*);
+
+    template <typename T>
     static Expr* binOp(Expr*, Expr*);
     virtual static bool binOp(int, int);
 };

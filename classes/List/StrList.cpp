@@ -2,6 +2,8 @@
 // Created by zion on 2/18/20.
 //
 
+#include <vector>
+#include <iostream>
 #include "StrList.h"
 
 StrList::StrList(char* cStr) {
@@ -14,8 +16,9 @@ StrList::append(char* cStr) {
     list.push_back(Str);
 }
 
-StrList::toString() {
-    for (std::vector<std::string>::iterator str = list.begin(); str != list.end(); ++str) {
-        std::cout << str << ' ';
+void StrList::toString() {
+    std::cout << list[0];
+    for (std::vector<char*>::iterator str = list.begin() + 1; str != list.end(); ++str) {
+        std::cout << ', ' + str.toString();
     }
 }
