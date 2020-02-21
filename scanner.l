@@ -1,14 +1,14 @@
 %{
 #include <cstdlib>
-
 #include "parser.hpp"
 %}
 
 %option noyywrap
 
 %%
+
 ARRAY|array { return ARRAY ;}
-BEGIN|begin { return BEGIN ;}
+BEGIN|begin { return BEGIN_TKN ;}
 CHR|chr { return CHR ;}
 CONST|const { return CONST ;}
 DO|do { return DO ;}
@@ -45,7 +45,7 @@ WRITE|write { return WRITE ;}
 "*" { return MULT ;}
 "/" { return DIV ;}
 "&" { return AMP ;}
-"|" { return PIPE ;}
+"|" { return BAR ;}
 "~" { return NOT ;}
 "=" { return EQ ;}
 "<>" { return NEQ ;}
@@ -64,18 +64,18 @@ WRITE|write { return WRITE ;}
 ":=" { return ASSIGN ;}
 "%" { return MOD ;}
 
-0[0-7]+ { yylval.int_val = atoi(yytext); return INT_CONST; }
-0x[\dA-F]+ { yylval.int_val = atoi(yytext); return INT_CONST; }
-[1-9]{1}\d* { yylval.int_val = atoi(yytext); return INT_CONST; }
-0 { yylval.int_val = atoi(yytext); return INT_CONST; }
+0[0-7]+ { yylval.intVal = atoi(yytext); return INT_CONST; }
+0x[\dA-F]+ { yylval.intVal = atoi(yytext); return INT_CONST; }
+[1-9]{1}\d* { yylval.intVal = atoi(yytext); return INT_CONST; }
+0 { yylval.intVal = atoi(yytext); return INT_CONST; }
 
-'\\n' { yylval.chr_val = yytext[1]; return CHR_CONST; }
-'\\r' { yylval.chr_val = yytext[1]; return CHR_CONST; }
-'\' { yylval.chr_val = yytext[1]; return CHR_CONST; }
-'\\t' { yylval.chr_val = yytext[1]; return CHR_CONST; }
-'\\f' { yylval.chr_val = yytext[1]; return CHR_CONST; }
-'[\x20-\x7E]{1}' { yylval.chr_val = strdup(yytext[1]); return CHR_CONST; }
-"[\x20-\x7E]*" { yylval.str_val = strdup(yytext); return STR_CONST; }
-\$.*\n {}
+\'\\n\' { yylval.chrVal = yytext[1]; return CHR_CONST; }
+\'\\r\' { yylval.chrVal = yytext[1]; return CHR_CONST; }
+\'\\' { yylval.chrVal = yytext[1]; return CHR_CONST; }
+\'\\t\' { yylval.chrVal = yytext[1]; return CHR_CONST; }
+\'\\f\' { yylval.chrVal = yytext[1]; return CHR_CONST; }
+\'[\x20-\x7E]{1}\' { yylval.chrVal = yytext[1]; return CHR_CONST; }
+\"[\x20-\x7E]\" { yylval.strVal = strdup(yytext); return STR_CONST; }
+\$.*\n { return COMMENT; }
 
 %%

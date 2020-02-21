@@ -3,40 +3,6 @@
 #include <map>
 #include <vector>
 
-#include "classes/Expr/Expr.h"
-#include "classes/Expr/Const/BoolConst.h"
-#include "classes/Expr/Const/ChrConst.h"
-#include "classes/Expr/Const/IntConst.h"
-#include "classes/Expr/Const/StrConst.h"
-#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.h"
-#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.h"
-#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.h"
-#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.h"
-#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.h"
-#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.h"
-#include "classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.h"
-#include "classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.h"
-#include "classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.h"
-#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h"
-#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/EQ.h"
-#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/GEQ.h"
-#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/GT.h"
-#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/LEQ.h"
-#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/LT.h"
-#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/NEQ.h"
-#include "classes/Expr/OpExpr/UnaryOpExpr/Not.h"
-#include "classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.h"
-#include "classes/List/List.h"
-#include "classes/List/StrList.h"
-#include "classes/List/VarAssignList.h"
-#include "classes/Type/Type.h"
-#include "classes/Type/ArrayType.h"
-#include "classes/Type/RecordType.h"
-#include "classes/Type/SimpleType.h"
-#include "classes/VarAssign.h"
-#include "classes/VarDecl.h"
-#include "classes/Opt/VarDeclOpt.h"
-
 extern int yylex();
 void yyerror(const char*);
 %}
@@ -45,22 +11,13 @@ void yyerror(const char*);
 %union
 {
 int intVal;
-char* id
-char* chrVal;
+char* id;
+char chrVal;
 char* strVal;
-
-Expr* exprPtr;
-List* listPtr;
-Const* constPtr;
-Type* typePtr;
-
-VarAssign* varAssignPtr;
-VarDecl* varDeclPtr;
-VarDeclOpt* varDeclOptPtr;
 }
 
 %token ARRAY
-%token BEGIN
+%token BEGIN_TKN
 %token CHR
 %token CONST
 %token DO
@@ -96,7 +53,7 @@ VarDeclOpt* varDeclOptPtr;
 %token MULT
 %token DIV
 %token AMP
-%token PIPE
+%token BAR
 %token NOT
 %token EQ
 %token NEQ
@@ -114,23 +71,12 @@ VarDeclOpt* varDeclOptPtr;
 %token R_BRACK
 %token ASSIGN
 %token MOD
-%token <int_val> INT_CONST
-%token <chr_val> CHR_CONST
-%token <str_val> STR_CONST
+%token <intVal> INT_CONST
+%token <chrVal> CHR_CONST
+%token <strVal> STR_CONST
 %token COMMENT
 
 /* TODO: declare nonterminal types*/
-%type <exprPtr> expr
-%type <typePtr> type
-%type <typePtr> arrayType
-%type <typePtr> recordType
-%type <typePtr> simpleType
-%type <listPtr> idList
-%type <listPtr> varAssignPlus
-%type <listPtr> varAssignStar
-%type <varAssignPtr> varAssign
-%type <varDeclPtr> varDecl
-%type <varDeclOptPtr> varDeclOpt
 
 %left BAR
 %left AMP
@@ -192,7 +138,7 @@ varOrRefOpt: VAR {}
 body: constDeclOpt typeDeclOpt varDeclOpt block {}
     ;
 
-block: BEGIN statements END {}
+block: BEGIN_TKN stmts END {}
      ;
 
 /* 3.1.3 Type Rules */
@@ -210,9 +156,9 @@ typeAssignPlus: typeAssignPlus typeAssign {}
 typeAssign: ID EQ type SEMICOLON {}
           ;
 
-type: simpleType {$$ = $1;}
-    | recordType {$$ = $1;}
-    | arrayType {$$ = $1;}
+type: simpleType {}
+    | recordType {}
+    | arrayType {}
     ;
 
 simpleType: ID {}
@@ -221,30 +167,30 @@ simpleType: ID {}
 recordType: RECORD varAssignStar END {}
           ;
 
-varAssignStar: varAssignStar varAssign {$1->append($2); $$ = $1;}
-             | {$$ = VarAssignList();}
+varAssignStar: varAssignStar varAssign {}
+             | {}
              ;
 
-arrayType: ARRAY L_BRACK expr COLON expr R_BRACK OF type {$$ = new ArrayType($8, $3, $5);}
+arrayType: ARRAY L_BRACK expr COLON expr R_BRACK OF type {}
          ;
 
-idList: idList COMMA ID {$1->append($3); $$ = $1;}
-      | ID {$$ = new StrList($1);}
+idList: idList COMMA ID {}
+      | ID {}
       ;
 
 /* 3.1.4 Variable Rules */
-varDeclOpt: varDecl {$$ = new VarDeclOpt($1);}
-           | {$$ = new VarDeclOpt();}
+varDeclOpt: varDecl {}
+           | {}
            ;
 
-varDecl: VAR varAssignPlus {$$ = new VarDecl($1);}
+varDecl: VAR varAssignPlus {}
        ;
 
-varAssignPlus: varAssignPlus varAssign {$1->append($2); $$ = $1;}
-             | varAssign {$$ = new VarAssignList(); $$->append($1);}
+varAssignPlus: varAssignPlus varAssign {}
+             | varAssign {}
              ;
 
-varAssign: idList COLON type SEMICOLON {$$ = new VarAssign($1, $3);}
+varAssign: idList COLON type SEMICOLON {}
          ;
 
 /* 3.2 CPSL Statements */
@@ -316,8 +262,7 @@ exprPlus: exprPlus COMMA expr {}
         | expr {}
         ;
 
-procCall: ID L_PAREN expr exprPlusOpt R_PAREN {}
-        | ID L_PAREN R_PAREN {}
+procCall: ID L_PAREN exprPlusOpt R_PAREN {}
         ;
 
 exprPlusOpt: exprPlus {}
@@ -328,43 +273,46 @@ nullStmt: {}
         ;
 
 /* 3.3 Expressions */
-expr: expr BAR expr {$$ = BoolBinOpExpr.binOp<Bar>($1, $3);}
-    | expr AMP expr {$$ = BoolBinOpExpr.binOp<Amp>($1, $3);}
-    | expr EQ expr {$$ = CmprBinOpExpr.binOp<EQ>($1, $3);}
-    | expr NEQ expr {$$ = CmprBinOpExpr.binOp<NEQ>($1, $3);}
-    | expr LEQ expr {$$ = CmprBinOpExpr.binOp<LEQ>($1, $3);}
-    | expr GEQ expr {$$ = CmprBinOpExpr.binOp<GEQ>($1, $3);}
-    | expr LT expr {$$ = CmprBinOpExpr.binOp<LT>($1, $3);}
-    | expr GT expr {$$ = CmprBinOpExpr.binOp<GT>($1, $3);}
-    | expr ADD expr {$$ = ArithBinOpExpr.binOp<Add>($1, $3);}
-    | expr SUB expr {$$ = ArithBinOpExpr.binOp<Sub>($1, $3);}
-    | expr MULT expr {$$ = ArithBinOpExpr.binOp<Mult>($1, $3);}
-    | expr DIV expr {$$ = ArithBinOpExpr.binOp<Div>($1, $3);}
-    | expr MOD expr {$$ = ArithBinOpExpr.binOp<Mod>($1, $3);}
-    | NOT expr {$$ = Not($2);}
-    | SUB expr %prec UNARYMINUS {$$ = UnaryMinus($2);}
-    | L_PAREN expr R_PAREN {$$ = $2;}
-    | ID L_PAREN expr exprStar R_PAREN {}
-    | ID L_PAREN R_PAREN {}
+expr: expr BAR expr {}
+    | expr AMP expr {}
+    | expr EQ expr {}
+    | expr NEQ expr {}
+    | expr LEQ expr {}
+    | expr GEQ expr {}
+    | expr LT expr {}
+    | expr GT expr {}
+    | expr ADD expr {}
+    | expr SUB expr {}
+    | expr MULT expr {}
+    | expr DIV expr {}
+    | expr MOD expr {}
+    | NOT expr {}
+    | SUB expr %prec UNARYMINUS {}
+    | L_PAREN expr R_PAREN {}
+    | procCall {}
     | CHR L_PAREN expr R_PAREN {}
     | ORD L_PAREN expr R_PAREN {}
     | PRED L_PAREN expr R_PAREN {}
     | SUCC L_PAREN expr R_PAREN {}
     | lVal {}
-    | INT_CONST {$$ = new IntConst($1);}
-    | CHR_CONST {$$ = new ChrConst($1);}
-    | STR_CONST {$$ = new StrConst($1);}
+    | INT_CONST {}
+    | CHR_CONST {}
+    | STR_CONST {}
     | ID {}
     ;
 
-lVal: ID dotOrIndexStar {}
+lVal: ID dotOrIndexPlus {}
     ;
 
-dotOrIndexStar: dotOrIndexStar dotOrIndex {}
-              | {}
+dotOrIndexPlus: dotOrIndexPlus dotOrIndex {}
+              | dotOrIndex {}
               ;
 
 dotOrIndex: PERIOD ID {}
           | L_BRACK expr R_BRACK {}
           ;
 %%
+
+void yyerror(const char* err) {
+    std::cerr << err << std::endl;
+}
