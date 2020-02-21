@@ -6,15 +6,15 @@
 #define CPSL_COMPILER_VARASSIGN_H
 
 
-#include <classes/List/idList.h>
+#include <classes/List/IdList.h>
 #include <string>
 #include "classes/Type/Type.h"
 
 struct VarAssign {
-    const idList* idList;
+    const IdList* idList;
     const Type* type;
 
-    VarAssign(idList*, Type*);
+    VarAssign(IdList*, Type*);
     std::string toString() const;
     ~VarAssign();
 };

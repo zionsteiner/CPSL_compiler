@@ -4,7 +4,7 @@
 
 #include "VarAssign.h"
 
-VarAssign::VarAssign(idList* idList, Type* type): idList(idList), type(type) {}
+VarAssign::VarAssign(IdList* idList, Type* type): idList(idList), type(type) {}
 std::string VarAssign::toString() const {
     return idList->toString() + ": " + type->toString() + ';';
 }

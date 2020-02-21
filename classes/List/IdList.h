@@ -6,13 +6,14 @@
 #define CPSL_COMPILER_IDLIST_H
 
 #include <vector>
+#include <classes/Expr/Ident.h>
 #include "List.h"
 
-struct idList: List {
-    std::vector<std::string> list;
+struct IdList: List {
+    std::vector<Ident*> list;
 
-    idList();
-    void append(char*);
+    IdList();
+    void append(Ident*);
     std::string toString() const override;
 };
 

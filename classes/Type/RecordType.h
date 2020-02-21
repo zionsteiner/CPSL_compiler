@@ -8,7 +8,6 @@
 #include "Type.h"
 
 struct RecordType: Type {
-    const
 };
 
 
