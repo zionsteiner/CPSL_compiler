@@ -6,11 +6,11 @@
 #define CPSL_COMPILER_NOT_H
 
 #include "../OpExpr.h"
+#include "UnaryOpExpr.h"
 
-struct Not: OpExpr {
-    const Expr* a;
-
+struct Not: UnaryOpExpr {
     Not(Expr*);
+    static Expr* op(Expr*);
     static bool op(bool);
     std::string toString() const override;
 };

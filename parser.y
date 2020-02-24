@@ -3,6 +3,26 @@
 #include <map>
 #include <vector>
 
+#include "classes/Expr/Expr.h"
+#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.h"
+#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.h"
+#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.h"
+#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.h"
+#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.h"
+#include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.h"
+#include "classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.h"
+#include "classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.h"
+#include "classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.h"
+#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h"
+#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/EQ.h"
+#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/NEQ.h"
+#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/LEQ.h"
+#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/GEQ.h"
+#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/LT.h"
+#include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/GT.h"
+#include "classes/Expr/OpExpr/UnaryOpExpr/Not.h"
+#include "classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.h"
+
 extern int yylex();
 void yyerror(const char*);
 %}
@@ -14,6 +34,10 @@ int intVal;
 char* id;
 char chrVal;
 char* strVal;
+
+Expr* exprPtr;
+List* listPtr;
+
 }
 
 %token ARRAY
@@ -77,6 +101,8 @@ char* strVal;
 %token COMMENT
 
 /* TODO: declare nonterminal types*/
+%type <exprPtr> expr;
+%type <listPtr> dotOrIndexPlus;
 
 %left BAR
 %left AMP
@@ -273,44 +299,50 @@ nullStmt: {}
         ;
 
 /* 3.3 Expressions */
-expr: expr BAR expr {}
-    | expr AMP expr {}
-    | expr EQ expr {}
-    | expr NEQ expr {}
-    | expr LEQ expr {}
-    | expr GEQ expr {}
-    | expr LT expr {}
-    | expr GT expr {}
-    | expr ADD expr {}
-    | expr SUB expr {}
-    | expr MULT expr {}
-    | expr DIV expr {}
-    | expr MOD expr {}
-    | NOT expr {}
-    | SUB expr %prec UNARYMINUS {}
-    | L_PAREN expr R_PAREN {}
+expr: expr BAR expr {$$ = BoolBinOpExpr::binOp<Bar>($1, $3);}
+    | expr AMP expr {$$ = BoolBinOpExpr::binOp<Amp>($1, $3);}
+    | expr EQ expr {$$ = CmprBinOpExpr::binOp<EQ>($1, $3);}
+    | expr NEQ expr {$$ = CmprBinOpExpr::binOp<NEQ>($1, $3);}
+    | expr LEQ expr {$$ = CmprBinOpExpr::binOp<LEQ>($1, $3);}
+    | expr GEQ expr {$$ = CmprBinOpExpr::binOp<GEQ>($1, $3);}
+    | expr LT expr {$$ = CmprBinOpExpr::binOp<LT>($1, $3);}
+    | expr GT expr {$$ = CmprBinOpExpr::binOp<GT>($1, $3);}
+    | expr ADD expr {$$ = ArithOpExpr::binOp<Add>($1, $3);}
+    | expr SUB expr {$$ = ArithOpExpr::binOp<Sub>($1, $3);}
+    | expr MULT expr {$$ = ArithOpExpr::binOp<Mult>($1, $3);}
+    | expr DIV expr {$$ = ArithOpExpr::binOp<Div>($1, $3);}
+    | expr MOD expr {$$ = ArithOpExpr::binOp<Mod>($1, $3);}
+    | NOT expr {$$ = Not::op($2);}
+    | SUB expr %prec UNARYMINUS {$$ = UnaryMinus::op($2);}
+    | L_PAREN expr R_PAREN {$$ = $2;}
     | procCall {}
-    | CHR L_PAREN expr R_PAREN {}
-    | ORD L_PAREN expr R_PAREN {}
-    | PRED L_PAREN expr R_PAREN {}
-    | SUCC L_PAREN expr R_PAREN {}
-    | lVal {}
-    | INT_CONST {}
-    | CHR_CONST {}
-    | STR_CONST {}
-    | ID {}
+    | CHR L_PAREN expr R_PAREN {$$ = ChrFunc::op($3);}
+    | ORD L_PAREN expr R_PAREN {$$ = OrdFunc::op($3);}
+    | PRED L_PAREN expr R_PAREN {$$ = PredFunc::op($3);}
+    | SUCC L_PAREN expr R_PAREN {$$ = SuccFunc::op($3);}
+    | lVal {$$ = $1;}
+    | INT_CONST {$$ = new IntConst($1);}
+    | CHR_CONST {$$ = new ChrConst($1);}
+    | STR_CONST {$$ = new StrConst($1);}
+    | ID {$$ = new Ident($1);}
     ;
 
-lVal: ID dotOrIndexPlus {}
+lVal: ID dotOrIndexPlus {$$ = new LValue($1, $2);}
     ;
 
-dotOrIndexPlus: dotOrIndexPlus dotOrIndex {}
-              | dotOrIndex {}
+dotOrIndexPlus: dotOrIndexPlus dotOrIndex {$1->append($2); $$ = $1;}
+              | dotOrIndex {$$ = new DotOrIndexPlus($1);}
               ;
 
-dotOrIndex: PERIOD ID {}
-          | L_BRACK expr R_BRACK {}
+dotOrIndex: dot {$$ = $1;}
+          | index {$$ = $1;}
           ;
+
+dot: PERIOD ID {$$ = new DotExt($2);}
+   ;
+
+index: L_BRACK expr R_BRACK {$$ = new IndexExt($2);}
+     ;
 %%
 
 void yyerror(const char* err) {

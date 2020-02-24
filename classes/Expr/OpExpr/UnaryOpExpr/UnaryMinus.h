@@ -7,9 +7,8 @@
 
 #include "../OpExpr.h"
 struct UnaryMinus: OpExpr {
-    const Expr* a;
-
     UnaryMinus(Expr*);
+    static Expr* op(Expr*);
     static int op(int);
     std::string toString() const override;
 };

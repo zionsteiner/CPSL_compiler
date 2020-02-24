@@ -12,7 +12,7 @@
 struct IdList: List {
     std::vector<Ident*> list;
 
-    IdList();
+    explicit IdList(Ident*);
     void append(Ident*);
     std::string toString() const override;
 };

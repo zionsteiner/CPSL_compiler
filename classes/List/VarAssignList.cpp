@@ -4,7 +4,9 @@
 
 #include "VarAssignList.h"
 
-VarAssignList::VarAssignList() {}
+VarAssignList::VarAssignList(VarAssign* varAssn) {
+    list.push_back(varAssn);
+}
 void VarAssignList::append(VarAssign* varAssn) {
     list.push_back(varAssn);
 }

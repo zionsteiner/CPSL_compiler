@@ -6,7 +6,9 @@
 #include <iostream>
 #include "IdList.h"
 
-IdList::IdList() = default;
+IdList::IdList(Ident* id) {
+    list.push_back(id)
+}
 
 void IdList::append(Ident* id) {
     list.push_back(id);

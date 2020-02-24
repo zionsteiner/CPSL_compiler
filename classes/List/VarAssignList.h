@@ -11,7 +11,7 @@
 struct VarAssignList: List {
     std::vector<VarAssign*> list;
 
-    VarAssignList();
+    VarAssignList(VarAssign*);
     void append(VarAssign*);
     std::string toString() const;
 };

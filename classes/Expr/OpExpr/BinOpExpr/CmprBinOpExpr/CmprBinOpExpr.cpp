@@ -10,8 +10,8 @@ CmprBinOpExpr::CmprBinOpExpr(Expr* a, Expr* b): BinOpExpr(a, b) {}
 template<typename T>
 Expr* CmprBinOpExpr::binOp(Expr* a, Expr* b) {
     if (a->isCompVal() && b->isCompVal()) {
-        BoolConst* a = dynamic_cast<BoolConst*> a;
-        BoolConst* b = dynamic_cast<BoolConst*> b;
+        auto a = dynamic_cast<BoolConst*> a;
+        auto b = dynamic_cast<BoolConst*> b;
         auto val = T::binOp(a->value, b->value);
         delete a;
         delete b;
