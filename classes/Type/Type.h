@@ -7,6 +7,7 @@
 
 
 struct Type {
+    virtual int size();
     virtual std::string toString() const;
 };
 

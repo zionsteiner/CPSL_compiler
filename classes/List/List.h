@@ -7,7 +7,6 @@
 
 
 struct List {
-    virtual void append();
     virtual std::string toString() const;
 };
 

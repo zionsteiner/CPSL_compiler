@@ -22,6 +22,11 @@
 #include "classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/GT.h"
 #include "classes/Expr/OpExpr/UnaryOpExpr/Not.h"
 #include "classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.h"
+#include "classes/Expr/ProcCall.h"
+#include "classes/Stmt/Stmt.h"
+#include "classes/Stmt/WriteStmt.h"
+#include "classes/Stmt/ReadStmt.h"
+#include "classes/Stmt/ReturnStmt.h"
 
 extern int yylex();
 void yyerror(const char*);
@@ -37,6 +42,7 @@ char* strVal;
 
 Expr* exprPtr;
 List* listPtr;
+ProcCall* procCallPtr;
 
 }
 
@@ -102,7 +108,9 @@ List* listPtr;
 
 /* TODO: declare nonterminal types*/
 %type <exprPtr> expr;
+%type <listPtr> exprPlus;
 %type <listPtr> dotOrIndexPlus;
+%type <procCallPtr> procCallPtr;
 
 %left BAR
 %left AMP
@@ -270,32 +278,32 @@ toOrDownto: TO {}
 stopStmt: STOP {}
         ;
 
-returnStmt: RETURN expr {}
-          | RETURN {}
+returnStmt: RETURN expr {$$ = new ReturnStmt($2);}
+          | RETURN {$$ = new ReturnStmt(nullptr);}
           ;
 
-readStmt: READ L_PAREN lValPlus R_PAREN {}
+readStmt: READ L_PAREN lValPlus R_PAREN {$$ = new ReadStmt($3);}
         ;
 
-lValPlus: lValPlus COMMA lVal {}
-        | lVal {}
+lValPlus: lValPlus COMMA lVal {$1->append($3); $$ = $1;}
+        | lVal {$$ = new lValList($1);}
         ;
 
-writeStmt: WRITE L_PAREN exprPlus R_PAREN {}
+writeStmt: WRITE L_PAREN exprPlus R_PAREN {$$ = new WriteStmt($3);}
          ;
 
-exprPlus: exprPlus COMMA expr {}
-        | expr {}
+exprPlus: exprPlus COMMA expr {$1->append($3); $$ = $1;}
+        | expr {$$ = new ExprList<Expr*>($1);}
         ;
 
-procCall: ID L_PAREN exprPlusOpt R_PAREN {}
+procCall: ID L_PAREN exprPlusOpt R_PAREN {$$ = new ProcCall($1, $3);}
         ;
 
-exprPlusOpt: exprPlus {}
-           | {}
+exprPlusOpt: exprPlus {$$ = $1;}
+           | {$$ = nullptr;}
            ;
 
-nullStmt: {}
+nullStmt: {$$ = nullptr;}
         ;
 
 /* 3.3 Expressions */
@@ -318,7 +326,8 @@ expr: expr BAR expr {$$ = BoolBinOpExpr::binOp<Bar>($1, $3);}
     | procCall {}
     | CHR L_PAREN expr R_PAREN {$$ = ChrFunc::op($3);}
     | ORD L_PAREN expr R_PAREN {$$ = OrdFunc::op($3);}
-    | PRED L_PAREN expr R_PAREN {$$ = PredFunc::op($3);}
+    | PRED L_PAREN expr R_PAREN {$$
+    = PredFunc::op($3);}
     | SUCC L_PAREN expr R_PAREN {$$ = SuccFunc::op($3);}
     | lVal {$$ = $1;}
     | INT_CONST {$$ = new IntConst($1);}
