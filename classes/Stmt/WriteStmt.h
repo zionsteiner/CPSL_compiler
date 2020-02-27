@@ -11,7 +11,7 @@
 struct WriteStmt: Stmt {
     const ExprList<Expr*>* args;
 
-    WriteStmt(ExprList<Expr *> *args);
+    explicit WriteStmt(ExprList<Expr *> *args);
     std::string toString() const override;
 };
 

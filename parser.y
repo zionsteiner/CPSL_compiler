@@ -2,7 +2,7 @@
 #include <iostream>
 #include <map>
 #include <vector>
-
+//TODO: is there a better way to include these?
 #include "classes/Expr/Expr.h"
 #include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.h"
 #include "classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.h"
@@ -27,6 +27,17 @@
 #include "classes/Stmt/WriteStmt.h"
 #include "classes/Stmt/ReadStmt.h"
 #include "classes/Stmt/ReturnStmt.h"
+#include "classes/Stmt/StopStmt.h"
+#include "classes/Stmt/ForStmt.h"
+#include "classes/Stmt/RepeatStmt.h"
+#include "classes/Stmt/WhileStmt.h"
+#include "classes/Stmt/ElseStmt.h"
+#include "classes/Stmt/ElseIfStmt.h"
+#include "classes/Stmt/IfStmt.h"
+#include "classes/List/List.h"
+#include "classes/List/StmtList.h"
+#include "classes/List/ElseIfStmtList.h"
+#include "classes/List/ExprList.h"
 
 extern int yylex();
 void yyerror(const char*);
@@ -36,14 +47,13 @@ void yyerror(const char*);
 %union
 {
 int intVal;
-char* id;
+const char* id;
 char chrVal;
-char* strVal;
+const char* strVal;
 
 Expr* exprPtr;
 List* listPtr;
-ProcCall* procCallPtr;
-
+Stmt* stmtPtr;
 }
 
 %token ARRAY
@@ -107,10 +117,7 @@ ProcCall* procCallPtr;
 %token COMMENT
 
 /* TODO: declare nonterminal types*/
-%type <exprPtr> expr;
-%type <listPtr> exprPlus;
-%type <listPtr> dotOrIndexPlus;
-%type <procCallPtr> procCallPtr;
+
 
 %left BAR
 %left AMP
@@ -228,7 +235,7 @@ varAssign: idList COLON type SEMICOLON {}
          ;
 
 /* 3.2 CPSL Statements */
-stmts: stmts COLON stmt {}
+stmts: stmts SEMICOLON stmt {}
      | stmt {}
      ;
 
@@ -248,34 +255,35 @@ stmt: assnStmt {}
 assnStmt: lVal ASSIGN expr {}
         ;
 
-ifStmt: IF expr THEN stmts elseIfStmtStar elseStmtOpt END {}
+ifStmt: IF expr THEN stmts elseIfStmtsOpt elseStmtOpt END {$$ = new IfStmt($2, $4, $5, $6);}
       ;
 
-elseIfStmtStar: elseIfStmtStar elseIfStmt {}
-              | {}
+elseIfStmtsOpt: elseIfStmts {$$ = $1;}
+              | {$$ = nullptr;}
               ;
 
-elseIfStmt: ELSEIF expr THEN stmts {}
-          ;
-
-elseStmtOpt: ELSE stmts {}
-           | {}
+elseIfStmts: elseIfStmts elseIfStmt {$1->append($1); $$ = $1;}
+           | elseIfStmt {$$ = new ElseIfStmtList($1);}
            ;
 
-whileStmt: WHILE expr DO stmts END {}
+elseIfStmt: ELSEIF expr THEN stmts {$$ = new ElseIfStmt($2, $4);}
+          ;
+
+elseStmtOpt: ELSE stmts {$$ = new ElseStmt($2);}
+           | {$$ = nullptr;}
+           ;
+
+whileStmt: WHILE expr DO stmts END {$$ = new WhileStmt($2, $4);}
          ;
 
-repeatStmt: REPEAT stmts UNTIL expr {}
+repeatStmt: REPEAT stmts UNTIL expr {$$ = new RepeatStmt($2, $4);}
           ;
 
-forStmt: FOR ID ASSIGN expr toOrDownto expr DO stmts END {}
+forStmt: FOR ID ASSIGN expr TO expr DO stmts END {$$ = new ForStmt($2, $4, "to", $6, $8);}
+       | FOR ID ASSIGN expr DOWNTO expr DO stmts END {$$ = new ForStmt($2, $4, "downto", $6, $8);}
        ;
 
-toOrDownto: TO {}
-          | DOWNTO {}
-          ;
-
-stopStmt: STOP {}
+stopStmt: STOP {$$ = new Stop();}
         ;
 
 returnStmt: RETURN expr {$$ = new ReturnStmt($2);}

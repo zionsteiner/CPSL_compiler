@@ -4,10 +4,10 @@
 
 #include <iostream>
 #include <sstream>
-#include "BoolConst.h"
+#include "BoolConstExprExpr.h"
 
-BoolConst::BoolConst(bool value): value(value) {}
-std::string BoolConst::toString() const {
+BoolConstExpr::BoolConstExpr(bool value): value(value) {}
+std::string BoolConstExpr::toString() const {
     std::stringstream buffer;
     buffer << value;
 

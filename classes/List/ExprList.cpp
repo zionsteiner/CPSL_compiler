@@ -23,4 +23,6 @@ std::string ExprList<T>::toString() const {
             retStr += ", " + (*expr)->toString();
         }
     }
+
+    return retStr;
 }
