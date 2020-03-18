@@ -14,6 +14,8 @@ void yyerror(const char*);
     int intVal;
     char chrVal;
     const char* strVal;
+    bool boolVal;
+    null nullVal;
 
     /* Nonterminal types */
     Program* programPtr;
@@ -34,7 +36,7 @@ void yyerror(const char*);
     SimpleType* simpleTypePtr;
     RecordType* recordTypePtr;
     ArrayType* arrayTypePtr;
-    std::vector<Ident*>* idList;
+    std::vector<Ident*>* idListPtr;
     VarDecl* varDeclPtr;
     VarAssign* varAssignPtr;
     std::vector<VarAssign*>* varAssignListPtr;
@@ -124,7 +126,62 @@ void yyerror(const char*);
 %token COMMENT
 
 /* TODO: declare nonterminal types*/
-%type <exprPtr> expr;
+%type <programPtr> Program
+%type <constDeclPtr> ConstDeclOpt
+%type <constDeclPtr> ConstDecl
+%type <constAssignListPtr> ConstAssignPlus
+%type <constAssignPtr> ConstAssign
+%type <callableListPtr> procOrFuncStar
+%type <procPtr> procDecl
+%type <funcPtr> funcDecl
+%type <paramsPtr> paramsOpt
+%type <paramsPtr> params
+%type <paramPtr> param
+%type <boolVal> varOrRefOpt
+%type <bodyPtr> body
+%type <blockPtr> block
+%type <typeDecl> typeDeclOpt
+%type <typeDecl> typeDecl
+%type <typeAssignListPtr> typeAssignPlus
+%type <typeAssignPtr> typeAssign
+%type <typePtr> type
+%type <simpleTypePtr> simpleType
+%type <recordTypePtr> recordType
+%type <varAssignListPtr> varAssignStar
+%type <arrayTypePtr> arrayType
+%type <idListPtr> idList
+%type <varDeclPtr> varDeclOpt
+%type <varDecl> varDecl
+%type <varAssignListPtr> varAssignPlus
+%type <varAssignPtr> varAssign
+%type <stmtListPtr> stmts
+%type <stmtPtr> stmt
+%type <assnStmtPtr> assnStmt
+%type <ifStmtPtr> ifStmt
+%type <elseIfStmtPtr> elseIfStmtOpt
+%type <elseIfStmtListPtr> elseIfStmts
+%type <elseIfStmtPtr> elseIfStmt
+%type <elseStmtPtr> elseStmtOpt
+%type <whileStmtPtr> whileStmt
+%type <repeatStmtPtr> repeatStmt
+%type <forStmtPtr> forStmt
+%type <stopStmtPtr> stopStmt
+%type <returnStmtPtr> returnStmt
+%type <readStmtPtr> readStmt
+%type <lValListPtr> lValPlus
+%type <writeStmtPtr> writeStmt
+%type <exprListPtr> exprPlus
+%type <procCallPtr> procCall
+%type <exprListPtr> exprPlusOpt
+%type <nullVal> nullStmt
+%type <exprPtr> expr
+%type <lValPtr> lVal
+%type <extListPtr> dotOrIndexPlusOpt
+%type <extListPtr> dotOrIndexPlus
+%type <extPtr> dotOrIndex
+%type <extPtr> dot
+%type <extPtr> index
+
 
 %left BAR
 %left AMP
@@ -181,7 +238,7 @@ param: varOrRefOpt idList COLON type {$$ = new Param($1, $2, $4);}
 
 varOrRefOpt: VAR {$$ = true;}
            | REF {$$ = false;}
-           | {$$ = nullptr;}
+           | {$$ = true;}
            ;
 
 body: constDeclOpt typeDeclOpt varDeclOpt block {$$ = new Body($1, $2, $3, $4);}
