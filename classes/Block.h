@@ -1,0 +1,17 @@
+//
+// Created by zion on 2/28/20.
+//
+
+#ifndef CPSL_COMPILER_BLOCK_H
+#define CPSL_COMPILER_BLOCK_H
+
+
+struct Block {
+    const std::vector<Stmt*>* stmts;
+
+    explicit Block(std::vector<Stmt*>*);
+    std::string toString() const;
+};
+
+
+#endif //CPSL_COMPILER_BLOCK_H

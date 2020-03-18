@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/zion/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/zion/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6015.37/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/zion/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/zion/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6015.37/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/zion/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/zion/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6015.37/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/zion/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/zion/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6015.37/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -123,6 +123,33 @@ CPSL_compiler/fast:
 	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/build
 .PHONY : CPSL_compiler/fast
 
+classes/Program.o: classes/Program.cpp.o
+
+.PHONY : classes/Program.o
+
+# target to build an object file
+classes/Program.cpp.o:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.o
+.PHONY : classes/Program.cpp.o
+
+classes/Program.i: classes/Program.cpp.i
+
+.PHONY : classes/Program.i
+
+# target to preprocess a source file
+classes/Program.cpp.i:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.i
+.PHONY : classes/Program.cpp.i
+
+classes/Program.s: classes/Program.cpp.s
+
+.PHONY : classes/Program.s
+
+# target to generate assembly for a file
+classes/Program.cpp.s:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.s
+.PHONY : classes/Program.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -150,6 +177,60 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+parser.o: parser.cpp.o
+
+.PHONY : parser.o
+
+# target to build an object file
+parser.cpp.o:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/parser.cpp.o
+.PHONY : parser.cpp.o
+
+parser.i: parser.cpp.i
+
+.PHONY : parser.i
+
+# target to preprocess a source file
+parser.cpp.i:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/parser.cpp.i
+.PHONY : parser.cpp.i
+
+parser.s: parser.cpp.s
+
+.PHONY : parser.s
+
+# target to generate assembly for a file
+parser.cpp.s:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/parser.cpp.s
+.PHONY : parser.cpp.s
+
+scanner.o: scanner.cpp.o
+
+.PHONY : scanner.o
+
+# target to build an object file
+scanner.cpp.o:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/scanner.cpp.o
+.PHONY : scanner.cpp.o
+
+scanner.i: scanner.cpp.i
+
+.PHONY : scanner.i
+
+# target to preprocess a source file
+scanner.cpp.i:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/scanner.cpp.i
+.PHONY : scanner.cpp.i
+
+scanner.s: scanner.cpp.s
+
+.PHONY : scanner.s
+
+# target to generate assembly for a file
+scanner.cpp.s:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/scanner.cpp.s
+.PHONY : scanner.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +240,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... CPSL_compiler"
 	@echo "... edit_cache"
+	@echo "... classes/Program.o"
+	@echo "... classes/Program.i"
+	@echo "... classes/Program.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... parser.o"
+	@echo "... parser.i"
+	@echo "... parser.s"
+	@echo "... scanner.o"
+	@echo "... scanner.i"
+	@echo "... scanner.s"
 .PHONY : help
 
 

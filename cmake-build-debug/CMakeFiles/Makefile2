@@ -35,10 +35,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/zion/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/zion/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6015.37/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/zion/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/zion/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6015.37/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -74,12 +74,12 @@ preinstall:
 CMakeFiles/CPSL_compiler.dir/all:
 	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/depend
 	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target CPSL_compiler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target CPSL_compiler"
 .PHONY : CMakeFiles/CPSL_compiler.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/CPSL_compiler.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CPSL_compiler.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/CPSL_compiler.dir/rule

@@ -9,9 +9,9 @@
 #include "Stmt.h"
 
 struct WriteStmt: Stmt {
-    const ExprList<Expr*>* args;
+    const std::vector<Expr*>* args;
 
-    explicit WriteStmt(ExprList<Expr *> *args);
+    explicit WriteStmt(std::vector<Expr*>* args);
     std::string toString() const override;
 };
 

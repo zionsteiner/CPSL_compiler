@@ -2,12 +2,12 @@
 // Created by zion on 2/25/20.
 //
 
-#ifndef CPSL_COMPILER_STOP_H
-#define CPSL_COMPILER_STOP_H
+#ifndef CPSL_COMPILER_STOPSTMT_H
+#define CPSL_COMPILER_STOPSTMT_H
 
 #include "Stmt.h"
 
-struct Stop: Stmt {
+struct StopStmt: Stmt {
     std::string toString() const override;
 };
 

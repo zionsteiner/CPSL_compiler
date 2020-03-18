@@ -4,10 +4,20 @@
 
 #include "LValue.h"
 
-LValue::LValue(Ident* id, DotOrIndexPlus* exts): id(id), exts(exts) {}
+LValue::LValue(Ident* id, std::vector<Ext*>* exts): id(id), exts(exts) {}
 std::string LValue::toString() const {
-    return id->toString() + exts->toString();
+    std::string retStr;
+    retStr += id->toString();
+    if (exts != nullptr) {
+        for (auto ext = exts->begin(); ext != exts->end(); ++ext) {
+            retStr += (*ext)->toString();
+        }
+    }
+
+    return retStr;
 }
 bool LValue::isCompVal() {
     return false;
 }
+
+LValue::LValue(const std::vector<Ext *> *exts) : exts(exts) {}

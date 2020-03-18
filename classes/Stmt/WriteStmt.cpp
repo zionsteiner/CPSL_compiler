@@ -3,9 +3,15 @@
 //
 
 #include <Expr/Expr.h>
+#include <vector>
 #include "WriteStmt.h"
 
-WriteStmt::WriteStmt(ExprList<Expr*> *args) : args(args) {}
+WriteStmt::WriteStmt(std::vector<Expr*>* args) : args(args) {}
 std::string WriteStmt::toString() const {
-    return "write (" + args->toString() + ')';
+    std::string retStr = "write (" + (*args)[0]->toString();
+    for (auto arg = args->begin(); arg != args->end(); ++arg) {
+        retStr += ", " + (*arg)->toString();
+    }
+
+    return retStr;
 }

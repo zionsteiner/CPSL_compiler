@@ -9,12 +9,16 @@
 #include <List/DotOrIndexPlus.h>
 #include <Expr/Ident.h>
 #include "Expr/Expr.h"
+#include "Ext.h"
 
 struct LValue: Expr {
     const Ident* id;
-    const DotOrIndexPlus* exts;
+    const std::vector<Ext*>* exts;
 
-    LValue(Ident*, DotOrIndexPlus*);
+    LValue(Ident*, Ext*);
+
+    LValue(const std::vector<Ext*> *exts);
+
     std::string toString() const override;
     bool isCompVal() override;
 };

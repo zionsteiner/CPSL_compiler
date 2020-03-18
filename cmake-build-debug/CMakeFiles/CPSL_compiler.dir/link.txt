@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/CPSL_compiler.dir/main.cpp.o  -o CPSL_compiler 
+/usr/bin/c++   -g3 -std=c++14 -g  -rdynamic CMakeFiles/CPSL_compiler.dir/main.cpp.o CMakeFiles/CPSL_compiler.dir/parser.cpp.o CMakeFiles/CPSL_compiler.dir/scanner.cpp.o CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.o  -o CPSL_compiler 

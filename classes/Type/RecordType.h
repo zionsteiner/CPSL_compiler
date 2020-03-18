@@ -8,6 +8,10 @@
 #include "Type.h"
 
 struct RecordType: Type {
+    const std::vector<VarAssign>* keys;
+
+    RecordType(std::vector<VarAssign>*);
+    std::string toString() const override;
 };
 
 

@@ -7,7 +7,8 @@
 
 
 struct Type {
-    virtual int size();
+    // ToDo: how to define this for different types?
+    // virtual int size();
     virtual std::string toString() const;
 };
 

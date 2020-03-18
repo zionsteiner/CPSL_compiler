@@ -34,6 +34,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/zion/Documents/cs5300/CPSL_compiler/classes"/>
+					<Add directory="/home/zion/Documents/cs5300/CPSL_compiler"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -57,6 +59,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/zion/Documents/cs5300/CPSL_compiler/classes"/>
+					<Add directory="/home/zion/Documents/cs5300/CPSL_compiler"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -84,6 +88,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Program.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/parser.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/parser.cpp.rule">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/parser.hpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/scanner.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/scanner.cpp.rule">
+			<Option target="CPSL_compiler"/>
+		</Unit>
 		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/main.cpp">
 			<Option target="CPSL_compiler"/>
 		</Unit>

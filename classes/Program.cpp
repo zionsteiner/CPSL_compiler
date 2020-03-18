@@ -1,0 +1,24 @@
+//
+// Created by zion on 3/9/20.
+//
+
+#include "Program.h"
+
+Program::Program(ConstDecl* constDecl, TypeDecl* typeDecl, VarDecl* varDecl, std::vector<Callable*>* callableList, Block* block)
+: constDecl(constDecl), typeDecl(typeDecl), callableList(callableList), block(block)
+{}
+
+std::string Program::toString() const {
+    std::string retStr;
+
+    if (constDecl != nullptr) {retStr += constDecl->toString() + '\n';}
+    if (typeDecl != nullptr) {retStr += typeDecl->toString() + '\n';}
+    if (varDecl != nullptr) {retStr += varDecl->toString() + '\n';}
+    for (auto callable = callableList->begin(); callable != callableList->end(); ++callable) {
+        retStr += (*callable)->toString() + '\n';
+    }
+    retStr += block->toString() + '\n';
+    retStr += '.';
+
+    return retStr;
+}

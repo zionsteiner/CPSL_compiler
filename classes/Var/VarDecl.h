@@ -9,9 +9,9 @@
 #include <classes/List/VarAssignList.h>
 
 struct VarDecl {
-    const VarAssignList* list;
+    const std::vector<VarAssign*>* varAssignList;
 
-    explicit VarDecl(VarAssignList*);
+    explicit VarDecl(std::vector<VarAssign*>*);
     std::string toString() const;
 };
 

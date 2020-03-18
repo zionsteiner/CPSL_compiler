@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/zion/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/zion/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6015.37/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/zion/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/zion/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6015.37/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -57,9 +57,20 @@ include CMakeFiles/CPSL_compiler.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/CPSL_compiler.dir/flags.make
 
+parser.cpp: ../parser.y
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BISON][Parser] Building parser with bison 3.0.4"
+	cd /home/zion/Documents/cs5300/CPSL_compiler && /usr/bin/bison -d -o /home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/parser.cpp parser.y
+
+parser.hpp: parser.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate parser.hpp
+
+scanner.cpp: ../scanner.l
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "[FLEX][Scanner] Building scanner with flex 2.6.4"
+	cd /home/zion/Documents/cs5300/CPSL_compiler && /usr/bin/flex -o/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/scanner.cpp scanner.l
+
 CMakeFiles/CPSL_compiler.dir/main.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
 CMakeFiles/CPSL_compiler.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CPSL_compiler.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CPSL_compiler.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/main.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/main.cpp
 
 CMakeFiles/CPSL_compiler.dir/main.cpp.i: cmake_force
@@ -70,17 +81,63 @@ CMakeFiles/CPSL_compiler.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/main.cpp -o CMakeFiles/CPSL_compiler.dir/main.cpp.s
 
+CMakeFiles/CPSL_compiler.dir/parser.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/parser.cpp.o: parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CPSL_compiler.dir/parser.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/parser.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/parser.cpp
+
+CMakeFiles/CPSL_compiler.dir/parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/parser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/parser.cpp > CMakeFiles/CPSL_compiler.dir/parser.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/parser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/parser.cpp -o CMakeFiles/CPSL_compiler.dir/parser.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/scanner.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/scanner.cpp.o: scanner.cpp
+CMakeFiles/CPSL_compiler.dir/scanner.cpp.o: parser.hpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CPSL_compiler.dir/scanner.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/scanner.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/scanner.cpp
+
+CMakeFiles/CPSL_compiler.dir/scanner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/scanner.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/scanner.cpp > CMakeFiles/CPSL_compiler.dir/scanner.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/scanner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/scanner.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/scanner.cpp -o CMakeFiles/CPSL_compiler.dir/scanner.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.o: ../classes/Program.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Program.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Program.cpp > CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Program.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.s
+
 # Object files for target CPSL_compiler
 CPSL_compiler_OBJECTS = \
-"CMakeFiles/CPSL_compiler.dir/main.cpp.o"
+"CMakeFiles/CPSL_compiler.dir/main.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/parser.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/scanner.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.o"
 
 # External object files for target CPSL_compiler
 CPSL_compiler_EXTERNAL_OBJECTS =
 
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/main.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/parser.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/scanner.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.o
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/build.make
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable CPSL_compiler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable CPSL_compiler"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CPSL_compiler.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -92,7 +149,9 @@ CMakeFiles/CPSL_compiler.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/CPSL_compiler.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/CPSL_compiler.dir/clean
 
-CMakeFiles/CPSL_compiler.dir/depend:
+CMakeFiles/CPSL_compiler.dir/depend: parser.cpp
+CMakeFiles/CPSL_compiler.dir/depend: parser.hpp
+CMakeFiles/CPSL_compiler.dir/depend: scanner.cpp
 	cd /home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zion/Documents/cs5300/CPSL_compiler /home/zion/Documents/cs5300/CPSL_compiler /home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug /home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug /home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/CPSL_compiler.dir/depend
 

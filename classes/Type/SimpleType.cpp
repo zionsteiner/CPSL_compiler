@@ -3,3 +3,7 @@
 //
 
 #include "SimpleType.h"
+
+SimpleType::SimpleType(Ident* id): id(id) {}
+
+std::string toString() {return id->toString();}

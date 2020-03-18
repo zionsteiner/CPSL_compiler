@@ -8,7 +8,10 @@
 #include "Type.h"
 
 struct SimpleType: Type {
+    const Ident* id;
 
+    SimpleType(Ident*);
+    std::string toString() const override;
 };
 
 
