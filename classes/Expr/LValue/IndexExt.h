@@ -5,14 +5,14 @@
 #ifndef CPSL_COMPILER_INDEXEXT_H
 #define CPSL_COMPILER_INDEXEXT_H
 
-#include <Expr/Expr.h>
 #include "Ext.h"
+#include "../Expr.h"
 
 struct IndexExt: Ext {
     const Expr* a;
 
     explicit IndexExt(Expr*);
-    std::string IndexExt::toString() const override;
+    std::string toString() const override;
 };
 
 

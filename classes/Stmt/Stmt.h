@@ -9,7 +9,7 @@
 #include <string>
 
 struct Stmt {
-    virtual std::string toString() const;
+    virtual std::string toString() const = 0;
 };
 
 

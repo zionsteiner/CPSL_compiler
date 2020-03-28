@@ -6,10 +6,12 @@
 #define CPSL_COMPILER_VARASSIGN_H
 
 #include <string>
-#include "classes/Type/Type.h"
+#include <vector>
+#include "../Type/Type.h"
+#include "../Expr/Ident.h"
 
 struct VarAssign {
-    const std::vector<Ident*> idList;
+    const std::vector<Ident*>* idList;
     const Type* type;
 
     VarAssign(std::vector<Ident*>*, Type*);

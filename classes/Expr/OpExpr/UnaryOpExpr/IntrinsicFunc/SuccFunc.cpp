@@ -2,22 +2,29 @@
 // Created by zion on 2/23/20.
 //
 
-#include <Expr/Const/IntConst.h>
-#include <Expr/Const/BoolConst.h>
+
 #include "SuccFunc.h"
 
-SuccFunc::SuccFunc(Expr* a): UnaryOpExpr(a) {}
-Expr* SuccFunc::op(BoolConst* a) {
-    auto val = SuccFunc::op(a->value);
-    delete a;
+SuccFunc::SuccFunc(Expr* expr): UnaryOpExpr(expr) {}
 
-    return new BoolConst(val);
-}
-Expr* SuccFunc::op(IntConst* a) {
-    auto val = SuccFunc::op(a->value);
-    delete a;
+Expr* SuccFunc::op(Expr* expr) {
+    auto expr_new = dynamic_cast<BoolConstExpr*>(expr);
+    if (expr_new == nullptr) {
+        auto expr_new = dynamic_cast<IntConstExpr*>(expr);
+        if (expr_new == nullptr) {
+             throw std::invalid_argument("Argument must be of type 'BoolConstExpr' or 'IntConstExpr'");
+        } else {
+            auto val = SuccFunc::op(expr_new->value);
+            delete expr_new;
 
-    return new IntConst(val);
+            return new IntConstExpr(val);
+        }
+    } else {
+        auto val = SuccFunc::op(expr_new->value);
+        delete expr_new;
+
+        return new BoolConstExpr(val);
+    }
 }
 
 bool SuccFunc::op(bool a) {
@@ -29,5 +36,5 @@ int SuccFunc::op(int a) {
 }
 
 std::string SuccFunc::toString() const {
-    return "succ(" + a->toString() + ')';
+    return "succ(" + expr->toString() + ')';
 }

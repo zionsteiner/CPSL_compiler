@@ -10,12 +10,12 @@ Procedure::Procedure(Ident* id, std::vector<Param*>* params)
 {}
 
 // Procedure definition
-Procedure::Procedure(Ident* id, std::vector<Param*>* params, Type* type)
+Procedure::Procedure(Ident* id, std::vector<Param*>* params, Body* body)
         : id(id), params(params), forward(false), body(body)
 {}
 
 std::string Procedure::toString() const {
-    std::string retStr += 'Procedure';
+    std::string retStr = "Procedure";
 
     retStr = id->toString() + '(';
     if (params != nullptr) {
@@ -25,7 +25,7 @@ std::string Procedure::toString() const {
     }
     retStr += ')';
     if (forward) {
-        retStr += ' forward';
+        retStr += " forward";
     } else {
         retStr += ' ' + body->toString();
     }

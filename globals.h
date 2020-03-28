@@ -6,5 +6,6 @@
 #define CPSL_COMPILER_GLOBALS_H
 
 extern int line;
+extern int token;
 
 #endif //CPSL_COMPILER_GLOBALS_H

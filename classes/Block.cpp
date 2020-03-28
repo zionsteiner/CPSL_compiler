@@ -5,15 +5,15 @@
 #include "Block.h"
 
 Block::Block(std::vector<Stmt*>* stmts): stmts(stmts) {}
-int Block::toString() const {
-    std::string retStr = "begin ";
-    retStr += (*stmts)[0];
+std::string Block::toString() const {
+    std::string retStr = "BEGIN";
+    retStr += "\n\t" + (*stmts)[0]->toString();
 
     if (stmts->size() > 1) {
-        for (auto stmt = stmts.begin() + 1; stmt != stmts.end(); ++stmt) {
-            retStr += "; " + (*stmt)->toString();
+        for (auto stmt = stmts->begin() + 1; stmt != stmts->end(); ++stmt) {
+            retStr += ";\n\t" + (*stmt)->toString();
         }
-        retStr += " end";
+        retStr += "\nEND";
     }
 
     return retStr;

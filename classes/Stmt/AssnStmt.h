@@ -5,9 +5,8 @@
 #ifndef CPSL_COMPILER_ASSNSTMT_H
 #define CPSL_COMPILER_ASSNSTMT_H
 
-#include <Expr/Expr.h>
-#include <Expr/LValue/LValue.h>
 #include "Stmt.h"
+#include "../Expr/LValue/LValue.h"
 
 struct AssnStmt: Stmt {
     const LValue* lVal;

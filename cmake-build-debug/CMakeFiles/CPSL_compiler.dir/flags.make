@@ -6,5 +6,5 @@ CXX_FLAGS =  -g3 -std=c++14 -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/zion/Documents/cs5300/CPSL_compiler/classes -I/home/zion/Documents/cs5300/CPSL_compiler 
+CXX_INCLUDES = -I/home/zion/Documents/cs5300/CPSL_compiler 
 

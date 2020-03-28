@@ -5,6 +5,9 @@
 #ifndef CPSL_COMPILER_PARAM_H
 #define CPSL_COMPILER_PARAM_H
 
+#include <vector>
+#include "Expr/Ident.h"
+#include "Type/Type.h"
 
 struct Param {
     const bool isPassByRef;

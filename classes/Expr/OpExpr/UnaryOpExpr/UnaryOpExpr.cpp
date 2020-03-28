@@ -4,7 +4,7 @@
 
 #include "UnaryOpExpr.h"
 
-UnaryOpExpr::UnaryOpExpr(Expr* a): a(a) {}
+UnaryOpExpr::UnaryOpExpr(Expr* expr): expr(expr) {}
 bool UnaryOpExpr::isCompVal() {
     return false;
 }

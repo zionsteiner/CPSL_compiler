@@ -5,15 +5,15 @@
 #ifndef CPSL_COMPILER_REPEATSTMT_H
 #define CPSL_COMPILER_REPEATSTMT_H
 
-#include <List/StmtList.h>
-#include <Expr/Expr.h>
+#include <vector>
 #include "Stmt.h"
+#include "../Expr/Expr.h"
 
 struct RepeatStmt: Stmt {
-    const StmtList* stmts;
+    const std::vector<Stmt*>* stmts;
     const Expr* expr;
 
-    RepeatStmt(StmtList*, Expr*);
+    RepeatStmt(std::vector<Stmt*>*, Expr*);
     std::string toString() const override;
 };
 

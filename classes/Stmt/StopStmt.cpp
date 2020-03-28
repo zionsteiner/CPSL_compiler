@@ -4,6 +4,4 @@
 
 #include "StopStmt.h"
 
-std::string StopStmt::toString() const {
-    return "stop";
-}
+std::string StopStmt::toString() const {return "stop";}

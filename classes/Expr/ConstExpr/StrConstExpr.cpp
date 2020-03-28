@@ -5,8 +5,8 @@
 #include <iostream>
 #include "StrConstExpr.h"
 
-StrConst::StrConst(char* value): value(value) {}
+StrConstExpr::StrConstExpr(const char* value): value(value) {}
 
-std::string StrConst::toString() const {
+std::string StrConstExpr::toString() const {
     return value;
 }

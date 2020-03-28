@@ -4,8 +4,13 @@
 
 #include "RepeatStmt.h"
 
-RepeatStmt::RepeatStmt(StmtList* stmts, Expr* expr): stmts(stmts), expr(expr) {}
+RepeatStmt::RepeatStmt(std::vector<Stmt*>* stmts, Expr* expr): stmts(stmts), expr(expr) {}
 
 std::string RepeatStmt::toString() const {
-    return "repeat " + stmts->toString() + "until" + expr->toString();
+    std::string retStr = "repeat";
+    for (auto stmt = stmts->begin(); stmt != stmts->end(); ++stmt) {
+        retStr += ' ' + (*stmt)->toString();
+    }
+    retStr += " until" + expr->toString();
+    return retStr;
 }

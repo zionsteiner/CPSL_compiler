@@ -2,32 +2,41 @@
 // Created by zion on 2/23/20.
 //
 
-#include <Expr/Const/IntConst.h>
-#include <Expr/Const/BoolConst.h>
+#include <stdexcept>
 #include "PredFunc.h"
 
-PredFunc::PredFunc(Expr* a): UnaryOpExpr(a) {}
-Expr* PredFunc::op(BoolConst* a) {
-    auto val = PredFunc::op(a->value);
-    delete a;
+PredFunc::PredFunc(Expr* expr): UnaryOpExpr(expr) {}
 
-    return new BoolConst(val);
+Expr* PredFunc::op(Expr* expr) {
+    auto expr_new = dynamic_cast<BoolConstExpr*>(expr);
+    if (expr_new == nullptr) {
+        auto expr_new = dynamic_cast<IntConstExpr*>(expr);
+        if (expr_new == nullptr) {
+            throw std::invalid_argument("Argument must be of type 'BoolConstExpr' or 'IntConstExpr'");
+        } else {
+            auto val = PredFunc::op(expr_new->value);
+            delete expr_new;
+
+            return new IntConstExpr(val);
+        }
+    } else {
+        auto val = PredFunc::op(expr_new->value);
+        delete expr_new;
+
+        return new BoolConstExpr(val);
+    }
 }
-Expr* PredFunc::op(IntConst* a) {
-    auto val = PredFunc::op(a->value);
-    delete a;
 
-    return new IntConst(val);
+
+
+bool PredFunc::op(bool val) {
+    return !val;
 }
 
-bool PredFunc::op(bool a) {
-    return !a;
-}
-
-int PredFunc::op(int a) {
-    return --a;
+int PredFunc::op(int val) {
+    return --val;
 }
 
 std::string PredFunc::toString() const {
-    return "pred(" + a->toString() + ')';
+    return "pred(" + expr->toString() + ')';
 }

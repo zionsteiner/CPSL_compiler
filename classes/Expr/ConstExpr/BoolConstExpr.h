@@ -8,7 +8,7 @@
 #include <string>
 #include "ConstExpr.h"
 
-struct BoolConstExpr: Const {
+struct BoolConstExpr: ConstExpr {
     const bool value;
 
     explicit BoolConstExpr(bool);

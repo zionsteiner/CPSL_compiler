@@ -6,13 +6,12 @@
 #define CPSL_COMPILER_READSTMT_H
 
 #include <string>
-#include <List/ExprList.h>
 #include "Stmt.h"
 
 struct ReadStmt: Stmt {
-    const ExprList<LValue*>* lValList;
+    const std::vector<LValue*>* lValList;
 
-    explicit ReadStmt(ExprList<LValue*>*);
+    explicit ReadStmt(std::vector<LValue*>*);
     std::string toString() const override;
 };
 

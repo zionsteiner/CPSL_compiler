@@ -6,21 +6,20 @@
 #include <sstream>
 
 #include "Not.h"
-#include "../../Const/BoolConst.h"
 
-Not::Not(Expr* a): UnaryOpExpr(a) {}
+Not::Not(Expr* expr): UnaryOpExpr(expr) {}
 Expr* Not::op(Expr* a) {
     if (a->isCompVal()) {
-        auto a = dynamic_cast<BoolConst*> (a);
-        auto val = Not::op(a->value);
-        delete a;
+        auto a_new = dynamic_cast<BoolConstExpr*> (a);
+        auto val = Not::op(a_new->value);
+        delete a_new;
 
-        return new BoolConst(val);
+        return new BoolConstExpr(val);
     } else {
         return new Not(a);
     }
 }
 bool Not::op(bool a) {return !a;}
 std::string Not::toString() const {
-    return '~' + a->toString();
+    return '~' + expr->toString();
 }

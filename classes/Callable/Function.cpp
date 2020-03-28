@@ -15,7 +15,7 @@ Function::Function(Ident* id, std::vector<Param*>* params, Type* type, Body* bod
 {}
 
 std::string Function::toString() const {
-    std::string retStr += 'function';
+    std::string retStr = "function";
 
     retStr = id->toString() + '(';
     if (params != nullptr) {
@@ -23,10 +23,10 @@ std::string Function::toString() const {
             retStr += ' ' + (*param)->toString();
         }
     }
-    retStr += '):';
+    retStr += "):";
     retStr += ' ' + type->toString();
     if (forward) {
-        retStr += ' forward';
+        retStr += " forward";
     } else {
         retStr += ' ' + body->toString();
     }

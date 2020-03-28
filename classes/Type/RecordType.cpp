@@ -4,8 +4,9 @@
 
 #include "RecordType.h"
 
-RecordType::RecordType(std::vector <VarAssign>* keys): keys(keys) {}
-std::string toString() {
+RecordType::RecordType(std::vector <VarAssign*>* keys): keys(keys) {}
+
+std::string RecordType::toString() const {
     std::string retStr = "record";
     for (auto key = keys->begin(); key != keys->end(); ++key) {
         retStr += ' ' + (*key)->toString();
@@ -14,3 +15,5 @@ std::string toString() {
 
     return retStr;
 }
+
+int RecordType::size() {return 0;}

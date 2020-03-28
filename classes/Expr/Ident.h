@@ -10,7 +10,7 @@
 struct Ident: Expr {
     const std::string id;
 
-    Ident(char*);
+    Ident(const char*);
     bool isCompVal() override;
     std::string toString() const override;
 };

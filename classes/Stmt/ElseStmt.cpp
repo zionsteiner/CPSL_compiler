@@ -4,7 +4,11 @@
 
 #include "ElseStmt.h"
 
-ElseStmt::ElseStmt(StmtList* stmts): stmts(stmts) {}
+ElseStmt::ElseStmt(std::vector<Stmt*>* stmts): stmts(stmts) {}
 std::string ElseStmt::toString() const {
-    return "else " + stmts->toString();
+    std::string retStr = "else";
+    for (auto stmt = stmts->begin(); stmt != stmts->end(); ++stmt) {
+        retStr += ' ' + (*stmt)->toString();
+    }
+    return retStr;
 }

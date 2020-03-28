@@ -7,7 +7,7 @@
 
 #include "ConstExpr.h"
 
-struct ChrConstExpr: Const {
+struct ChrConstExpr: ConstExpr {
     const char value;
 
     explicit ChrConstExpr(char);

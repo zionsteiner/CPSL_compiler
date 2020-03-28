@@ -4,9 +4,9 @@
 
 #include <iostream>
 #include <sstream>
-#include "IntConstExprExprExpr.h"
+#include "IntConstExpr.h"
 
-IntConstExprExpr::IntConstExprExpr(int value): value(value) {}
-std::string IntConstExprExpr::toString() const {
+IntConstExpr::IntConstExpr(int value): value(value) {}
+std::string IntConstExpr::toString() const {
     return std::to_string(value);
 }

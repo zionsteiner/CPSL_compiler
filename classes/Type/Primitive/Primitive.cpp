@@ -4,4 +4,3 @@
 
 #include "Primitive.h"
 
-int Primitive::size() {return 4;}

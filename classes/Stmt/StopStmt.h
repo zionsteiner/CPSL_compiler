@@ -5,6 +5,7 @@
 #ifndef CPSL_COMPILER_STOPSTMT_H
 #define CPSL_COMPILER_STOPSTMT_H
 
+#include <string>
 #include "Stmt.h"
 
 struct StopStmt: Stmt {
@@ -12,4 +13,4 @@ struct StopStmt: Stmt {
 };
 
 
-#endif //CPSL_COMPILER_STOP_H
+#endif //CPSL_COMPILER_STOPSTMT_H

@@ -3,26 +3,26 @@
 //
 
 #include "OrdFunc.h"
-#include "../../../Const/ChrConst.h"
+#include "../../../ConstExpr/ChrConstExpr.h"
 
-OrdFunc::OrdFunc(Expr* a): UnaryOpExpr(a) {}
-Expr * OrdFunc::op(Expr* a) {
+OrdFunc::OrdFunc(Expr* expr): UnaryOpExpr(expr) {}
+Expr* OrdFunc::op(Expr* a) {
     if (a->isCompVal()) {
-        auto a = dynamic_cast<ChrConst*> (a);
-        auto val = OrdFunc::op(a->value);
-        delete a
+        auto a_new = dynamic_cast<ChrConstExpr*> (a);
+        auto val = OrdFunc::op(a_new->value);
+        delete a_new;
 
-        return new OrdFunc(val);
+        return new ChrConstExpr(val);
     } else {
         return new OrdFunc(a);
     }
 }
 
 int OrdFunc::op(char a) {
-    int a = (int)a;
-    return a;
+    int a_int = (int)a;
+    return a_int;
 }
 
 std::string OrdFunc::toString() const {
-    return "ord(" + a->toString() + ')';
+    return "ord(" + expr->toString() + ')';
 }

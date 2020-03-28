@@ -5,19 +5,17 @@
 #ifndef CPSL_COMPILER_IFSTMT_H
 #define CPSL_COMPILER_IFSTMT_H
 
-#include <Expr/Expr.h>
-#include <List/StmtList.h>
-#include <List/ElseIfStmtList.h>
 #include "Stmt.h"
 #include "ElseStmt.h"
+#include "ElseIfStmt.h"
 
 struct IfStmt: Stmt {
     const Expr* condition;
-    const StmtList* stmts;
-    const ElseIfStmtList* elseIfStmts;
+    const std::vector<Stmt*>* stmts;
+    const std::vector<ElseIfStmt*>* elseIfStmts;
     const ElseStmt* elseStmt;
 
-    IfStmt(Expr*, StmtList*, ElseIfStmtList*, ElseStmt*);
+    IfStmt(Expr*, std::vector<Stmt*>*, std::vector<ElseIfStmt*>*, ElseStmt*);
     std::string toString() const override;
 };
 

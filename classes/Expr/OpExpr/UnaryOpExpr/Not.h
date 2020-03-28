@@ -7,6 +7,7 @@
 
 #include "../OpExpr.h"
 #include "UnaryOpExpr.h"
+#include "../../../Expr/ConstExpr/BoolConstExpr.h"
 
 struct Not: UnaryOpExpr {
     Not(Expr*);

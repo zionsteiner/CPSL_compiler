@@ -6,4 +6,6 @@
 
 SimpleType::SimpleType(Ident* id): id(id) {}
 
-std::string toString() {return id->toString();}
+std::string SimpleType::toString() const {return id->toString();}
+
+int SimpleType::size() {return id->toString().size();}

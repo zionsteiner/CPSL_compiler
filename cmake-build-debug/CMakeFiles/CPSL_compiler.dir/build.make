@@ -108,9 +108,542 @@ CMakeFiles/CPSL_compiler.dir/scanner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/scanner.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/scanner.cpp -o CMakeFiles/CPSL_compiler.dir/scanner.cpp.s
 
+CMakeFiles/CPSL_compiler.dir/classes/Block.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Block.cpp.o: ../classes/Block.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Block.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Block.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Block.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Block.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Block.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Block.cpp > CMakeFiles/CPSL_compiler.dir/classes/Block.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Block.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Block.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Block.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Block.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Body.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Body.cpp.o: ../classes/Body.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Body.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Body.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Body.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Body.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Body.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Body.cpp > CMakeFiles/CPSL_compiler.dir/classes/Body.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Body.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Body.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Body.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Body.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Callable/Function.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Callable/Function.cpp.o: ../classes/Callable/Function.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Callable/Function.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Callable/Function.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Callable/Function.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Callable/Function.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Callable/Function.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Callable/Function.cpp > CMakeFiles/CPSL_compiler.dir/classes/Callable/Function.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Callable/Function.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Callable/Function.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Callable/Function.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Callable/Function.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Callable/Procedure.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Callable/Procedure.cpp.o: ../classes/Callable/Procedure.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Callable/Procedure.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Callable/Procedure.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Callable/Procedure.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Callable/Procedure.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Callable/Procedure.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Callable/Procedure.cpp > CMakeFiles/CPSL_compiler.dir/classes/Callable/Procedure.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Callable/Procedure.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Callable/Procedure.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Callable/Procedure.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Callable/Procedure.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Const/ConstAssign.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Const/ConstAssign.cpp.o: ../classes/Const/ConstAssign.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Const/ConstAssign.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Const/ConstAssign.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Const/ConstAssign.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Const/ConstAssign.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Const/ConstAssign.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Const/ConstAssign.cpp > CMakeFiles/CPSL_compiler.dir/classes/Const/ConstAssign.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Const/ConstAssign.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Const/ConstAssign.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Const/ConstAssign.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Const/ConstAssign.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Const/ConstDecl.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Const/ConstDecl.cpp.o: ../classes/Const/ConstDecl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Const/ConstDecl.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Const/ConstDecl.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Const/ConstDecl.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Const/ConstDecl.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Const/ConstDecl.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Const/ConstDecl.cpp > CMakeFiles/CPSL_compiler.dir/classes/Const/ConstDecl.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Const/ConstDecl.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Const/ConstDecl.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Const/ConstDecl.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Const/ConstDecl.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/BoolConstExpr.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/BoolConstExpr.cpp.o: ../classes/Expr/ConstExpr/BoolConstExpr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/BoolConstExpr.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/BoolConstExpr.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/BoolConstExpr.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/BoolConstExpr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/BoolConstExpr.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/BoolConstExpr.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/BoolConstExpr.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/BoolConstExpr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/BoolConstExpr.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/BoolConstExpr.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/BoolConstExpr.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ChrConstExpr.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ChrConstExpr.cpp.o: ../classes/Expr/ConstExpr/ChrConstExpr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ChrConstExpr.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ChrConstExpr.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/ChrConstExpr.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ChrConstExpr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ChrConstExpr.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/ChrConstExpr.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ChrConstExpr.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ChrConstExpr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ChrConstExpr.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/ChrConstExpr.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ChrConstExpr.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ConstExpr.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ConstExpr.cpp.o: ../classes/Expr/ConstExpr/ConstExpr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ConstExpr.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ConstExpr.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/ConstExpr.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ConstExpr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ConstExpr.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/ConstExpr.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ConstExpr.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ConstExpr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ConstExpr.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/ConstExpr.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ConstExpr.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/IntConstExpr.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/IntConstExpr.cpp.o: ../classes/Expr/ConstExpr/IntConstExpr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/IntConstExpr.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/IntConstExpr.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/IntConstExpr.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/IntConstExpr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/IntConstExpr.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/IntConstExpr.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/IntConstExpr.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/IntConstExpr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/IntConstExpr.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/IntConstExpr.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/IntConstExpr.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/StrConstExpr.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/StrConstExpr.cpp.o: ../classes/Expr/ConstExpr/StrConstExpr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/StrConstExpr.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/StrConstExpr.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/StrConstExpr.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/StrConstExpr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/StrConstExpr.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/StrConstExpr.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/StrConstExpr.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/StrConstExpr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/StrConstExpr.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/StrConstExpr.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/StrConstExpr.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/Ident.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/Ident.cpp.o: ../classes/Expr/Ident.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/Ident.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/Ident.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/Ident.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/Ident.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/Ident.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/Ident.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/Ident.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/Ident.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/Ident.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/Ident.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/Ident.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/DotExt.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/DotExt.cpp.o: ../classes/Expr/LValue/DotExt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/DotExt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/DotExt.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/LValue/DotExt.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/DotExt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/DotExt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/LValue/DotExt.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/DotExt.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/DotExt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/DotExt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/LValue/DotExt.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/DotExt.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/IndexExt.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/IndexExt.cpp.o: ../classes/Expr/LValue/IndexExt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/IndexExt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/IndexExt.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/LValue/IndexExt.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/IndexExt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/IndexExt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/LValue/IndexExt.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/IndexExt.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/IndexExt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/IndexExt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/LValue/IndexExt.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/IndexExt.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/LValue.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/LValue.cpp.o: ../classes/Expr/LValue/LValue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/LValue.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/LValue.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/LValue/LValue.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/LValue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/LValue.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/LValue/LValue.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/LValue.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/LValue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/LValue.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/LValue/LValue.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/LValue.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/OpExpr.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/OpExpr.cpp.o: ../classes/Expr/OpExpr/OpExpr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/OpExpr.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/OpExpr.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/OpExpr.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/OpExpr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/OpExpr.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/OpExpr.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/OpExpr.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/OpExpr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/OpExpr.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/OpExpr.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/OpExpr.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp.o: ../classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.o: ../classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp.o: ../classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp.o: ../classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/Not.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/Not.cpp.o: ../classes/Expr/OpExpr/UnaryOpExpr/Not.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/Not.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/Not.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/Not.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/Not.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/Not.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/Not.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/Not.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/Not.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/Not.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/Not.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/Not.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp.o: ../classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp.o: ../classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp > CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Param.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Param.cpp.o: ../classes/Param.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Param.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Param.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Param.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Param.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Param.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Param.cpp > CMakeFiles/CPSL_compiler.dir/classes/Param.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Param.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Param.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Param.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Param.cpp.s
+
 CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
 CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.o: ../classes/Program.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Program.cpp
 
 CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.i: cmake_force
@@ -121,12 +654,375 @@ CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Program.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.s
 
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/AssnStmt.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/AssnStmt.cpp.o: ../classes/Stmt/AssnStmt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Stmt/AssnStmt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/AssnStmt.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/AssnStmt.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/AssnStmt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Stmt/AssnStmt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/AssnStmt.cpp > CMakeFiles/CPSL_compiler.dir/classes/Stmt/AssnStmt.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/AssnStmt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Stmt/AssnStmt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/AssnStmt.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/AssnStmt.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseIfStmt.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseIfStmt.cpp.o: ../classes/Stmt/ElseIfStmt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseIfStmt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseIfStmt.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ElseIfStmt.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseIfStmt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseIfStmt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ElseIfStmt.cpp > CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseIfStmt.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseIfStmt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseIfStmt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ElseIfStmt.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseIfStmt.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseStmt.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseStmt.cpp.o: ../classes/Stmt/ElseStmt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseStmt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseStmt.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ElseStmt.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseStmt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseStmt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ElseStmt.cpp > CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseStmt.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseStmt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseStmt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ElseStmt.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseStmt.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ForStmt.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ForStmt.cpp.o: ../classes/Stmt/ForStmt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Stmt/ForStmt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/ForStmt.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ForStmt.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ForStmt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Stmt/ForStmt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ForStmt.cpp > CMakeFiles/CPSL_compiler.dir/classes/Stmt/ForStmt.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ForStmt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Stmt/ForStmt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ForStmt.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/ForStmt.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/IfStmt.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/IfStmt.cpp.o: ../classes/Stmt/IfStmt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Stmt/IfStmt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/IfStmt.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/IfStmt.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/IfStmt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Stmt/IfStmt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/IfStmt.cpp > CMakeFiles/CPSL_compiler.dir/classes/Stmt/IfStmt.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/IfStmt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Stmt/IfStmt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/IfStmt.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/IfStmt.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ProcCall.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ProcCall.cpp.o: ../classes/Stmt/ProcCall.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Stmt/ProcCall.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/ProcCall.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ProcCall.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ProcCall.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Stmt/ProcCall.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ProcCall.cpp > CMakeFiles/CPSL_compiler.dir/classes/Stmt/ProcCall.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ProcCall.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Stmt/ProcCall.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ProcCall.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/ProcCall.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReadStmt.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReadStmt.cpp.o: ../classes/Stmt/ReadStmt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReadStmt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReadStmt.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ReadStmt.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReadStmt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReadStmt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ReadStmt.cpp > CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReadStmt.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReadStmt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReadStmt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ReadStmt.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReadStmt.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/RepeatStmt.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/RepeatStmt.cpp.o: ../classes/Stmt/RepeatStmt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Stmt/RepeatStmt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/RepeatStmt.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/RepeatStmt.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/RepeatStmt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Stmt/RepeatStmt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/RepeatStmt.cpp > CMakeFiles/CPSL_compiler.dir/classes/Stmt/RepeatStmt.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/RepeatStmt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Stmt/RepeatStmt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/RepeatStmt.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/RepeatStmt.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReturnStmt.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReturnStmt.cpp.o: ../classes/Stmt/ReturnStmt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReturnStmt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReturnStmt.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ReturnStmt.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReturnStmt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReturnStmt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ReturnStmt.cpp > CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReturnStmt.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReturnStmt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReturnStmt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ReturnStmt.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReturnStmt.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/StopStmt.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/StopStmt.cpp.o: ../classes/Stmt/StopStmt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Stmt/StopStmt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/StopStmt.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/StopStmt.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/StopStmt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Stmt/StopStmt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/StopStmt.cpp > CMakeFiles/CPSL_compiler.dir/classes/Stmt/StopStmt.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/StopStmt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Stmt/StopStmt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/StopStmt.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/StopStmt.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/WhileStmt.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/WhileStmt.cpp.o: ../classes/Stmt/WhileStmt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Stmt/WhileStmt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/WhileStmt.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/WhileStmt.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/WhileStmt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Stmt/WhileStmt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/WhileStmt.cpp > CMakeFiles/CPSL_compiler.dir/classes/Stmt/WhileStmt.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/WhileStmt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Stmt/WhileStmt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/WhileStmt.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/WhileStmt.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/WriteStmt.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/WriteStmt.cpp.o: ../classes/Stmt/WriteStmt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Stmt/WriteStmt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/WriteStmt.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/WriteStmt.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/WriteStmt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Stmt/WriteStmt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/WriteStmt.cpp > CMakeFiles/CPSL_compiler.dir/classes/Stmt/WriteStmt.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Stmt/WriteStmt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Stmt/WriteStmt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/WriteStmt.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Stmt/WriteStmt.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.o: ../classes/Type/ArrayType.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/ArrayType.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/ArrayType.cpp > CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/ArrayType.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.o: ../classes/Type/Primitive/ChrType.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/ChrType.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/ChrType.cpp > CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/ChrType.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.o: ../classes/Type/Primitive/IntType.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/IntType.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/IntType.cpp > CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/IntType.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.o: ../classes/Type/Primitive/Primitive.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/Primitive.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/Primitive.cpp > CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/Primitive.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.o: ../classes/Type/Primitive/StrType.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/StrType.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/StrType.cpp > CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/StrType.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.o: ../classes/Type/RecordType.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/RecordType.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/RecordType.cpp > CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/RecordType.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.o: ../classes/Type/SimpleType.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/SimpleType.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/SimpleType.cpp > CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/SimpleType.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.o: ../classes/Type/TypeAssign.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/TypeAssign.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/TypeAssign.cpp > CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/TypeAssign.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.o: ../classes/Type/TypeDecl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/TypeDecl.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/TypeDecl.cpp > CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/TypeDecl.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.o: ../classes/Var/VarAssign.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Var/VarAssign.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Var/VarAssign.cpp > CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Var/VarAssign.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.o: ../classes/Var/VarDecl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Var/VarDecl.cpp
+
+CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Var/VarDecl.cpp > CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Var/VarDecl.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.s
+
 # Object files for target CPSL_compiler
 CPSL_compiler_OBJECTS = \
 "CMakeFiles/CPSL_compiler.dir/main.cpp.o" \
 "CMakeFiles/CPSL_compiler.dir/parser.cpp.o" \
 "CMakeFiles/CPSL_compiler.dir/scanner.cpp.o" \
-"CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.o"
+"CMakeFiles/CPSL_compiler.dir/classes/Block.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Body.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Callable/Function.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Callable/Procedure.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Const/ConstAssign.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Const/ConstDecl.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/BoolConstExpr.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ChrConstExpr.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ConstExpr.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/IntConstExpr.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/StrConstExpr.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/Ident.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/DotExt.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/IndexExt.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/LValue.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/OpExpr.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/Not.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Param.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Stmt/AssnStmt.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseIfStmt.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseStmt.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Stmt/ForStmt.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Stmt/IfStmt.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Stmt/ProcCall.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReadStmt.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Stmt/RepeatStmt.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReturnStmt.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Stmt/StopStmt.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Stmt/WhileStmt.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Stmt/WriteStmt.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.o"
 
 # External object files for target CPSL_compiler
 CPSL_compiler_EXTERNAL_OBJECTS =
@@ -134,10 +1030,74 @@ CPSL_compiler_EXTERNAL_OBJECTS =
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/main.cpp.o
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/parser.cpp.o
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/scanner.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Block.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Body.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Callable/Function.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Callable/Procedure.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Const/ConstAssign.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Const/ConstDecl.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/BoolConstExpr.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ChrConstExpr.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/ConstExpr.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/IntConstExpr.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/ConstExpr/StrConstExpr.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/Ident.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/DotExt.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/IndexExt.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/LValue/LValue.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/OpExpr.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/Not.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Param.cpp.o
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Program.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Stmt/AssnStmt.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseIfStmt.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Stmt/ElseStmt.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Stmt/ForStmt.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Stmt/IfStmt.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Stmt/ProcCall.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReadStmt.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Stmt/RepeatStmt.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Stmt/ReturnStmt.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Stmt/StopStmt.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Stmt/WhileStmt.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Stmt/WriteStmt.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.o
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/build.make
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable CPSL_compiler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Linking CXX executable CPSL_compiler"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CPSL_compiler.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

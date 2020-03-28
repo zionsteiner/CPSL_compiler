@@ -6,6 +6,9 @@
 #define CPSL_COMPILER_TYPEDECL_H
 
 
+#include "TypeAssign.h"
+#include <vector>
+
 struct TypeDecl {
     const std::vector<TypeAssign*>* typeAssignPlus;
 

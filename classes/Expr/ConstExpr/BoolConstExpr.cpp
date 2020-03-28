@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include <sstream>
-#include "BoolConstExprExpr.h"
+#include "BoolConstExpr.h"
 
 BoolConstExpr::BoolConstExpr(bool value): value(value) {}
 std::string BoolConstExpr::toString() const {

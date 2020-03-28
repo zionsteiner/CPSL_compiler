@@ -5,13 +5,13 @@
 #ifndef CPSL_COMPILER_ELSESTMT_H
 #define CPSL_COMPILER_ELSESTMT_H
 
-#include <List/StmtList.h>
+#include <vector>
 #include "Stmt.h"
 
 struct ElseStmt: Stmt {
-    const StmtList* stmts;
+    const std::vector<Stmt*>* stmts;
 
-    ElseStmt(StmtList*);
+    ElseStmt(std::vector<Stmt*>*);
     std::string toString() const override;
 };
 

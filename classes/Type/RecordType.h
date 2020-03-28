@@ -5,13 +5,16 @@
 #ifndef CPSL_COMPILER_RECORDTYPE_H
 #define CPSL_COMPILER_RECORDTYPE_H
 
+#include <vector>
 #include "Type.h"
+#include "../Var/VarAssign.h"
 
 struct RecordType: Type {
-    const std::vector<VarAssign>* keys;
+    const std::vector<VarAssign*>* keys;
 
-    RecordType(std::vector<VarAssign>*);
+    RecordType(std::vector<VarAssign*>*);
     std::string toString() const override;
+    int size() override;
 };
 
 

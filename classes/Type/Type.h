@@ -5,11 +5,13 @@
 #ifndef CPSL_COMPILER_TYPE_H
 #define CPSL_COMPILER_TYPE_H
 
+#include <string>
 
 struct Type {
     // ToDo: how to define this for different types?
-    // virtual int size();
-    virtual std::string toString() const;
+    virtual int size() = 0;
+    virtual std::string toString() const = 0;
+    virtual ~Type() {};
 };
 
 

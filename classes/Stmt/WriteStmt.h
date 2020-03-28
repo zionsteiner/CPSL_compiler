@@ -5,7 +5,6 @@
 #ifndef CPSL_COMPILER_WRITESTMT_H
 #define CPSL_COMPILER_WRITESTMT_H
 
-#include <List/ExprList.h>
 #include "Stmt.h"
 
 struct WriteStmt: Stmt {

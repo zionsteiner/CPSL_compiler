@@ -8,7 +8,7 @@
 #include "../UnaryOpExpr.h"
 
 struct ChrFunc: UnaryOpExpr {
-    ChrFunc(Expr* a);
+    ChrFunc(Expr*);
     static Expr* op(Expr*);
     static char op(int);
     std::string toString() const override;

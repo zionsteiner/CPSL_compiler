@@ -19,5 +19,3 @@ std::string LValue::toString() const {
 bool LValue::isCompVal() {
     return false;
 }
-
-LValue::LValue(const std::vector<Ext *> *exts) : exts(exts) {}

@@ -5,7 +5,10 @@
 #ifndef CPSL_COMPILER_SUCCFUNC_H
 #define CPSL_COMPILER_SUCCFUNC_H
 
+#include <stdexcept>
 #include "../UnaryOpExpr.h"
+#include "../../../ConstExpr/IntConstExpr.h"
+#include "../../../ConstExpr/BoolConstExpr.h"
 
 struct SuccFunc: UnaryOpExpr {
     SuccFunc(Expr* a);

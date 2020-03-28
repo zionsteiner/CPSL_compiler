@@ -5,8 +5,10 @@
 #ifndef CPSL_COMPILER_CALLABLE_H
 #define CPSL_COMPILER_CALLABLE_H
 
-#endif //CPSL_COMPILER_CALLABLE_H
+#include <string>
 
 struct Callable {
-    virtual std::string toString() const;
+    virtual std::string toString() const = 0;
 };
+
+#endif //CPSL_COMPILER_CALLABLE_H

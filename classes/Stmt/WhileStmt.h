@@ -5,15 +5,15 @@
 #ifndef CPSL_COMPILER_WHILESTMT_H
 #define CPSL_COMPILER_WHILESTMT_H
 
-#include <Expr/Expr.h>
-#include <List/StmtList.h>
+#include <vector>
 #include "Stmt.h"
+#include "../Expr/Expr.h"
 
 struct WhileStmt: Stmt {
     const Expr* expr;
-    const StmtList* stmts;
+    const std::vector<Stmt*>* stmts;
 
-    WhileStmt(Expr*, StmtList*);
+    WhileStmt(Expr*, std::vector<Stmt*>*);
     std::string toString() const override;
 };
 

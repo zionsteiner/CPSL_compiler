@@ -5,8 +5,8 @@
 #ifndef CPSL_COMPILER_RETURNSTMT_H
 #define CPSL_COMPILER_RETURNSTMT_H
 
-#include <Expr/Expr.h>
 #include "Stmt.h"
+#include "../Expr/Expr.h"
 
 struct ReturnStmt: Stmt {
     const Expr* expr;

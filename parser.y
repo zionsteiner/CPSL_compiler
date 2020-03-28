@@ -1,27 +1,33 @@
+%define parse.error verbose
+
 %{
 #include <iostream>
 #include <map>
 #include <vector>
 
-#include "includes.h"
+#include "globals.h"
+#include "classes.h"
 
 extern int yylex();
 void yyerror(const char*);
+
+int line = 1;
+int token = 1;
 %}
 
-/* TODO: decide OO structure */
 %union {
     int intVal;
     char chrVal;
     const char* strVal;
     bool boolVal;
-    null nullVal;
+    void* nullVal;
+
 
     /* Nonterminal types */
     Program* programPtr;
     ConstDecl* constDeclPtr;
     ConstAssign* constAssignPtr;
-    std::vector<ConstAssign>* constAssignListPtr;
+    std::vector<ConstAssign*>* constAssignListPtr;
     std::vector<Callable*>* callableListPtr;
     Procedure* procPtr;
     Function* funcPtr;
@@ -31,11 +37,12 @@ void yyerror(const char*);
     Block* blockPtr;
     TypeDecl* typeDeclPtr;
     TypeAssign* typeAssignPtr;
-    std::vector<TypeAssign>* typeAssignListPtr;
+    std::vector<TypeAssign*>* typeAssignListPtr;
     Type* typePtr;
     SimpleType* simpleTypePtr;
     RecordType* recordTypePtr;
     ArrayType* arrayTypePtr;
+    Ident* idPtr;
     std::vector<Ident*>* idListPtr;
     VarDecl* varDeclPtr;
     VarAssign* varAssignPtr;
@@ -53,16 +60,19 @@ void yyerror(const char*);
     StopStmt* stopStmtPtr;
     ReturnStmt* returnStmtPtr;
     ReadStmt* readStmtPtr;
-    LValue* lvalPtr;
+    LValue* lValPtr;
     std::vector<LValue*>* lValListPtr;
     WriteStmt* writeStmtPtr;
     Expr* exprPtr;
-    std::vector<Expr*> exprListPtr;
+    std::vector<Expr*>* exprListPtr;
     ProcCall* procCallPtr;
     std::vector<Ext*>* extListPtr;
     Ext* extPtr;
-    Dot* dotPtr;
-    Index* indexPtr;
+    DotExt* dotPtr;
+    IndexExt* indexPtr;
+    IntConstExpr* intConstPtr;
+    ChrConstExpr* chrConstPtr;
+    StrConstExpr* strConstPtr;
 }
 
 %token ARRAY
@@ -96,7 +106,7 @@ void yyerror(const char*);
 %token VAR
 %token WHILE
 %token WRITE
-%token <id> ID
+%token <idPtr> ID
 %token ADD
 %token SUB
 %token MULT
@@ -104,12 +114,12 @@ void yyerror(const char*);
 %token AMP
 %token BAR
 %token NOT
-%token EQ
-%token NEQ
-%token LT
-%token LEQ
-%token GT
-%token GEQ
+%token EQ_t
+%token NEQ_t
+%token LT_t
+%token LEQ_t
+%token GT_t
+%token GEQ_t
 %token PERIOD
 %token COMMA
 %token SEMICOLON
@@ -125,12 +135,11 @@ void yyerror(const char*);
 %token <strVal> STR_CONST
 %token COMMENT
 
-/* TODO: declare nonterminal types*/
-%type <programPtr> Program
-%type <constDeclPtr> ConstDeclOpt
-%type <constDeclPtr> ConstDecl
-%type <constAssignListPtr> ConstAssignPlus
-%type <constAssignPtr> ConstAssign
+%type <programPtr> program
+%type <constDeclPtr> constDeclOpt
+%type <constDeclPtr> constDecl
+%type <constAssignListPtr> constAssignPlus
+%type <constAssignPtr> constAssign
 %type <callableListPtr> procOrFuncStar
 %type <procPtr> procDecl
 %type <funcPtr> funcDecl
@@ -140,8 +149,8 @@ void yyerror(const char*);
 %type <boolVal> varOrRefOpt
 %type <bodyPtr> body
 %type <blockPtr> block
-%type <typeDecl> typeDeclOpt
-%type <typeDecl> typeDecl
+%type <typeDeclPtr> typeDeclOpt
+%type <typeDeclPtr> typeDecl
 %type <typeAssignListPtr> typeAssignPlus
 %type <typeAssignPtr> typeAssign
 %type <typePtr> type
@@ -151,14 +160,14 @@ void yyerror(const char*);
 %type <arrayTypePtr> arrayType
 %type <idListPtr> idList
 %type <varDeclPtr> varDeclOpt
-%type <varDecl> varDecl
+%type <varDeclPtr> varDecl
 %type <varAssignListPtr> varAssignPlus
 %type <varAssignPtr> varAssign
 %type <stmtListPtr> stmts
 %type <stmtPtr> stmt
 %type <assnStmtPtr> assnStmt
 %type <ifStmtPtr> ifStmt
-%type <elseIfStmtPtr> elseIfStmtOpt
+%type <elseIfStmtListPtr> elseIfStmtsOpt
 %type <elseIfStmtListPtr> elseIfStmts
 %type <elseIfStmtPtr> elseIfStmt
 %type <elseStmtPtr> elseStmtOpt
@@ -186,14 +195,14 @@ void yyerror(const char*);
 %left BAR
 %left AMP
 %right NOT
-%nonassoc EQ NEQ LT LEQ GT GEQ
+%nonassoc EQ_t NEQ_t LT_t LEQ_t GT_t GEQ_t
 %left ADD SUB
 %left MULT DIV MOD
 %right UNARYMINUS
 
 %%
 /* CPSL Declarations */
-program: constDeclOpt typeDeclOpt varDeclOpt procOrFuncStar block PERIOD {$$ = new Program($1, $2, $3, $4, $5);}
+program: constDeclOpt typeDeclOpt varDeclOpt procOrFuncStar block PERIOD {$$ = new Program($1, $2, $3, $4, $5); std::cout << std::endl << $$->toString() << std::endl;}
 
 /* 3.1.1 Constant Rules */
 constDeclOpt: constDecl {$$ = $1;}
@@ -204,11 +213,11 @@ constDecl: CONST constAssignPlus {$$ = new ConstDecl($2);}
          ;
 
 constAssignPlus: constAssignPlus constAssign {$1->push_back($2); $$ = $1;}
-               | constAssign {$$ = new vector<ConstAssign*>(); $$->push_back($1);}
+               | constAssign {$$ = new std::vector<ConstAssign*>(); $$->push_back($1);}
                ;
 
 /* TODO: Add to symbol table */
-constAssign: ID EQ expr SEMICOLON {$$ = new ConstAssign($1, $3);}
+constAssign: ID EQ_t expr SEMICOLON {$$ = new ConstAssign($1, $3);}
            ;
 
 /* 3.1.2 Procedure and Function Rules */
@@ -217,10 +226,9 @@ procOrFuncStar: procOrFuncStar procDecl {$$ = $1; $$->push_back($2);}
               | {$$ = new std::vector<Callable*>();}
               ;
 
-procDecl: PROCEDURE ID L_PAREN paramsOpt R_PAREN SEMICOLON FORWARD SEMICOLON {}
-        | PROCEDURE ID L_PAREN paramsOpt R_PAREN SEMICOLON body SEMICOLON {}
+procDecl: PROCEDURE ID L_PAREN paramsOpt R_PAREN SEMICOLON FORWARD SEMICOLON {$$ = new Procedure($2, $4);}
+        | PROCEDURE ID L_PAREN paramsOpt R_PAREN SEMICOLON body SEMICOLON {$$ = new Procedure($2, $4, $7);}
 
-/* ToDo: different classes for forward declaration and definition? */
 funcDecl: FUNCTION ID L_PAREN paramsOpt R_PAREN COLON type SEMICOLON FORWARD SEMICOLON {$$ = new Function($2, $4, $7);}
         | FUNCTION ID L_PAREN paramsOpt R_PAREN COLON type SEMICOLON body SEMICOLON {$$ = new Function($2, $4, $7, $9);}
         ;
@@ -259,7 +267,7 @@ typeAssignPlus: typeAssignPlus typeAssign {$$ = $1; $$->push_back($2);}
               | typeAssign {$$ = new std::vector<TypeAssign*>(); $$->push_back($1);}
               ;
 
-typeAssign: ID EQ type SEMICOLON {$$ = new TypeAssign($1, $3);}
+typeAssign: ID EQ_t type SEMICOLON {$$ = new TypeAssign($1, $3);}
           ;
 
 type: simpleType {$$ = $1;}
@@ -267,18 +275,17 @@ type: simpleType {$$ = $1;}
     | arrayType {$$ = $1;}
     ;
 
-simpleType: ID {$$ = SimpleType($1);}
+simpleType: ID {$$ = new SimpleType($1);}
           ;
 
 recordType: RECORD varAssignStar END {$$ = new RecordType($2);}
           ;
 
-// ToDo: does bison automatically do left recursion removal and factorization?
 varAssignStar: varAssignStar varAssign {$$->push_back($2);}
              | {$$ = new std::vector<VarAssign*>();}
              ;
 
-arrayType: ARRAY L_BRACK expr COLON expr R_BRACK OF type {$$ = new ArrayType($3, $5, $7);}
+arrayType: ARRAY L_BRACK expr COLON expr R_BRACK OF type {$$ = new ArrayType($3, $5, $8);}
          ;
 
 idList: idList COMMA ID {$1->push_back($3); $$ = $1;}
@@ -301,7 +308,7 @@ varAssign: idList COLON type SEMICOLON {$$ = new VarAssign($1, $3);}
          ;
 
 /* 3.2 CPSL Statements */
-stmts: stmts SEMICOLON stmt {$1->push_back($3); $$ = $1;}
+stmts: stmts SEMICOLON stmt {if ($3 != nullptr) {$1->push_back($3);} $$ = $1;}
      | stmt {$$ = new std::vector<Stmt*>(); $$->push_back($1);}
      ;
 
@@ -315,7 +322,7 @@ stmt: assnStmt {$$ = $1;}
     | readStmt {$$ = $1;}
     | writeStmt {$$ = $1;}
     | procCall {$$ = $1;}
-    | nullStmt {$$ = $1;}
+    | nullStmt {$$ = nullptr;}
     ;
 
 assnStmt: lVal ASSIGN expr {$$ = new AssnStmt($1, $3);}
@@ -328,8 +335,8 @@ elseIfStmtsOpt: elseIfStmts {$$ = $1;}
               | {$$ = nullptr;}
               ;
 
-elseIfStmts: elseIfStmts elseIfStmt {$1->append($1); $$ = $1;}
-           | elseIfStmt {$$ = new ElseIfStmtList($1);}
+elseIfStmts: elseIfStmts elseIfStmt {$1->push_back($2); $$ = $1;}
+           | elseIfStmt {$$ = new std::vector<ElseIfStmt*>(); $$->push_back($1);}
            ;
 
 elseIfStmt: ELSEIF expr THEN stmts {$$ = new ElseIfStmt($2, $4);}
@@ -349,7 +356,7 @@ forStmt: FOR ID ASSIGN expr TO expr DO stmts END {$$ = new ForStmt($2, $4, "to",
        | FOR ID ASSIGN expr DOWNTO expr DO stmts END {$$ = new ForStmt($2, $4, "downto", $6, $8);}
        ;
 
-stopStmt: STOP {$$ = new Stop();}
+stopStmt: STOP {$$ = new StopStmt();}
         ;
 
 returnStmt: RETURN expr {$$ = new ReturnStmt($2);}
@@ -359,14 +366,14 @@ returnStmt: RETURN expr {$$ = new ReturnStmt($2);}
 readStmt: READ L_PAREN lValPlus R_PAREN {$$ = new ReadStmt($3);}
         ;
 
-lValPlus: lValPlus COMMA lVal {$1->append($3); $$ = $1;}
-        | lVal {$$ = new std::vector<LValue*>($1);}
+lValPlus: lValPlus COMMA lVal {$1->push_back($3); $$ = $1;}
+        | lVal {$$ = new std::vector<LValue*>(); $$->push_back($1);}
         ;
 
 writeStmt: WRITE L_PAREN exprPlus R_PAREN {$$ = new WriteStmt($3);}
          ;
 
-exprPlus: exprPlus COMMA expr {$1->append($3); $$ = $1;}
+exprPlus: exprPlus COMMA expr {$1->push_back($3); $$ = $1;}
         | expr {$$ = new std::vector<Expr*>(); $$->push_back($1);}
         ;
 
@@ -377,36 +384,34 @@ exprPlusOpt: exprPlus {$$ = $1;}
            | {$$ = nullptr;}
            ;
 
-nullStmt: {$$ = nullptr;}
+nullStmt: {}
         ;
 
 /* 3.3 Expressions */
 expr: expr BAR expr {$$ = BoolBinOpExpr::binOp<Bar>($1, $3);}
     | expr AMP expr {$$ = BoolBinOpExpr::binOp<Amp>($1, $3);}
-    | expr EQ expr {$$ = CmprBinOpExpr::binOp<EQ>($1, $3);}
-    | expr NEQ expr {$$ = CmprBinOpExpr::binOp<NEQ>($1, $3);}
-    | expr LEQ expr {$$ = CmprBinOpExpr::binOp<LEQ>($1, $3);}
-    | expr GEQ expr {$$ = CmprBinOpExpr::binOp<GEQ>($1, $3);}
-    | expr LT expr {$$ = CmprBinOpExpr::binOp<LT>($1, $3);}
-    | expr GT expr {$$ = CmprBinOpExpr::binOp<GT>($1, $3);}
-    | expr ADD expr {$$ = ArithOpExpr::binOp<Add>($1, $3);}
-    | expr SUB expr {$$ = ArithOpExpr::binOp<Sub>($1, $3);}
-    | expr MULT expr {$$ = ArithOpExpr::binOp<Mult>($1, $3);}
-    | expr DIV expr {$$ = ArithOpExpr::binOp<Div>($1, $3);}
-    | expr MOD expr {$$ = ArithOpExpr::binOp<Mod>($1, $3);}
+    | expr EQ_t expr {$$ = CmprBinOpExpr::binOp<Eq>($1, $3);}
+    | expr NEQ_t expr {$$ = CmprBinOpExpr::binOp<Neq>($1, $3);}
+    | expr LEQ_t expr {$$ = CmprBinOpExpr::binOp<Leq>($1, $3);}
+    | expr GEQ_t expr {$$ = CmprBinOpExpr::binOp<Geq>($1, $3);}
+    | expr LT_t expr {$$ = CmprBinOpExpr::binOp<Lt>($1, $3);}
+    | expr GT_t expr {$$ = CmprBinOpExpr::binOp<Gt>($1, $3);}
+    | expr ADD expr {$$ = ArithBinOpExpr::binOp<Add>($1, $3);}
+    | expr SUB expr {$$ = ArithBinOpExpr::binOp<Sub>($1, $3);}
+    | expr MULT expr {$$ = ArithBinOpExpr::binOp<Mult>($1, $3);}
+    | expr DIV expr {$$ = ArithBinOpExpr::binOp<Div>($1, $3);}
+    | expr MOD expr {$$ = ArithBinOpExpr::binOp<Mod>($1, $3);}
     | NOT expr {$$ = Not::op($2);}
     | SUB expr %prec UNARYMINUS {$$ = UnaryMinus::op($2);}
     | L_PAREN expr R_PAREN {$$ = $2;}
-    | procCall {}
     | CHR L_PAREN expr R_PAREN {$$ = ChrFunc::op($3);}
     | ORD L_PAREN expr R_PAREN {$$ = OrdFunc::op($3);}
     | PRED L_PAREN expr R_PAREN {$$ = PredFunc::op($3);}
     | SUCC L_PAREN expr R_PAREN {$$ = SuccFunc::op($3);}
     | lVal {$$ = $1;}
-    | INT_CONST {$$ = new IntConst($1);}
-    | CHR_CONST {$$ = new ChrConst($1);}
-    | STR_CONST {$$ = new StrConst($1);}
-    | ID {$$ = new Ident($1);}
+    | INT_CONST {$$ = new IntConstExpr($1);}
+    | CHR_CONST {$$ = new ChrConstExpr($1);}
+    | STR_CONST {$$ = new StrConstExpr($1);}
     ;
 
 lVal: ID dotOrIndexPlusOpt {$$ = new LValue($1, $2);}
@@ -416,8 +421,8 @@ dotOrIndexPlusOpt: dotOrIndexPlus {$$ = $1;}
                  | {$$ = nullptr;}
                  ;
 
-dotOrIndexPlus: dotOrIndexPlus dotOrIndex {$1->append($2); $$ = $1;}
-              | dotOrIndex {$$ = new vector<Ext*>(); $$->push_back($1);}
+dotOrIndexPlus: dotOrIndexPlus dotOrIndex {$1->push_back($2); $$ = $1;}
+              | dotOrIndex {$$ = new std::vector<Ext*>(); $$->push_back($1);}
               ;
 
 dotOrIndex: dot {$$ = $1;}
@@ -433,4 +438,5 @@ index: L_BRACK expr R_BRACK {$$ = new IndexExt($2);}
 
 void yyerror(const char* err) {
     std::cerr << err << std::endl;
+    std::cerr << "line " << line << " token " << token << std::endl;
 }

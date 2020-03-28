@@ -5,10 +5,9 @@
 #ifndef CPSL_COMPILER_PRIMITIVE_H
 #define CPSL_COMPILER_PRIMITIVE_H
 
-#include "Type/Type.h"
+#include "../Type.h"
 
 struct Primitive: Type {
-    int size() override;
 };
 
 

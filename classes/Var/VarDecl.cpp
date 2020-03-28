@@ -6,9 +6,9 @@
 
 VarDecl::VarDecl(std::vector<VarAssign*>* varAssignList): varAssignList(varAssignList) {}
 std::string VarDecl::toString() const {
-    std::string retStr = "var ";
+    std::string retStr = "VAR";
     for (auto varAssign = varAssignList->begin(); varAssign != varAssignList->end(); ++ varAssign) {
-        retStr += (*varAssign)->toString();
+        retStr += "\n\t" + (*varAssign)->toString();
     }
 
     return retStr;

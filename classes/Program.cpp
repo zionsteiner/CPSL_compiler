@@ -5,7 +5,7 @@
 #include "Program.h"
 
 Program::Program(ConstDecl* constDecl, TypeDecl* typeDecl, VarDecl* varDecl, std::vector<Callable*>* callableList, Block* block)
-: constDecl(constDecl), typeDecl(typeDecl), callableList(callableList), block(block)
+: constDecl(constDecl), typeDecl(typeDecl), varDecl(varDecl), callableList(callableList), block(block)
 {}
 
 std::string Program::toString() const {
@@ -17,7 +17,7 @@ std::string Program::toString() const {
     for (auto callable = callableList->begin(); callable != callableList->end(); ++callable) {
         retStr += (*callable)->toString() + '\n';
     }
-    retStr += block->toString() + '\n';
+    retStr += block->toString();
     retStr += '.';
 
     return retStr;

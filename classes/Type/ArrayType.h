@@ -13,8 +13,9 @@ struct ArrayType: Type {
     const Expr* begin;
     const Expr* end;
 
-    ArrayType(Type*, Expr*, Expr*);
+    ArrayType(Expr*, Expr*, Type*);
     std::string toString() const override;
+    int size() override;
 };
 
 

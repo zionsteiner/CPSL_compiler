@@ -1,0 +1,2 @@
+How to define int size() for different types?
+Template class issue?

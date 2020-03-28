@@ -4,6 +4,6 @@
 
 #include "Ident.h"
 
-Ident::Ident(char* id): id(id) {}
+Ident::Ident(const char* id): id(id) {}
 bool Ident::isCompVal() {return false;}
 std::string Ident::toString() const {return id;}

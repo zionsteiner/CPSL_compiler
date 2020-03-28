@@ -2,29 +2,29 @@
 // Created by zion on 2/23/20.
 //
 
-#include <Expr/Const/ChrConst.h>
 #include "ChrFunc.h"
-#include "../../../Const/IntConst.h"
+#include "../../../ConstExpr/IntConstExpr.h"
+#include "../../../ConstExpr/ChrConstExpr.h"
 
-ChrFunc::ChrFunc(Expr* a): UnaryOpExpr(a) {}
+ChrFunc::ChrFunc(Expr* expr): UnaryOpExpr(expr) {}
 
 Expr* ChrFunc::op(Expr* a) {
     if (a->isCompVal()) {
-        auto a = dynamic_cast<IntConst*> (a);
-        auto val = ChrFunc::op(a->value);
-        delete a;
+        auto a_new = dynamic_cast<IntConstExpr*> (a);
+        auto val = ChrFunc::op(a_new->value);
+        delete a_new;
 
-        return new ChrConst(val);
+        return new ChrConstExpr(val);
     } else {
         return new ChrFunc(a);
     }
 }
 
 char ChrFunc::op(int a) {
-    char a = a;
-    return a;
+    char a_new = a;
+    return a_new;
 }
 
 std::string ChrFunc::toString() const {
-    return "chr(" + a->toString() + ')';
+    return "chr(" + expr->toString() + ')';
 }

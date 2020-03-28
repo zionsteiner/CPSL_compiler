@@ -5,7 +5,11 @@
 #ifndef CPSL_COMPILER_PROCEDURE_H
 #define CPSL_COMPILER_PROCEDURE_H
 
+#include <vector>
 #include "Callable.h"
+#include "../Expr/Ident.h"
+#include "../Param.h"
+#include "../Body.h"
 
 struct Procedure: Callable {
     const Ident* id;
@@ -14,10 +18,10 @@ struct Procedure: Callable {
     const Body* body;
 
     // Forward decl constructor
-    Function::Function(Ident*, std::vector<Param*>*, bool);
+    Procedure(Ident*, std::vector<Param*>*);
 
     // Definition constructor
-    Function(Ident*, std::vector<Param*>*, Body*);
+    Procedure(Ident*, std::vector<Param*>*, Body*);
     std::string toString() const override;
 };
 

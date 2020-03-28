@@ -5,6 +5,8 @@
 #ifndef CPSL_COMPILER_BLOCK_H
 #define CPSL_COMPILER_BLOCK_H
 
+#include <vector>
+#include <classes/Stmt/Stmt.h>
 
 struct Block {
     const std::vector<Stmt*>* stmts;

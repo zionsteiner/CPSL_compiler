@@ -6,6 +6,7 @@
 #define CPSL_COMPILER_AMP_H
 
 #include "BoolBinOpExpr.h"
+#include "Amp.h"
 
 struct Amp: BoolBinOpExpr {
     Amp(Expr*, Expr*);

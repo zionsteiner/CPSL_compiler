@@ -7,7 +7,7 @@
 ReturnStmt::ReturnStmt(Expr* expr): expr(expr) {}
 std::string ReturnStmt::toString() const {
     if (expr == nullptr) {
-        return "return"
+        return "return";
     } else {
         return "return " + expr->toString();
     }

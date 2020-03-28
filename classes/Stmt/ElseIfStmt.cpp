@@ -4,7 +4,11 @@
 
 #include "ElseIfStmt.h"
 
-ElseIfStmt::ElseIfStmt(Expr* expr, StmtList* stmts): expr(expr), stmts(stmts) {}
+ElseIfStmt::ElseIfStmt(Expr* expr, std::vector<Stmt*>* stmts): expr(expr), stmts(stmts) {}
 std::string ElseIfStmt::toString() const {
-    return "elseif " + expr->toString() + " then" + stmts->toString();
+    std::string retStr = "elseif " + expr->toString() + " then";
+    for (auto stmt = stmts->begin(); stmt != stmts->end(); ++stmt) {
+        retStr += ' ' + (*stmt)->toString();
+    }
+    return retStr;
 }

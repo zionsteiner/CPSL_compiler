@@ -6,8 +6,8 @@
 #define CPSL_COMPILER_DOTEXT_H
 
 
-#include <Expr/Ident.h>
 #include "Ext.h"
+#include "../../Expr/Ident.h"
 
 struct DotExt: Ext {
     const Ident* id;

@@ -7,8 +7,6 @@
 
 #include "../Expr.h"
 
-// TODO: add option to add id to const
-// TODO: change names for all ConstExpr
 
 struct ConstExpr: Expr {
     bool isCompVal() override;

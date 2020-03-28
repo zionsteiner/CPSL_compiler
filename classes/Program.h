@@ -5,14 +5,13 @@
 #ifndef CPSL_COMPILER_PROGRAM_H
 #define CPSL_COMPILER_PROGRAM_H
 
-
-#include <Const/ConstDecl.h>
-#include <Type/TypeDecl.h>
-#include <Var/VarDecl.h>
-#include <Callable/Callable.h>
 #include "Block.h"
 #include <vector>
 #include <string>
+#include <classes/Const/ConstDecl.h>
+#include <classes/Type/TypeDecl.h>
+#include <classes/Var/VarDecl.h>
+#include <classes/Callable/Callable.h>
 
 struct Program {
     const ConstDecl* constDecl;
@@ -22,6 +21,9 @@ struct Program {
     const Block* block;
 
     Program(ConstDecl*, TypeDecl*, VarDecl*, std::vector<Callable*>*, Block*);
+
+    Program(const TypeDecl *typeDecl);
+
     std::string toString() const;
 };
 

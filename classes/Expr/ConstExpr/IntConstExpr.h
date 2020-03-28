@@ -7,7 +7,7 @@
 
 #include "ConstExpr.h"
 
-struct IntConstExpr: Const {
+struct IntConstExpr: ConstExpr {
     const int value;
     explicit IntConstExpr(int);
     std::string toString() const override;

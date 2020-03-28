@@ -5,6 +5,6 @@
 #include "ConstAssign.h"
 
 ConstAssign::ConstAssign(Ident* id, Expr* expr): id(id), expr(expr) {}
-int ConstAssign::toString() const {
+std::string ConstAssign::toString() const {
     return  id->toString() + " = " + expr->toString() + ';';
 }

@@ -5,10 +5,10 @@
 #ifndef CPSL_COMPILER_UNARYOPEXPR_H
 #define CPSL_COMPILER_UNARYOPEXPR_H
 
-#include <Expr/Expr.h>
+#include "../../Expr.h"
 
 struct UnaryOpExpr: Expr {
-    const Expr* a;
+    const Expr* expr;
 
     explicit UnaryOpExpr(Expr*);
     bool isCompVal() override;

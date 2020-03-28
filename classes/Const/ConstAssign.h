@@ -6,6 +6,8 @@
 #define CPSL_COMPILER_CONSTASSIGN_H
 
 
+#include <classes/Expr/Ident.h>
+
 struct ConstAssign {
     const Ident* id;
     const Expr* expr;

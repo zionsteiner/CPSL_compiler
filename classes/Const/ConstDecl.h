@@ -5,6 +5,8 @@
 #ifndef CPSL_COMPILER_CONSTDECL_H
 #define CPSL_COMPILER_CONSTDECL_H
 
+#include <vector>
+#include "ConstAssign.h"
 
 struct ConstDecl {
     const std::vector<ConstAssign*>* constAssignList;

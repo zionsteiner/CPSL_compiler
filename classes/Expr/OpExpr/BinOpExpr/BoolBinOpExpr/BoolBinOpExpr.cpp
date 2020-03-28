@@ -3,21 +3,5 @@
 //
 
 #include "BoolBinOpExpr.h"
-#include "../../../Const/BoolConst.h"
 
 BoolBinOpExpr::BoolBinOpExpr(Expr* a, Expr* b): BinOpExpr(a, b) {}
-
-template<typename T>
-Expr* BoolBinOpExpr::binOp(Expr* a, Expr* b) {
-    if (a->isCompVal() && b->isCompVal()) {
-        auto a = dynamic_cast<BoolConst*> (a);
-        auto b = dynamic_cast<BoolConst*> (b);
-        auto val = T::binOp(a->value, b->value);
-        delete a;
-        delete b;
-
-        return new BoolConst(val);
-    } else {
-        return new T(a, b);
-    }
-}

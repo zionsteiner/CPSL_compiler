@@ -34,7 +34,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/zion/Documents/cs5300/CPSL_compiler/classes"/>
 					<Add directory="/home/zion/Documents/cs5300/CPSL_compiler"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
@@ -59,7 +58,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/zion/Documents/cs5300/CPSL_compiler/classes"/>
 					<Add directory="/home/zion/Documents/cs5300/CPSL_compiler"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
@@ -88,7 +86,409 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Block.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Block.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Body.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Body.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Callable/Callable.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Callable/Function.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Callable/Function.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Callable/Procedure.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Callable/Procedure.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Const/ConstAssign.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Const/ConstAssign.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Const/ConstDecl.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Const/ConstDecl.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/BoolConstExpr.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/BoolConstExpr.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/ChrConstExpr.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/ChrConstExpr.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/ConstExpr.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/ConstExpr.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/IntConstExpr.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/IntConstExpr.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/StrConstExpr.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/StrConstExpr.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/Expr.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/Ident.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/Ident.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/LValue/DotExt.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/LValue/DotExt.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/LValue/Ext.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/LValue/IndexExt.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/LValue/IndexExt.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/LValue/LValue.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/LValue/LValue.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/ArithBinOpExpr.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Div.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mod.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Sub.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Amp.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/Bar.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/OpExpr.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/OpExpr.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/PredFunc.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/SuccFunc.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/Not.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/Not.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/UnaryMinus.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Param.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Param.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
 		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Program.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Program.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/AssnStmt.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/AssnStmt.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ElseIfStmt.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ElseIfStmt.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ElseStmt.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ElseStmt.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ForStmt.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ForStmt.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/IfStmt.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/IfStmt.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ProcCall.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ProcCall.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ReadStmt.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ReadStmt.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/RepeatStmt.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/RepeatStmt.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ReturnStmt.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/ReturnStmt.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/Stmt.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/StopStmt.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/StopStmt.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/WhileStmt.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/WhileStmt.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/WriteStmt.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/WriteStmt.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/ArrayType.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/ArrayType.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/ChrType.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/ChrType.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/IntType.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/IntType.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/Primitive.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/Primitive.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/StrType.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/StrType.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/RecordType.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/RecordType.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/SimpleType.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/SimpleType.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Type.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/TypeAssign.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/TypeAssign.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/TypeDecl.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/TypeDecl.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Var/VarAssign.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Var/VarAssign.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Var/VarDecl.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Var/VarDecl.h">
 			<Option target="CPSL_compiler"/>
 		</Unit>
 		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/parser.cpp">

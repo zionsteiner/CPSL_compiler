@@ -5,9 +5,7 @@
 #ifndef CPSL_COMPILER_FORSTMT_H
 #define CPSL_COMPILER_FORSTMT_H
 
-#include <Expr/Expr.h>
-#include <Expr/Ident.h>
-#include <List/StmtList.h>
+#include <vector>
 #include "Stmt.h"
 
 struct ForStmt: Stmt {
@@ -15,9 +13,9 @@ struct ForStmt: Stmt {
     const Expr* from;
     const std::string iterDirection;
     const Expr* to;
-    const StmtList* stmts;
+    const std::vector<Stmt*>* stmts;
 
-    ForStmt(Ident*, Expr*, std::string, Expr*, StmtList*);
+    ForStmt(Ident*, Expr*, std::string, Expr*, std::vector<Stmt*>*);
     std::string toString() const override;
 };
 

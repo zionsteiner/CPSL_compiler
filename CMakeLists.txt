@@ -13,12 +13,15 @@ set(EXTRA_COMPILE_FLAGS "-g3 -std=c++14")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${EXTRA_COMPILE_FLAGS}")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS}")
 
+file(GLOB_RECURSE classes_src
+        "classes/*.h"
+        "classes/*.cpp")
+
 set(CPSL_compiler_srcs
     main.cpp
     ${BISON_Parser_OUTPUTS}
-    ${FLEX_Scanner_OUTPUTS} classes/Program.cpp classes/Const.cpp classes/Const.h classes/Const/ConstAssign.cpp classes/Const/ConstAssign.h classes/Const/ConstDecl.cpp classes/Const/ConstDecl.h classes/Program.cpp classes/Program.h classes/Callable/Callable.h classes/Callable/Function.cpp classes/Callable/Function.h classes/Callable/Procedure.cpp classes/Callable/Procedure.h includes.h classes/Type/TypeAssign.cpp classes/Type/TypeAssign.h classes/Type/TypeDecl.cpp classes/Type/TypeDecl.h)
-
-include_directories(classes)
+    ${FLEX_Scanner_OUTPUTS}
+    ${classes_src})
 
 source_group("CPSL_compiler" FILES ${CPSL_compiler_srcs})
 

@@ -9,9 +9,9 @@
 #include <string>
 #include "ConstExpr.h"
 
-class StrConstExpr: Const {
+struct StrConstExpr: ConstExpr {
     const std::string value;
-    StrConstExpr(char*);
+    StrConstExpr(const char*);
     std::string toString() const override;
 };
 

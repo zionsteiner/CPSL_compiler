@@ -6,7 +6,8 @@
 #define CPSL_COMPILER_VARDECL_H
 
 
-#include <classes/List/VarAssignList.h>
+#include "VarAssign.h"
+#include <iostream>
 
 struct VarDecl {
     const std::vector<VarAssign*>* varAssignList;

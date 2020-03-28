@@ -5,15 +5,15 @@
 #ifndef CPSL_COMPILER_ELSEIFSTMT_H
 #define CPSL_COMPILER_ELSEIFSTMT_H
 
-#include <Expr/Expr.h>
-#include <List/StmtList.h>
+#include <vector>
 #include "Stmt.h"
+#include "../Expr/Expr.h"
 
 struct ElseIfStmt: Stmt {
     const Expr* expr;
-    const StmtList* stmts;
+    const std::vector<Stmt*>* stmts;
 
-    ElseIfStmt(Expr*, StmtList*);
+    ElseIfStmt(Expr*, std::vector<Stmt*>*);
     std::string toString() const override;
 };
 
