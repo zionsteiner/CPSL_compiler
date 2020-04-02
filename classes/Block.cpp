@@ -13,8 +13,8 @@ std::string Block::toString() const {
         for (auto stmt = stmts->begin() + 1; stmt != stmts->end(); ++stmt) {
             retStr += ";\n\t" + (*stmt)->toString();
         }
-        retStr += "\nEND";
     }
+    retStr += "\nEND";
 
     return retStr;
 }

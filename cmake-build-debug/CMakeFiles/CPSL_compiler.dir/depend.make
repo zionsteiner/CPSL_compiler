@@ -198,16 +198,16 @@ CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBin
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.cpp.o: ../classes/Expr/OpExpr/OpExpr.h
 
-CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.o: ../classes/Expr/ConstExpr/BoolConstExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.o: ../classes/Expr/ConstExpr/ConstExpr.h
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.o: ../classes/Expr/ConstExpr/IntConstExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.o: ../classes/Expr/Expr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/BinOpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.o: ../classes/Expr/OpExpr/OpExpr.h
 
-CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.o: ../classes/Expr/ConstExpr/BoolConstExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.o: ../classes/Expr/ConstExpr/ConstExpr.h
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.o: ../classes/Expr/ConstExpr/IntConstExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.o: ../classes/Expr/Expr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/BinOpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h
@@ -215,8 +215,8 @@ CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.o: ../classes/Expr/OpExpr/OpExpr.h
 
-CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.o: ../classes/Expr/ConstExpr/BoolConstExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.o: ../classes/Expr/ConstExpr/ConstExpr.h
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.o: ../classes/Expr/ConstExpr/IntConstExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.o: ../classes/Expr/Expr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/BinOpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h
@@ -224,8 +224,8 @@ CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.o: ../classes/Expr/OpExpr/OpExpr.h
 
-CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.o: ../classes/Expr/ConstExpr/BoolConstExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.o: ../classes/Expr/ConstExpr/ConstExpr.h
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.o: ../classes/Expr/ConstExpr/IntConstExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.o: ../classes/Expr/Expr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/BinOpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h
@@ -233,8 +233,8 @@ CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.o: ../classes/Expr/OpExpr/OpExpr.h
 
-CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.o: ../classes/Expr/ConstExpr/BoolConstExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.o: ../classes/Expr/ConstExpr/ConstExpr.h
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.o: ../classes/Expr/ConstExpr/IntConstExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.o: ../classes/Expr/Expr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/BinOpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h
@@ -242,8 +242,8 @@ CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.o: ../classes/Expr/OpExpr/OpExpr.h
 
-CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.o: ../classes/Expr/ConstExpr/BoolConstExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.o: ../classes/Expr/ConstExpr/ConstExpr.h
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.o: ../classes/Expr/ConstExpr/IntConstExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.o: ../classes/Expr/Expr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/BinOpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h
@@ -251,8 +251,8 @@ CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.o: ../classes/Expr/OpExpr/OpExpr.h
 
-CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.o: ../classes/Expr/ConstExpr/BoolConstExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.o: ../classes/Expr/ConstExpr/ConstExpr.h
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.o: ../classes/Expr/ConstExpr/IntConstExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.o: ../classes/Expr/Expr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/BinOpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.o: ../classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h
@@ -272,8 +272,10 @@ CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFu
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp.o: ../classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.cpp.o: ../classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.h
 
-CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.o: ../classes/Expr/ConstExpr/ChrConstExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.o: ../classes/Expr/ConstExpr/ConstExpr.h
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.o: ../classes/Expr/ConstExpr/IntConstExpr.h
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.o: ../classes/Expr/Expr.h
+CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.o: ../classes/Expr/ConstExpr/ChrConstExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.o: ../classes/Expr/Expr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.o: ../classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.o: ../classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.h

@@ -199,16 +199,16 @@ CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBin
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BoolBinOpExpr/BoolBinOpExpr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/OpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp.o
- ../classes/Expr/ConstExpr/BoolConstExpr.h
  ../classes/Expr/ConstExpr/ConstExpr.h
+ ../classes/Expr/ConstExpr/IntConstExpr.h
  ../classes/Expr/Expr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.cpp
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/OpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.o
- ../classes/Expr/ConstExpr/BoolConstExpr.h
  ../classes/Expr/ConstExpr/ConstExpr.h
+ ../classes/Expr/ConstExpr/IntConstExpr.h
  ../classes/Expr/Expr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h
@@ -216,8 +216,8 @@ CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.cpp.
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Eq.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/OpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp.o
- ../classes/Expr/ConstExpr/BoolConstExpr.h
  ../classes/Expr/ConstExpr/ConstExpr.h
+ ../classes/Expr/ConstExpr/IntConstExpr.h
  ../classes/Expr/Expr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h
@@ -225,8 +225,8 @@ CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.cpp
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Geq.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/OpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.o
- ../classes/Expr/ConstExpr/BoolConstExpr.h
  ../classes/Expr/ConstExpr/ConstExpr.h
+ ../classes/Expr/ConstExpr/IntConstExpr.h
  ../classes/Expr/Expr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h
@@ -234,8 +234,8 @@ CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.cpp.
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Gt.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/OpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp.o
- ../classes/Expr/ConstExpr/BoolConstExpr.h
  ../classes/Expr/ConstExpr/ConstExpr.h
+ ../classes/Expr/ConstExpr/IntConstExpr.h
  ../classes/Expr/Expr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h
@@ -243,8 +243,8 @@ CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.cpp
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Leq.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/OpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.o
- ../classes/Expr/ConstExpr/BoolConstExpr.h
  ../classes/Expr/ConstExpr/ConstExpr.h
+ ../classes/Expr/ConstExpr/IntConstExpr.h
  ../classes/Expr/Expr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h
@@ -252,8 +252,8 @@ CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.cpp.
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Lt.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/OpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/Neq.cpp.o
- ../classes/Expr/ConstExpr/BoolConstExpr.h
  ../classes/Expr/ConstExpr/ConstExpr.h
+ ../classes/Expr/ConstExpr/IntConstExpr.h
  ../classes/Expr/Expr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/BinOpExpr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/BinOpExpr/CmprBinOpExpr/CmprBinOpExpr.h
@@ -273,8 +273,10 @@ CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFu
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/ChrFunc.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/UnaryOpExpr.h
 CMakeFiles/CPSL_compiler.dir/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp.o
+ ../classes/Expr/ConstExpr/ConstExpr.h
+ ../classes/Expr/ConstExpr/IntConstExpr.h
+ ../classes/Expr/Expr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/ChrConstExpr.h
- /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/ConstExpr/ConstExpr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/Expr.h
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.cpp
  /home/zion/Documents/cs5300/CPSL_compiler/classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.h

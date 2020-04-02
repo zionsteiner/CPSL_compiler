@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/CPSL_compiler.dir/Register.cpp.o"
+  "CMakeFiles/CPSL_compiler.dir/RegisterPool.cpp.o"
+  "CMakeFiles/CPSL_compiler.dir/Scope.cpp.o"
+  "CMakeFiles/CPSL_compiler.dir/SymbolTable.cpp.o"
   "CMakeFiles/CPSL_compiler.dir/classes/Block.cpp.o"
   "CMakeFiles/CPSL_compiler.dir/classes/Body.cpp.o"
   "CMakeFiles/CPSL_compiler.dir/classes/Callable/Function.cpp.o"

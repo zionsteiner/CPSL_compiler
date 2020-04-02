@@ -14,11 +14,11 @@ struct ArithBinOpExpr: BinOpExpr {
     template<typename T>
     static Expr* binOp(Expr* a, Expr* b) {
         if (a->isCompVal() && b->isCompVal()) {
-            auto a = dynamic_cast<IntConstExpr*> (a);
-            auto b = dynamic_cast<IntConstExpr*> (b);
-            auto val = T::binOp(a->value, b->value);
-            delete a;
-            delete b;
+            auto a_new = dynamic_cast<IntConstExpr*> (a);
+            auto b_new = dynamic_cast<IntConstExpr*> (b);
+            auto val = T::binOp(a_new->value, b_new->value);
+            delete a_new;
+            delete b_new;
 
             return new IntConstExpr(val);
         } else {

@@ -1,7 +1,7 @@
 %{
 #include <cstdlib>
 #include <iostream>
-#include "includes.h"
+#include "classes.h"
 #include "parser.hpp"
 #include "globals.h"
 
@@ -73,12 +73,12 @@ WRITE|write { token++; return WRITE ;}
 [1-9]{1}[0-9]* { token++; yylval.intVal = atoi(yytext); return INT_CONST; }
 0 { token++; yylval.intVal = atoi(yytext); return INT_CONST; }
 
-\'\\n\' { token++; yylval.chrVal = yytext[0]; return CHR_CONST; }
-\'\\r\' { token++; yylval.chrVal = yytext[0]; return CHR_CONST; }
-\'\\' { token++; yylval.chrVal = yytext[0]; return CHR_CONST; }
-\'\\t\' { token++; yylval.chrVal = yytext[0]; return CHR_CONST; }
-\'\\f\' { token++; yylval.chrVal = yytext[0]; return CHR_CONST; }
-\'[ -~]{1}\' { token++; yylval.chrVal = yytext[0]; return CHR_CONST; }
+\'\\n\' { token++; yylval.chrVal = '\n'; return CHR_CONST; }
+\'\\r\' { token++; yylval.chrVal = '\r'; return CHR_CONST; }
+\'\\b' { token++; yylval.chrVal = '\b'; return CHR_CONST; }
+\'\\t\' { token++; yylval.chrVal = '\t'; return CHR_CONST; }
+\'\\f\' { token++; yylval.chrVal = '\f'; return CHR_CONST; }
+\'[ -~]{1}\' { token++; yylval.chrVal = yytext[1]; return CHR_CONST; }
 \"[ -~]*\" { token++; yylval.strVal = strdup(yytext); return STR_CONST; }
 \$.*\n { token++; return COMMENT; }
 \n {line++; token = 1;}

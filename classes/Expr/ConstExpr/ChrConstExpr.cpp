@@ -7,5 +7,21 @@
 
 ChrConstExpr::ChrConstExpr(char value): value(value) {}
 std::string ChrConstExpr::toString() const {
-    return std::string(1, value);
+    std::string retStr;
+    switch (value) {
+        case '\n': retStr = "'\\n'";
+                   break;
+        case '\r': retStr = "'\\r'";
+                   break;
+        case '\b': retStr = "'\\b'";
+                   break;
+        case '\t': retStr = "'\\t'";
+                   break;
+        case '\f': retStr = "'\\f'";
+                   break;
+        default: retStr = "'" + std::string(1, value) + "'";
+                 break;
+    }
+
+    return retStr;
 }

@@ -86,6 +86,30 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/Register.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/Register.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/RegisterPool.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/RegisterPool.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/Scope.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/Scope.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/SymbolTable.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/SymbolTable.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
 		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Block.cpp">
 			<Option target="CPSL_compiler"/>
 		</Unit>

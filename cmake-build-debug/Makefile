@@ -123,6 +123,114 @@ CPSL_compiler/fast:
 	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/build
 .PHONY : CPSL_compiler/fast
 
+Register.o: Register.cpp.o
+
+.PHONY : Register.o
+
+# target to build an object file
+Register.cpp.o:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/Register.cpp.o
+.PHONY : Register.cpp.o
+
+Register.i: Register.cpp.i
+
+.PHONY : Register.i
+
+# target to preprocess a source file
+Register.cpp.i:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/Register.cpp.i
+.PHONY : Register.cpp.i
+
+Register.s: Register.cpp.s
+
+.PHONY : Register.s
+
+# target to generate assembly for a file
+Register.cpp.s:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/Register.cpp.s
+.PHONY : Register.cpp.s
+
+RegisterPool.o: RegisterPool.cpp.o
+
+.PHONY : RegisterPool.o
+
+# target to build an object file
+RegisterPool.cpp.o:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/RegisterPool.cpp.o
+.PHONY : RegisterPool.cpp.o
+
+RegisterPool.i: RegisterPool.cpp.i
+
+.PHONY : RegisterPool.i
+
+# target to preprocess a source file
+RegisterPool.cpp.i:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/RegisterPool.cpp.i
+.PHONY : RegisterPool.cpp.i
+
+RegisterPool.s: RegisterPool.cpp.s
+
+.PHONY : RegisterPool.s
+
+# target to generate assembly for a file
+RegisterPool.cpp.s:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/RegisterPool.cpp.s
+.PHONY : RegisterPool.cpp.s
+
+Scope.o: Scope.cpp.o
+
+.PHONY : Scope.o
+
+# target to build an object file
+Scope.cpp.o:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/Scope.cpp.o
+.PHONY : Scope.cpp.o
+
+Scope.i: Scope.cpp.i
+
+.PHONY : Scope.i
+
+# target to preprocess a source file
+Scope.cpp.i:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/Scope.cpp.i
+.PHONY : Scope.cpp.i
+
+Scope.s: Scope.cpp.s
+
+.PHONY : Scope.s
+
+# target to generate assembly for a file
+Scope.cpp.s:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/Scope.cpp.s
+.PHONY : Scope.cpp.s
+
+SymbolTable.o: SymbolTable.cpp.o
+
+.PHONY : SymbolTable.o
+
+# target to build an object file
+SymbolTable.cpp.o:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/SymbolTable.cpp.o
+.PHONY : SymbolTable.cpp.o
+
+SymbolTable.i: SymbolTable.cpp.i
+
+.PHONY : SymbolTable.i
+
+# target to preprocess a source file
+SymbolTable.cpp.i:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/SymbolTable.cpp.i
+.PHONY : SymbolTable.cpp.i
+
+SymbolTable.s: SymbolTable.cpp.s
+
+.PHONY : SymbolTable.s
+
+# target to generate assembly for a file
+SymbolTable.cpp.s:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/SymbolTable.cpp.s
+.PHONY : SymbolTable.cpp.s
+
 classes/Block.o: classes/Block.cpp.o
 
 .PHONY : classes/Block.o
@@ -1968,6 +2076,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... CPSL_compiler"
 	@echo "... edit_cache"
+	@echo "... Register.o"
+	@echo "... Register.i"
+	@echo "... Register.s"
+	@echo "... RegisterPool.o"
+	@echo "... RegisterPool.i"
+	@echo "... RegisterPool.s"
+	@echo "... Scope.o"
+	@echo "... Scope.i"
+	@echo "... Scope.s"
+	@echo "... SymbolTable.o"
+	@echo "... SymbolTable.i"
+	@echo "... SymbolTable.s"
 	@echo "... classes/Block.o"
 	@echo "... classes/Block.i"
 	@echo "... classes/Block.s"

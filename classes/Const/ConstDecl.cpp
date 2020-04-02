@@ -6,11 +6,9 @@
 
 ConstDecl::ConstDecl(std::vector<ConstAssign*>* constAssignList): constAssignList(constAssignList) {}
 std::string ConstDecl::toString() const {
-    std::string retStr = "const " + (*constAssignList)[0]->toString();
-    if (constAssignList->size() > 1) {
-        for (auto constAssign = constAssignList->begin() + 1; constAssign != constAssignList->end(); ++constAssign) {
-            retStr += ' ' + (*constAssign)->toString();
-        }
+    std::string retStr = "CONST";
+    for (auto constAssign = constAssignList->begin(); constAssign != constAssignList->end(); ++constAssign) {
+        retStr += "\n\t" + (*constAssign)->toString();
     }
 
     return retStr;

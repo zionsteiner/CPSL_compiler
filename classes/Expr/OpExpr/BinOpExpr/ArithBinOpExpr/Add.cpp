@@ -9,5 +9,5 @@
 Add::Add(Expr* a, Expr* b): ArithBinOpExpr(a, b) {}
 int Add::binOp(int a, int b) {return a + b;}
 std::string Add::toString() const {
-    return a->toString() + " + " + b->toString();
+    return "(" + a->toString() + " + " + b->toString() + ")";
 }

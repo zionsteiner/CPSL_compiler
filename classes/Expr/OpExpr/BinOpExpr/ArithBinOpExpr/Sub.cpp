@@ -8,5 +8,5 @@
 Sub::Sub(Expr* a, Expr* b): ArithBinOpExpr(a, b) {}
 int Sub::binOp(int a, int b) {return a - b;}
 std::string Sub::toString() const {
-    return a->toString() + " - " + b->toString();
+    return "(" + a->toString() + " - " + b->toString() + ")";
 }

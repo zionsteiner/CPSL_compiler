@@ -202,7 +202,7 @@ int token = 1;
 
 %%
 /* CPSL Declarations */
-program: constDeclOpt typeDeclOpt varDeclOpt procOrFuncStar block PERIOD {$$ = new Program($1, $2, $3, $4, $5); std::cout << std::endl << $$->toString() << std::endl;}
+program: constDeclOpt typeDeclOpt varDeclOpt procOrFuncStar block PERIOD {$$ = new Program($1, $2, $3, $4, $5); std::cout << std::endl << $$->toString() << std::endl; YYACCEPT;}
 
 /* 3.1.1 Constant Rules */
 constDeclOpt: constDecl {$$ = $1;}
@@ -212,7 +212,7 @@ constDeclOpt: constDecl {$$ = $1;}
 constDecl: CONST constAssignPlus {$$ = new ConstDecl($2);}
          ;
 
-constAssignPlus: constAssignPlus constAssign {$1->push_back($2); $$ = $1;}
+constAssignPlus: constAssignPlus constAssign {$$ = $1; $$->push_back($2);}
                | constAssign {$$ = new std::vector<ConstAssign*>(); $$->push_back($1);}
                ;
 

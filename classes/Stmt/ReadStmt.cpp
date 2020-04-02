@@ -7,9 +7,9 @@
 
 ReadStmt::ReadStmt(std::vector<LValue*>* lValList): lValList(lValList) {}
 std::string ReadStmt::toString() const {
-    std::string retStr = "read (";
-    for (auto lVal = lValList->begin(); lVal != lValList->end(); ++lVal) {
-        retStr += ' ' + (*lVal)->toString();
+    std::string retStr = "read(" + (*lValList)[0]->toString();
+    for (auto lVal = lValList->begin()+1; lVal != lValList->end(); ++lVal) {
+        retStr += ", " + (*lVal)->toString();
     }
     retStr += ')';
     return retStr;

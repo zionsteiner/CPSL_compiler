@@ -6,9 +6,9 @@
 
 TypeDecl::TypeDecl(std::vector<TypeAssign*>* typeAssignPlus): typeAssignPlus(typeAssignPlus) {}
 std::string TypeDecl::toString() const {
-    std::string retStr = "type";
+    std::string retStr = "TYPE";
     for (auto typeAssign = typeAssignPlus->begin(); typeAssign != typeAssignPlus->end(); ++typeAssign) {
-        retStr += ' ' + (*typeAssign)->toString();
+        retStr += "\n\t" + (*typeAssign)->toString();
     }
 
     return retStr;

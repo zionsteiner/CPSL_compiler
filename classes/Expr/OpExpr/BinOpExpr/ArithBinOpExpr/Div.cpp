@@ -15,5 +15,5 @@ int Div::binOp(int a, int b) {
 }
 
 std::string Div::toString() const {
-    return a->toString() + " / " + b->toString();
+    return "(" + a->toString() + " / " + b->toString() + ")";
 }

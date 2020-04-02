@@ -2,17 +2,18 @@
 // Created by zion on 2/23/20.
 //
 
+#include <classes/Expr/ConstExpr/IntConstExpr.h>
 #include "OrdFunc.h"
 #include "../../../ConstExpr/ChrConstExpr.h"
 
 OrdFunc::OrdFunc(Expr* expr): UnaryOpExpr(expr) {}
 Expr* OrdFunc::op(Expr* a) {
     if (a->isCompVal()) {
-        auto a_new = dynamic_cast<ChrConstExpr*> (a);
+        auto a_new = dynamic_cast<ChrConstExpr*>(a);
         auto val = OrdFunc::op(a_new->value);
         delete a_new;
 
-        return new ChrConstExpr(val);
+        return new IntConstExpr(val);
     } else {
         return new OrdFunc(a);
     }

@@ -9,5 +9,5 @@ Mult::Mult(Expr* a, Expr* b): ArithBinOpExpr(a, b) {}
 int Mult::binOp(int a, int b) {return a * b;}
 
 std::string Mult::toString() const {
-    return a->toString() + " * " + b->toString();
+    return "(" + a->toString() + " * " + b->toString() + ")";
 }
