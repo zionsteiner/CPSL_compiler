@@ -6,8 +6,29 @@
 #define CPSL_COMPILER_REGISTERPOOL_H
 
 
-class RegisterPool {
+#include <string>
+#include <vector>
 
+class RegisterPool {
+public:
+    class Register{
+    private:
+        const std::string reg;
+        bool isValid;
+        RegisterPool* pool;
+    public:
+        Register(std::string, RegisterPool*);
+        Register(Register&) = delete;
+        Register(Register&&);
+        ~Register();
+    };
+
+    RegisterPool();
+    Register get();
+    void push(Register*);
+
+private:
+    std::vector<std::string> availableRegs;
 };
 
 

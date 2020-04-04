@@ -2,4 +2,36 @@
 // Created by zion on 3/28/20.
 //
 
+#include <string>
 #include "RegisterPool.h"
+
+// ToDo: split register pool by register type?
+RegisterPool::RegisterPool() {
+    // $t0-$t7, $s0-$s7, $t8-$t9
+    for (int i = 8; i <= 25; ++i) {
+        std::string regId = "$" + std::to_string(i);
+        availableRegs.push_back(regId);
+    }
+}
+
+RegisterPool::Register RegisterPool::get() {
+    std::string regId = availableRegs.back();
+    availableRegs.pop_back();
+
+    return Register(regId, this);
+}
+
+void RegisterPool::push(std::string regId) {
+    availableRegs.push_back(regId);
+}
+
+RegisterPool::Register::Register(std::string regId, RegisterPool* pool): reg(regId), pool(pool), isValid(true) {}
+
+RegisterPool::Register::Register(Register&& a): reg(a.reg), isValid(true) {}
+
+RegisterPool::Register::~Register() {
+    if (isValid) {
+        pool->push(*this);
+    }
+}
+

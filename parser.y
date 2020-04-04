@@ -216,7 +216,6 @@ constAssignPlus: constAssignPlus constAssign {$$ = $1; $$->push_back($2);}
                | constAssign {$$ = new std::vector<ConstAssign*>(); $$->push_back($1);}
                ;
 
-/* TODO: Add to symbol table */
 constAssign: ID EQ_t expr SEMICOLON {$$ = new ConstAssign($1, $3);}
            ;
 

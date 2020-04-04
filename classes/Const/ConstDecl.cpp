@@ -13,3 +13,7 @@ std::string ConstDecl::toString() const {
 
     return retStr;
 }
+
+std::string ConstDecl::emitMips() {
+    std::string mips;
+}

@@ -25,6 +25,7 @@ struct Program {
     Program(const TypeDecl *typeDecl);
 
     std::string toString() const;
+    void emitMips();
 };
 
 

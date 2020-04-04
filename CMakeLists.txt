@@ -21,7 +21,7 @@ set(CPSL_compiler_srcs
     main.cpp
     ${BISON_Parser_OUTPUTS}
     ${FLEX_Scanner_OUTPUTS}
-    ${classes_src} SymbolTable.cpp SymbolTable.h RegisterPool.cpp RegisterPool.h Register.cpp Register.h Scope.cpp Scope.h)
+    ${classes_src} SymbolTable.cpp SymbolTable.h RegisterPool.cpp RegisterPool.h Scope.cpp Scope.h)
 
 source_group("CPSL_compiler" FILES ${CPSL_compiler_srcs})
 

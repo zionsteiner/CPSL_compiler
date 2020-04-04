@@ -2,6 +2,7 @@
 // Created by zion on 3/9/20.
 //
 
+#include <globals.h>
 #include "Program.h"
 
 Program::Program(ConstDecl* constDecl, TypeDecl* typeDecl, VarDecl* varDecl, std::vector<Callable*>* callableList, Block* block)
@@ -21,4 +22,13 @@ std::string Program::toString() const {
     retStr += '.';
 
     return retStr;
+}
+
+void Program::emitMips() {
+    SymbolTable symbolTable;
+    RegisterPool registerPool;
+
+    std::cout << "\t.text\nmain:\n";
+
+
 }

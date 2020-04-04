@@ -1,2 +1,16 @@
-How to define int size() for different types?
-Template class issue?
+1. How to define int size() for different types?
+
+
+2. Split register pool by register type?
+
+
+3. Where/when to add stuff to symbol table? In parser actions? Or in emitMips()?
+
+5. How does Register/RegisterPool work?
+global, stack of registers
+emit returns register
+
+x. emitMips() emits string?
+yep
+
+offset? assign to permanent memory?
