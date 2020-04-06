@@ -100,13 +100,7 @@
 #include "classes/Type/SimpleType.h"
 #include "classes/Type/TypeAssign.h"
 #include "classes/Type/TypeDecl.h"
-
-
-// * Primitive types
-#include "classes/Type/Primitive/Primitive.h"
-#include "classes/Type/Primitive/ChrType.h"
-#include "classes/Type/Primitive/IntType.h"
-#include "classes/Type/Primitive/StrType.h"
+#include "classes/Type/Primitive.h"
 
 // Var
 #include "classes/Var/VarAssign.h"

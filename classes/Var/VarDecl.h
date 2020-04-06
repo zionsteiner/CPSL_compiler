@@ -14,6 +14,7 @@ struct VarDecl {
 
     explicit VarDecl(std::vector<VarAssign*>*);
     std::string toString() const;
+    void emitMips();
 };
 
 

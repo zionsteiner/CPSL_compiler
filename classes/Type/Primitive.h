@@ -5,9 +5,13 @@
 #ifndef CPSL_COMPILER_PRIMITIVE_H
 #define CPSL_COMPILER_PRIMITIVE_H
 
-#include "../Type.h"
+#include "Type.h"
 
 struct Primitive: Type {
+    std::string toString() const override;
+    Primitive(): Type() {}
+    ~Primitive() override = default;
+    int size() override;
 };
 
 

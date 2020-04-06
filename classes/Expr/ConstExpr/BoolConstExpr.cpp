@@ -8,8 +8,7 @@
 
 BoolConstExpr::BoolConstExpr(bool value): value(value) {}
 std::string BoolConstExpr::toString() const {
-    std::stringstream buffer;
-    buffer << value;
+    std::string retStr = value? "true": "false";
 
-    return buffer.str();
+    return retStr;
 }

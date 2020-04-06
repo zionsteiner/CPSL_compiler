@@ -13,7 +13,7 @@ class RegisterPool {
 public:
     class Register{
     private:
-        const std::string reg;
+        const std::string regId;
         bool isValid;
         RegisterPool* pool;
     public:
@@ -25,7 +25,7 @@ public:
 
     RegisterPool();
     Register get();
-    void push(Register*);
+    void push(std::string);
 
 private:
     std::vector<std::string> availableRegs;

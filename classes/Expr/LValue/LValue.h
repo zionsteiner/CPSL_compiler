@@ -6,6 +6,8 @@
 #define CPSL_COMPILER_LVALUE_H
 
 #include <vector>
+#include <RegisterPool.h>
+#include <classes/Type/Type.h>
 #include "Ext.h"
 #include "../Expr.h"
 #include "../Ident.h"

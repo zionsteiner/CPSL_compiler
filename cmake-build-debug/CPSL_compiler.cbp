@@ -86,12 +86,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/Register.cpp">
-			<Option target="CPSL_compiler"/>
-		</Unit>
-		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/Register.h">
-			<Option target="CPSL_compiler"/>
-		</Unit>
 		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/RegisterPool.cpp">
 			<Option target="CPSL_compiler"/>
 		</Unit>
@@ -102,6 +96,12 @@
 			<Option target="CPSL_compiler"/>
 		</Unit>
 		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/Scope.h">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/Symbol.cpp">
+			<Option target="CPSL_compiler"/>
+		</Unit>
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/Symbol.h">
 			<Option target="CPSL_compiler"/>
 		</Unit>
 		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/SymbolTable.cpp">
@@ -452,28 +452,10 @@
 		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/ArrayType.h">
 			<Option target="CPSL_compiler"/>
 		</Unit>
-		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/ChrType.cpp">
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive.cpp">
 			<Option target="CPSL_compiler"/>
 		</Unit>
-		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/ChrType.h">
-			<Option target="CPSL_compiler"/>
-		</Unit>
-		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/IntType.cpp">
-			<Option target="CPSL_compiler"/>
-		</Unit>
-		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/IntType.h">
-			<Option target="CPSL_compiler"/>
-		</Unit>
-		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/Primitive.cpp">
-			<Option target="CPSL_compiler"/>
-		</Unit>
-		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/Primitive.h">
-			<Option target="CPSL_compiler"/>
-		</Unit>
-		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/StrType.cpp">
-			<Option target="CPSL_compiler"/>
-		</Unit>
-		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/StrType.h">
+		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive.h">
 			<Option target="CPSL_compiler"/>
 		</Unit>
 		<Unit filename="/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/RecordType.cpp">

@@ -12,6 +12,5 @@ extern int line;
 extern int token;
 extern RegisterPool registerPool;
 extern SymbolTable symbolTable;
-// ToDo: add registerpool, symboltable
 
 #endif //CPSL_COMPILER_GLOBALS_H

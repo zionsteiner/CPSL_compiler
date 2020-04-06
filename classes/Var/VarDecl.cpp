@@ -13,3 +13,7 @@ std::string VarDecl::toString() const {
 
     return retStr;
 }
+
+void VarDecl::emitMips() {
+
+}

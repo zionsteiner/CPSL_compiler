@@ -823,61 +823,22 @@ CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/ArrayType.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.s
 
-CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
-CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.o: ../classes/Type/Primitive/ChrType.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/ChrType.cpp
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive.cpp.o: ../classes/Type/Primitive.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive.cpp
 
-CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/ChrType.cpp > CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.i
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive.cpp > CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive.cpp.i
 
-CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/ChrType.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.s
-
-CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
-CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.o: ../classes/Type/Primitive/IntType.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/IntType.cpp
-
-CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/IntType.cpp > CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.i
-
-CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/IntType.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.s
-
-CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
-CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.o: ../classes/Type/Primitive/Primitive.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/Primitive.cpp
-
-CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/Primitive.cpp > CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.i
-
-CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/Primitive.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.s
-
-CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
-CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.o: ../classes/Type/Primitive/StrType.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/StrType.cpp
-
-CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/StrType.cpp > CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.i
-
-CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/StrType.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.s
+CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive.cpp -o CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive.cpp.s
 
 CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
 CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.o: ../classes/Type/RecordType.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/RecordType.cpp
 
 CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.i: cmake_force
@@ -890,7 +851,7 @@ CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.s: cmake_force
 
 CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
 CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.o: ../classes/Type/SimpleType.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/SimpleType.cpp
 
 CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.i: cmake_force
@@ -903,7 +864,7 @@ CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.s: cmake_force
 
 CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
 CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.o: ../classes/Type/TypeAssign.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/TypeAssign.cpp
 
 CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.i: cmake_force
@@ -916,7 +877,7 @@ CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.s: cmake_force
 
 CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
 CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.o: ../classes/Type/TypeDecl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Type/TypeDecl.cpp
 
 CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.i: cmake_force
@@ -929,7 +890,7 @@ CMakeFiles/CPSL_compiler.dir/classes/Type/TypeDecl.cpp.s: cmake_force
 
 CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
 CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.o: ../classes/Var/VarAssign.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Var/VarAssign.cpp
 
 CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.i: cmake_force
@@ -942,7 +903,7 @@ CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.s: cmake_force
 
 CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
 CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.o: ../classes/Var/VarDecl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/classes/Var/VarDecl.cpp
 
 CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.i: cmake_force
@@ -955,7 +916,7 @@ CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.s: cmake_force
 
 CMakeFiles/CPSL_compiler.dir/SymbolTable.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
 CMakeFiles/CPSL_compiler.dir/SymbolTable.cpp.o: ../SymbolTable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CMakeFiles/CPSL_compiler.dir/SymbolTable.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/CPSL_compiler.dir/SymbolTable.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/SymbolTable.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/SymbolTable.cpp
 
 CMakeFiles/CPSL_compiler.dir/SymbolTable.cpp.i: cmake_force
@@ -968,7 +929,7 @@ CMakeFiles/CPSL_compiler.dir/SymbolTable.cpp.s: cmake_force
 
 CMakeFiles/CPSL_compiler.dir/RegisterPool.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
 CMakeFiles/CPSL_compiler.dir/RegisterPool.cpp.o: ../RegisterPool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/CPSL_compiler.dir/RegisterPool.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/CPSL_compiler.dir/RegisterPool.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/RegisterPool.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/RegisterPool.cpp
 
 CMakeFiles/CPSL_compiler.dir/RegisterPool.cpp.i: cmake_force
@@ -979,22 +940,9 @@ CMakeFiles/CPSL_compiler.dir/RegisterPool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/RegisterPool.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/RegisterPool.cpp -o CMakeFiles/CPSL_compiler.dir/RegisterPool.cpp.s
 
-CMakeFiles/CPSL_compiler.dir/Register.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
-CMakeFiles/CPSL_compiler.dir/Register.cpp.o: ../Register.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/CPSL_compiler.dir/Register.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/Register.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/Register.cpp
-
-CMakeFiles/CPSL_compiler.dir/Register.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/Register.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/Register.cpp > CMakeFiles/CPSL_compiler.dir/Register.cpp.i
-
-CMakeFiles/CPSL_compiler.dir/Register.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/Register.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/Register.cpp -o CMakeFiles/CPSL_compiler.dir/Register.cpp.s
-
 CMakeFiles/CPSL_compiler.dir/Scope.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
 CMakeFiles/CPSL_compiler.dir/Scope.cpp.o: ../Scope.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CMakeFiles/CPSL_compiler.dir/Scope.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/CPSL_compiler.dir/Scope.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/Scope.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/Scope.cpp
 
 CMakeFiles/CPSL_compiler.dir/Scope.cpp.i: cmake_force
@@ -1004,6 +952,19 @@ CMakeFiles/CPSL_compiler.dir/Scope.cpp.i: cmake_force
 CMakeFiles/CPSL_compiler.dir/Scope.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/Scope.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/Scope.cpp -o CMakeFiles/CPSL_compiler.dir/Scope.cpp.s
+
+CMakeFiles/CPSL_compiler.dir/Symbol.cpp.o: CMakeFiles/CPSL_compiler.dir/flags.make
+CMakeFiles/CPSL_compiler.dir/Symbol.cpp.o: ../Symbol.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CMakeFiles/CPSL_compiler.dir/Symbol.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CPSL_compiler.dir/Symbol.cpp.o -c /home/zion/Documents/cs5300/CPSL_compiler/Symbol.cpp
+
+CMakeFiles/CPSL_compiler.dir/Symbol.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPSL_compiler.dir/Symbol.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zion/Documents/cs5300/CPSL_compiler/Symbol.cpp > CMakeFiles/CPSL_compiler.dir/Symbol.cpp.i
+
+CMakeFiles/CPSL_compiler.dir/Symbol.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPSL_compiler.dir/Symbol.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zion/Documents/cs5300/CPSL_compiler/Symbol.cpp -o CMakeFiles/CPSL_compiler.dir/Symbol.cpp.s
 
 # Object files for target CPSL_compiler
 CPSL_compiler_OBJECTS = \
@@ -1065,10 +1026,7 @@ CPSL_compiler_OBJECTS = \
 "CMakeFiles/CPSL_compiler.dir/classes/Stmt/WhileStmt.cpp.o" \
 "CMakeFiles/CPSL_compiler.dir/classes/Stmt/WriteStmt.cpp.o" \
 "CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.o" \
-"CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.o" \
-"CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.o" \
-"CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.o" \
-"CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive.cpp.o" \
 "CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.o" \
 "CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.o" \
 "CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.o" \
@@ -1077,8 +1035,8 @@ CPSL_compiler_OBJECTS = \
 "CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.o" \
 "CMakeFiles/CPSL_compiler.dir/SymbolTable.cpp.o" \
 "CMakeFiles/CPSL_compiler.dir/RegisterPool.cpp.o" \
-"CMakeFiles/CPSL_compiler.dir/Register.cpp.o" \
-"CMakeFiles/CPSL_compiler.dir/Scope.cpp.o"
+"CMakeFiles/CPSL_compiler.dir/Scope.cpp.o" \
+"CMakeFiles/CPSL_compiler.dir/Symbol.cpp.o"
 
 # External object files for target CPSL_compiler
 CPSL_compiler_EXTERNAL_OBJECTS =
@@ -1141,10 +1099,7 @@ CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Stmt/StopStmt.cpp.o
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Stmt/WhileStmt.cpp.o
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Stmt/WriteStmt.cpp.o
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.o
-CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.o
-CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.o
-CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.o
-CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive.cpp.o
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.o
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.o
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.o
@@ -1153,11 +1108,11 @@ CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Var/VarAssign.cpp.o
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/classes/Var/VarDecl.cpp.o
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/SymbolTable.cpp.o
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/RegisterPool.cpp.o
-CPSL_compiler: CMakeFiles/CPSL_compiler.dir/Register.cpp.o
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/Scope.cpp.o
+CPSL_compiler: CMakeFiles/CPSL_compiler.dir/Symbol.cpp.o
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/build.make
 CPSL_compiler: CMakeFiles/CPSL_compiler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Linking CXX executable CPSL_compiler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Linking CXX executable CPSL_compiler"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CPSL_compiler.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

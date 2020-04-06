@@ -10,9 +10,6 @@
 
 extern int yylex();
 void yyerror(const char*);
-
-int line = 1;
-int token = 1;
 %}
 
 %union {
@@ -202,7 +199,8 @@ int token = 1;
 
 %%
 /* CPSL Declarations */
-program: constDeclOpt typeDeclOpt varDeclOpt procOrFuncStar block PERIOD {$$ = new Program($1, $2, $3, $4, $5); std::cout << std::endl << $$->toString() << std::endl; YYACCEPT;}
+program: constDeclOpt typeDeclOpt varDeclOpt procOrFuncStar block PERIOD {$$ = new Program($1, $2, $3, $4, $5); $$->emitMips(); YYACCEPT;}
+//program: constDeclOpt typeDeclOpt varDeclOpt procOrFuncStar block PERIOD {$$ = new Program($1, $2, $3, $4, $5); std::cout << std::endl << $$->toString() << std::endl; YYACCEPT;}
 
 /* 3.1.1 Constant Rules */
 constDeclOpt: constDecl {$$ = $1;}

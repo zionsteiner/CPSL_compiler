@@ -14,6 +14,7 @@ struct TypeDecl {
 
     explicit TypeDecl(std::vector<TypeAssign*>*);
     std::string toString() const;
+    void emitMips();
 };
 
 

@@ -6,14 +6,19 @@
 #define CPSL_COMPILER_SYMBOLTABLE_H
 
 
-#include <classes/Expr/LValue/LValue.h>
 #include <classes/Type/Type.h>
 #include "Scope.h"
 
 class SymbolTable {
 public:
-    LValue* lookupLVal(std::string);
+    Symbol* lookupSymbol(std::string);
+    void addSymbol(std::string, Symbol*);
     Type* lookupType(std::string);
+    void addType(std::string, Type*);
+    void enterScope();
+    void listSymbols();
+    void listTypes();
+    SymbolTable();
 
 private:
     std::vector<Scope> scopeLevels;

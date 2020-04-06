@@ -2,6 +2,12 @@
 // Created by zion on 3/9/20.
 //
 
+#include <iostream>
+#include <classes/Expr/ConstExpr/IntConstExpr.h>
+#include <classes/Expr/ConstExpr/ChrConstExpr.h>
+#include <classes/Expr/ConstExpr/StrConstExpr.h>
+#include <classes/Expr/ConstExpr/BoolConstExpr.h>
+#include "globals.h"
 #include "ConstDecl.h"
 
 ConstDecl::ConstDecl(std::vector<ConstAssign*>* constAssignList): constAssignList(constAssignList) {}
@@ -14,6 +20,38 @@ std::string ConstDecl::toString() const {
     return retStr;
 }
 
-std::string ConstDecl::emitMips() {
-    std::string mips;
+void ConstDecl::emitMips() {
+    for (auto constAssign = constAssignList->begin(); constAssign != constAssignList->end(); ++constAssign) {
+        // Identify and lookup type of expr
+        auto expr = (*constAssign)->expr;
+        Symbol* constSymbol;
+
+        auto i_expr = dynamic_cast<IntConstExpr*>(expr);
+        if (i_expr != nullptr) {
+            auto type = symbolTable.lookupType("integer");
+            constSymbol = new Symbol(i_expr, type);
+        }
+        auto c_expr = dynamic_cast<ChrConstExpr*>(expr);
+        if (c_expr != nullptr) {
+            auto type = symbolTable.lookupType("char");
+            constSymbol = new Symbol(c_expr, type);
+        }
+        auto s_expr = dynamic_cast<StrConstExpr*>(expr);
+        if (s_expr != nullptr) {
+            auto type = symbolTable.lookupType("string");
+            constSymbol = new Symbol(s_expr, type);
+        }
+        auto b_expr = dynamic_cast<BoolConstExpr*>(expr);
+        if (b_expr != nullptr) {
+            auto type = symbolTable.lookupType("boolean");
+            constSymbol = new Symbol(b_expr, type);
+        }
+
+        if (constSymbol == nullptr) {
+            throw "Something weird happened.";
+        } else {
+            symbolTable.addSymbol((*constAssign)->id->id, constSymbol)
+        }
+
+    }
 }

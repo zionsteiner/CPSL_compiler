@@ -123,33 +123,6 @@ CPSL_compiler/fast:
 	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/build
 .PHONY : CPSL_compiler/fast
 
-Register.o: Register.cpp.o
-
-.PHONY : Register.o
-
-# target to build an object file
-Register.cpp.o:
-	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/Register.cpp.o
-.PHONY : Register.cpp.o
-
-Register.i: Register.cpp.i
-
-.PHONY : Register.i
-
-# target to preprocess a source file
-Register.cpp.i:
-	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/Register.cpp.i
-.PHONY : Register.cpp.i
-
-Register.s: Register.cpp.s
-
-.PHONY : Register.s
-
-# target to generate assembly for a file
-Register.cpp.s:
-	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/Register.cpp.s
-.PHONY : Register.cpp.s
-
 RegisterPool.o: RegisterPool.cpp.o
 
 .PHONY : RegisterPool.o
@@ -203,6 +176,33 @@ Scope.s: Scope.cpp.s
 Scope.cpp.s:
 	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/Scope.cpp.s
 .PHONY : Scope.cpp.s
+
+Symbol.o: Symbol.cpp.o
+
+.PHONY : Symbol.o
+
+# target to build an object file
+Symbol.cpp.o:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/Symbol.cpp.o
+.PHONY : Symbol.cpp.o
+
+Symbol.i: Symbol.cpp.i
+
+.PHONY : Symbol.i
+
+# target to preprocess a source file
+Symbol.cpp.i:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/Symbol.cpp.i
+.PHONY : Symbol.cpp.i
+
+Symbol.s: Symbol.cpp.s
+
+.PHONY : Symbol.s
+
+# target to generate assembly for a file
+Symbol.cpp.s:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/Symbol.cpp.s
+.PHONY : Symbol.cpp.s
 
 SymbolTable.o: SymbolTable.cpp.o
 
@@ -1716,113 +1716,32 @@ classes/Type/ArrayType.cpp.s:
 	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.s
 .PHONY : classes/Type/ArrayType.cpp.s
 
-classes/Type/Primitive/ChrType.o: classes/Type/Primitive/ChrType.cpp.o
+classes/Type/Primitive.o: classes/Type/Primitive.cpp.o
 
-.PHONY : classes/Type/Primitive/ChrType.o
-
-# target to build an object file
-classes/Type/Primitive/ChrType.cpp.o:
-	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.o
-.PHONY : classes/Type/Primitive/ChrType.cpp.o
-
-classes/Type/Primitive/ChrType.i: classes/Type/Primitive/ChrType.cpp.i
-
-.PHONY : classes/Type/Primitive/ChrType.i
-
-# target to preprocess a source file
-classes/Type/Primitive/ChrType.cpp.i:
-	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.i
-.PHONY : classes/Type/Primitive/ChrType.cpp.i
-
-classes/Type/Primitive/ChrType.s: classes/Type/Primitive/ChrType.cpp.s
-
-.PHONY : classes/Type/Primitive/ChrType.s
-
-# target to generate assembly for a file
-classes/Type/Primitive/ChrType.cpp.s:
-	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.s
-.PHONY : classes/Type/Primitive/ChrType.cpp.s
-
-classes/Type/Primitive/IntType.o: classes/Type/Primitive/IntType.cpp.o
-
-.PHONY : classes/Type/Primitive/IntType.o
+.PHONY : classes/Type/Primitive.o
 
 # target to build an object file
-classes/Type/Primitive/IntType.cpp.o:
-	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.o
-.PHONY : classes/Type/Primitive/IntType.cpp.o
+classes/Type/Primitive.cpp.o:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive.cpp.o
+.PHONY : classes/Type/Primitive.cpp.o
 
-classes/Type/Primitive/IntType.i: classes/Type/Primitive/IntType.cpp.i
+classes/Type/Primitive.i: classes/Type/Primitive.cpp.i
 
-.PHONY : classes/Type/Primitive/IntType.i
-
-# target to preprocess a source file
-classes/Type/Primitive/IntType.cpp.i:
-	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.i
-.PHONY : classes/Type/Primitive/IntType.cpp.i
-
-classes/Type/Primitive/IntType.s: classes/Type/Primitive/IntType.cpp.s
-
-.PHONY : classes/Type/Primitive/IntType.s
-
-# target to generate assembly for a file
-classes/Type/Primitive/IntType.cpp.s:
-	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.s
-.PHONY : classes/Type/Primitive/IntType.cpp.s
-
-classes/Type/Primitive/Primitive.o: classes/Type/Primitive/Primitive.cpp.o
-
-.PHONY : classes/Type/Primitive/Primitive.o
-
-# target to build an object file
-classes/Type/Primitive/Primitive.cpp.o:
-	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.o
-.PHONY : classes/Type/Primitive/Primitive.cpp.o
-
-classes/Type/Primitive/Primitive.i: classes/Type/Primitive/Primitive.cpp.i
-
-.PHONY : classes/Type/Primitive/Primitive.i
+.PHONY : classes/Type/Primitive.i
 
 # target to preprocess a source file
-classes/Type/Primitive/Primitive.cpp.i:
-	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.i
-.PHONY : classes/Type/Primitive/Primitive.cpp.i
+classes/Type/Primitive.cpp.i:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive.cpp.i
+.PHONY : classes/Type/Primitive.cpp.i
 
-classes/Type/Primitive/Primitive.s: classes/Type/Primitive/Primitive.cpp.s
+classes/Type/Primitive.s: classes/Type/Primitive.cpp.s
 
-.PHONY : classes/Type/Primitive/Primitive.s
-
-# target to generate assembly for a file
-classes/Type/Primitive/Primitive.cpp.s:
-	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.s
-.PHONY : classes/Type/Primitive/Primitive.cpp.s
-
-classes/Type/Primitive/StrType.o: classes/Type/Primitive/StrType.cpp.o
-
-.PHONY : classes/Type/Primitive/StrType.o
-
-# target to build an object file
-classes/Type/Primitive/StrType.cpp.o:
-	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.o
-.PHONY : classes/Type/Primitive/StrType.cpp.o
-
-classes/Type/Primitive/StrType.i: classes/Type/Primitive/StrType.cpp.i
-
-.PHONY : classes/Type/Primitive/StrType.i
-
-# target to preprocess a source file
-classes/Type/Primitive/StrType.cpp.i:
-	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.i
-.PHONY : classes/Type/Primitive/StrType.cpp.i
-
-classes/Type/Primitive/StrType.s: classes/Type/Primitive/StrType.cpp.s
-
-.PHONY : classes/Type/Primitive/StrType.s
+.PHONY : classes/Type/Primitive.s
 
 # target to generate assembly for a file
-classes/Type/Primitive/StrType.cpp.s:
-	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.s
-.PHONY : classes/Type/Primitive/StrType.cpp.s
+classes/Type/Primitive.cpp.s:
+	$(MAKE) -f CMakeFiles/CPSL_compiler.dir/build.make CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive.cpp.s
+.PHONY : classes/Type/Primitive.cpp.s
 
 classes/Type/RecordType.o: classes/Type/RecordType.cpp.o
 
@@ -2076,15 +1995,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... CPSL_compiler"
 	@echo "... edit_cache"
-	@echo "... Register.o"
-	@echo "... Register.i"
-	@echo "... Register.s"
 	@echo "... RegisterPool.o"
 	@echo "... RegisterPool.i"
 	@echo "... RegisterPool.s"
 	@echo "... Scope.o"
 	@echo "... Scope.i"
 	@echo "... Scope.s"
+	@echo "... Symbol.o"
+	@echo "... Symbol.i"
+	@echo "... Symbol.s"
 	@echo "... SymbolTable.o"
 	@echo "... SymbolTable.i"
 	@echo "... SymbolTable.s"
@@ -2253,18 +2172,9 @@ help:
 	@echo "... classes/Type/ArrayType.o"
 	@echo "... classes/Type/ArrayType.i"
 	@echo "... classes/Type/ArrayType.s"
-	@echo "... classes/Type/Primitive/ChrType.o"
-	@echo "... classes/Type/Primitive/ChrType.i"
-	@echo "... classes/Type/Primitive/ChrType.s"
-	@echo "... classes/Type/Primitive/IntType.o"
-	@echo "... classes/Type/Primitive/IntType.i"
-	@echo "... classes/Type/Primitive/IntType.s"
-	@echo "... classes/Type/Primitive/Primitive.o"
-	@echo "... classes/Type/Primitive/Primitive.i"
-	@echo "... classes/Type/Primitive/Primitive.s"
-	@echo "... classes/Type/Primitive/StrType.o"
-	@echo "... classes/Type/Primitive/StrType.i"
-	@echo "... classes/Type/Primitive/StrType.s"
+	@echo "... classes/Type/Primitive.o"
+	@echo "... classes/Type/Primitive.i"
+	@echo "... classes/Type/Primitive.s"
 	@echo "... classes/Type/RecordType.o"
 	@echo "... classes/Type/RecordType.i"
 	@echo "... classes/Type/RecordType.s"

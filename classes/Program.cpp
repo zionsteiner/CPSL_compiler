@@ -25,10 +25,8 @@ std::string Program::toString() const {
 }
 
 void Program::emitMips() {
-    SymbolTable symbolTable;
-    RegisterPool registerPool;
-
-    std::cout << "\t.text\nmain:\n";
-
-
+    std::cout << "\t.text\n.globl main:" << std::endl;
+    constDecl->emitMips();
+    typeDecl->emitMips();
+//    varDecl->emitMips();
 }

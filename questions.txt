@@ -14,3 +14,7 @@ x. emitMips() emits string?
 yep
 
 offset? assign to permanent memory?
+
+what to store? lval? what does lval have? a type and
+
+how to store strings? use string buffer? is string primitive with size 4?

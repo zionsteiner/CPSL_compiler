@@ -14,8 +14,8 @@
 #include <classes/Callable/Callable.h>
 
 struct Program {
-    const ConstDecl* constDecl;
-    const TypeDecl* typeDecl;
+    ConstDecl *constDecl;
+    TypeDecl *typeDecl;
     const VarDecl* varDecl;
     const std::vector<Callable*>* callableList;
     const Block* block;

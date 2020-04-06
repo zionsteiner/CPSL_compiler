@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <classes/Expr/ConstExpr/IntConstExpr.h>
+#include <classes/Expr/ConstExpr/BoolConstExpr.h>
 #include "../BinOpExpr.h"
 
 struct CmprBinOpExpr: BinOpExpr {
@@ -17,11 +18,11 @@ struct CmprBinOpExpr: BinOpExpr {
         if (a->isCompVal() && b->isCompVal()) {
             auto a_new = dynamic_cast<IntConstExpr*> (a);
             auto b_new = dynamic_cast<IntConstExpr*> (b);
-            auto val = T::binOp(a_new->value, b_new->value);
+            bool val = T::binOp(a_new->value, b_new->value);
             delete a_new;
             delete b_new;
 
-            return new IntConstExpr(val);
+            return new BoolConstExpr(val);
         } else {
             return new T(a, b);
         }

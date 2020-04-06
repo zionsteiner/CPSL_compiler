@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/zion/Documents/cs5300/CPSL_compiler/Register.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/Register.cpp.o"
   "/home/zion/Documents/cs5300/CPSL_compiler/RegisterPool.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/RegisterPool.cpp.o"
   "/home/zion/Documents/cs5300/CPSL_compiler/Scope.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/Scope.cpp.o"
+  "/home/zion/Documents/cs5300/CPSL_compiler/Symbol.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/Symbol.cpp.o"
   "/home/zion/Documents/cs5300/CPSL_compiler/SymbolTable.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/SymbolTable.cpp.o"
   "/home/zion/Documents/cs5300/CPSL_compiler/classes/Block.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/classes/Block.cpp.o"
   "/home/zion/Documents/cs5300/CPSL_compiler/classes/Body.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/classes/Body.cpp.o"
@@ -63,10 +63,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/WhileStmt.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/classes/Stmt/WhileStmt.cpp.o"
   "/home/zion/Documents/cs5300/CPSL_compiler/classes/Stmt/WriteStmt.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/classes/Stmt/WriteStmt.cpp.o"
   "/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/ArrayType.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/classes/Type/ArrayType.cpp.o"
-  "/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/ChrType.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/ChrType.cpp.o"
-  "/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/IntType.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/IntType.cpp.o"
-  "/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/Primitive.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/Primitive.cpp.o"
-  "/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive/StrType.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive/StrType.cpp.o"
+  "/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/Primitive.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/classes/Type/Primitive.cpp.o"
   "/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/RecordType.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/classes/Type/RecordType.cpp.o"
   "/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/SimpleType.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/classes/Type/SimpleType.cpp.o"
   "/home/zion/Documents/cs5300/CPSL_compiler/classes/Type/TypeAssign.cpp" "/home/zion/Documents/cs5300/CPSL_compiler/cmake-build-debug/CMakeFiles/CPSL_compiler.dir/classes/Type/TypeAssign.cpp.o"
