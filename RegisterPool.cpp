@@ -25,6 +25,8 @@ void RegisterPool::push(std::string regId) {
     availableRegs.push_back(regId);
 }
 
+std::string RegisterPool::Register::getRegId() {return regId;}
+
 RegisterPool::Register::Register(std::string regId, RegisterPool* pool): regId(regId), pool(pool), isValid(true) {}
 
 RegisterPool::Register::Register(Register&& a): regId(a.regId), isValid(true) {}

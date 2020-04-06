@@ -9,7 +9,8 @@ Symbol::Symbol(Expr* expr, Type* type) {
     this->offset = -1;
     this->type = type;
 }
-Symbol::Symbol(int offset) {
+
+Symbol::Symbol(int offset, Type* type) {
     this->offset = offset;
     this->expr = nullptr;
     this->type = type;

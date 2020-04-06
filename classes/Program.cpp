@@ -25,8 +25,11 @@ std::string Program::toString() const {
 }
 
 void Program::emitMips() {
-    std::cout << "\t.text\n.globl main:" << std::endl;
+    std::cout << "\t.text\n.globl main\nmain:" << std::endl;
     constDecl->emitMips();
     typeDecl->emitMips();
-//    varDecl->emitMips();
+    varDecl->emitMips();
+
+
+//    symbolTable.listSymbols();
 }

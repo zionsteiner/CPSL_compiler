@@ -6,6 +6,8 @@
 #include "Scope.h"
 #include "Symbol.h"
 
+Scope::Scope(std::string baseReg): baseReg(baseReg) {}
+
 Symbol* Scope::lookupSymbol(std::string key) {
     auto symbol = symbols.find(key);
     if (symbol != symbols.end()) {
@@ -26,7 +28,13 @@ Type * Scope::lookupType(std::string key) {
 
 void Scope::addSymbol(std::string key, Symbol* symbol) {
     symbols[key] = symbol;
-
+    if (symbol->offset != -1) {
+        if (symbol->offset == nextOffset) {
+            nextOffset += symbol->type->size();
+        } else {
+            throw "ERROR: Invalid symbol offset";
+        }
+    }
 }
 
 void Scope::addType(std::string key, Type* type) {
@@ -36,7 +44,12 @@ void Scope::addType(std::string key, Type* type) {
 void Scope::listSymbols() {
     for (auto symbol = symbols.begin(); symbol != symbols.end(); ++symbol) {
         std::cout << "ID: " << symbol->first << std::endl;
-        std::cout << "Text: " << symbol->second->expr->toString() << std::endl;
+        if (symbol->second->offset == -1) {
+            std::cout << "Text: " << symbol->second->expr->toString() << std::endl;
+        } else {
+            std::cout << "Text: " << "unknown" << std::endl;
+        }
+        std::cout << "Type: " << symbol->second->type->toString() << std::endl;
     }
 }
 
@@ -46,3 +59,6 @@ void Scope::listTypes() {
         std::cout << "Text: " << type->second->toString() << std::endl;
     }
 }
+
+int Scope::getNextOffset() {return nextOffset;}
+std::string Scope::getBaseReg() {return baseReg;}

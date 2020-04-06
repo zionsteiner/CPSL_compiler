@@ -18,6 +18,8 @@ public:
     void enterScope();
     void listSymbols();
     void listTypes();
+    int getNextOffset();
+    std::string getBaseReg();
     SymbolTable();
 
 private:

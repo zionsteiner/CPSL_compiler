@@ -19,11 +19,15 @@ public:
     void addSymbol(std::string, Symbol*);
     void listSymbols();
     void listTypes();
+    int getNextOffset();
+    std::string getBaseReg();
+    Scope(std::string);
 
 private:
     std::map<std::string, Symbol*> symbols;
     std::map<std::string, Type*> types;
-    int bytes = 0;
+    std::string baseReg;
+    int nextOffset = 0;
 };
 
 

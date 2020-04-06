@@ -17,6 +17,7 @@ public:
         bool isValid;
         RegisterPool* pool;
     public:
+        std::string getRegId();
         Register(std::string, RegisterPool*);
         Register(Register&) = delete;
         Register(Register&&);

@@ -61,17 +61,28 @@ void SymbolTable::listTypes() {
     }
 }
 
+int SymbolTable::getNextOffset() {
+    Scope topLevel = scopeLevels.back();
+    return topLevel.getNextOffset();
+}
+
+std::string SymbolTable::getBaseReg() {
+    Scope topLevel = scopeLevels.back();
+    return topLevel.getBaseReg();
+}
+
 SymbolTable::SymbolTable() {
 //    Enter scope
     this->enterScope();
 //    Init predefined identifiers
     this->addType("integer", new Primitive());
     this->addType("char", new Primitive());
-    this->addType("boolean", new Primitive());
+    Type* boolType = new Primitive();
+    this->addType("boolean", boolType);
     this->addType("string", new Primitive());
 
-    Symbol* true_const = new Symbol(new BoolConstExpr(true));
+    Symbol* true_const = new Symbol(new BoolConstExpr(true), boolType);
     this->addSymbol("true", true_const);
-    Symbol* false_const = new Symbol(new BoolConstExpr(false));
+    Symbol* false_const = new Symbol(new BoolConstExpr(false), boolType);
     this->addSymbol("false", false_const);
 }

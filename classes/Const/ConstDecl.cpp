@@ -26,22 +26,22 @@ void ConstDecl::emitMips() {
         auto expr = (*constAssign)->expr;
         Symbol* constSymbol;
 
-        auto i_expr = dynamic_cast<IntConstExpr*>(expr);
+        const auto i_expr = dynamic_cast<const IntConstExpr*>(expr);
         if (i_expr != nullptr) {
             auto type = symbolTable.lookupType("integer");
             constSymbol = new Symbol(i_expr, type);
         }
-        auto c_expr = dynamic_cast<ChrConstExpr*>(expr);
+        const auto c_expr = dynamic_cast<const ChrConstExpr*>(expr);
         if (c_expr != nullptr) {
             auto type = symbolTable.lookupType("char");
             constSymbol = new Symbol(c_expr, type);
         }
-        auto s_expr = dynamic_cast<StrConstExpr*>(expr);
+        const auto s_expr = dynamic_cast<const StrConstExpr*>(expr);
         if (s_expr != nullptr) {
             auto type = symbolTable.lookupType("string");
             constSymbol = new Symbol(s_expr, type);
         }
-        auto b_expr = dynamic_cast<BoolConstExpr*>(expr);
+        const auto b_expr = dynamic_cast<const BoolConstExpr*>(expr);
         if (b_expr != nullptr) {
             auto type = symbolTable.lookupType("boolean");
             constSymbol = new Symbol(b_expr, type);
@@ -50,7 +50,7 @@ void ConstDecl::emitMips() {
         if (constSymbol == nullptr) {
             throw "Something weird happened.";
         } else {
-            symbolTable.addSymbol((*constAssign)->id->id, constSymbol)
+            symbolTable.addSymbol((*constAssign)->id->id, constSymbol);
         }
 
     }

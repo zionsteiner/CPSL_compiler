@@ -16,7 +16,7 @@
 struct Program {
     ConstDecl *constDecl;
     TypeDecl *typeDecl;
-    const VarDecl* varDecl;
+    VarDecl *varDecl;
     const std::vector<Callable*>* callableList;
     const Block* block;
 
