@@ -4,7 +4,7 @@
 
 #include "RecordType.h"
 
-RecordType::RecordType(std::vector <VarAssign*>* keys): keys(keys) {}
+RecordType::RecordType(std::vector<VarAssign *> *keys) : Type(RECORD_T), keys(keys) {}
 
 std::string RecordType::toString() const {
     std::string retStr = "record";

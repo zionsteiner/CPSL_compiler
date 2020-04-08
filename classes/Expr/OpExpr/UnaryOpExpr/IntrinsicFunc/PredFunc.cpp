@@ -5,7 +5,15 @@
 #include <stdexcept>
 #include "PredFunc.h"
 
-PredFunc::PredFunc(Expr* expr): UnaryOpExpr(expr) {}
+PredFunc::PredFunc(Expr* expr): UnaryOpExpr(expr) {
+    if (expr->typeEnum == INT_T) {
+        this->typeEnum = INT_T;
+    } else if (expr->typeEnum == BOOL_T) {
+        this->typeEnum = BOOL_T;
+    } else {
+        throw "Error in PredFunc: expected either int or bool";
+    }
+}
 
 Expr* PredFunc::op(Expr* expr) {
     auto expr_new = dynamic_cast<BoolConstExpr*>(expr);

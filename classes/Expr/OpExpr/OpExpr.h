@@ -8,6 +8,7 @@
 #include "../Expr.h"
 
 struct OpExpr: Expr {
+    OpExpr(TypeEnum);
     bool isCompVal() override;
 };
 

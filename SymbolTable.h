@@ -20,10 +20,13 @@ public:
     void listTypes();
     int getNextOffset();
     std::string getBaseReg();
+    std::string addString(std::string);
+    std::map<std::string, std::string>* getStrings();
     SymbolTable();
 
 private:
     std::vector<Scope> scopeLevels;
+    std::map<std::string, std::string> strings;
 };
 
 

@@ -3,10 +3,25 @@
 //
 
 #include <sstream>
+#include <globals.h>
+#include <iostream>
 #include "Sub.h"
 
 Sub::Sub(Expr* a, Expr* b): ArithBinOpExpr(a, b) {}
+
 int Sub::binOp(int a, int b) {return a - b;}
+
 std::string Sub::toString() const {
     return "(" + a->toString() + " - " + b->toString() + ")";
+}
+
+RegisterPool::Register Sub::emitMips() {
+    auto regA = a->emitMips();
+    auto regB = b->emitMips();
+    auto regC = registerPool.get();
+
+    std::cout << "# Sub" << std::endl;
+    std::cout << "sub " + regC.getRegId() + ", " + regA.getRegId() + ", " + regB.getRegId() << std::endl;
+
+    return regC;
 }

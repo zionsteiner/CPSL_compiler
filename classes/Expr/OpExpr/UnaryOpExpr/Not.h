@@ -14,6 +14,7 @@ struct Not: UnaryOpExpr {
     static Expr* op(Expr*);
     static bool op(bool);
     std::string toString() const override;
+    RegisterPool::Register emitMips() override;
 };
 
 

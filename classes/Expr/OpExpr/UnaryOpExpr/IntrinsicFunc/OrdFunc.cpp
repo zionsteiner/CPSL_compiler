@@ -6,7 +6,7 @@
 #include "OrdFunc.h"
 #include "../../../ConstExpr/ChrConstExpr.h"
 
-OrdFunc::OrdFunc(Expr* expr): UnaryOpExpr(expr) {}
+OrdFunc::OrdFunc(Expr* expr): UnaryOpExpr(expr, INT_T) {}
 Expr* OrdFunc::op(Expr* a) {
     if (a->isCompVal()) {
         auto a_new = dynamic_cast<ChrConstExpr*>(a);
@@ -26,4 +26,8 @@ int OrdFunc::op(char a) {
 
 std::string OrdFunc::toString() const {
     return "ord(" + expr->toString() + ')';
+}
+
+RegisterPool::Register OrdFunc::emitMips() {
+    return expr->emitMips();
 }

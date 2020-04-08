@@ -7,10 +7,11 @@
 
 
 #include <classes/Expr/Ident.h>
+#include <classes/Expr/Expr.h>
 
 struct ConstAssign {
     const Ident* id;
-    const Expr* expr;
+    Expr* expr;
 
     ConstAssign(Ident*, Expr*);
     std::string toString() const;

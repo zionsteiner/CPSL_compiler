@@ -12,6 +12,7 @@ struct ChrConstExpr: ConstExpr {
 
     explicit ChrConstExpr(char);
     std::string toString() const override;
+    RegisterPool::Register emitMips() override;
 };
 
 

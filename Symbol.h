@@ -17,6 +17,7 @@ struct Symbol {
     explicit Symbol(int, Type*);
     explicit Symbol(Expr*, Type*);
     Symbol(const Expr* Expr, Type*);
+    RegisterPool::Register emitMips();
 };
 
 

@@ -8,9 +8,10 @@
 #include "../../Expr.h"
 
 struct UnaryOpExpr: Expr {
-    const Expr* expr;
+    Expr *expr;
 
     explicit UnaryOpExpr(Expr*);
+    UnaryOpExpr(Expr*, TypeEnum);
     bool isCompVal() override;
 };
 

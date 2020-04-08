@@ -13,6 +13,7 @@ struct UnaryMinus: UnaryOpExpr {
     static Expr* op(Expr*);
     static int op(int);
     std::string toString() const override;
+    RegisterPool::Register emitMips() override;
 };
 
 

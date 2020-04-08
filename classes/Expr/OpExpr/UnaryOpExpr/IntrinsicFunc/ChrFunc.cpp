@@ -6,7 +6,7 @@
 #include "../../../ConstExpr/IntConstExpr.h"
 #include "../../../ConstExpr/ChrConstExpr.h"
 
-ChrFunc::ChrFunc(Expr* expr): UnaryOpExpr(expr) {}
+ChrFunc::ChrFunc(Expr* expr): UnaryOpExpr(expr, CHR_T) {}
 
 Expr* ChrFunc::op(Expr* a) {
     if (a->isCompVal()) {
@@ -27,4 +27,8 @@ char ChrFunc::op(int a) {
 
 std::string ChrFunc::toString() const {
     return "chr(" + expr->toString() + ')';
+}
+
+RegisterPool::Register ChrFunc::emitMips() {
+    return expr->emitMips();
 }

@@ -7,9 +7,11 @@
 
 
 #include <string>
+#include "RegisterPool.h"
 
 struct Stmt {
     virtual std::string toString() const = 0;
+    virtual void emitMips() {};
 };
 
 

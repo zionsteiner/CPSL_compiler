@@ -12,6 +12,7 @@ struct OrdFunc: UnaryOpExpr {
     static Expr* op(Expr*);
     static int op(char);
     std::string toString() const override;
+    RegisterPool::Register emitMips() override;
 };
 
 

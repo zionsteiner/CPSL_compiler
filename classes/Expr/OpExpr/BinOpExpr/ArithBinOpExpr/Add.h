@@ -11,6 +11,7 @@ struct Add: ArithBinOpExpr {
     Add(Expr*, Expr*);
     static int binOp(int, int);
     std::string toString() const override;
+    RegisterPool::Register emitMips() override;
 };
 
 

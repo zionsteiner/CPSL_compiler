@@ -11,7 +11,7 @@
 #include "../../../ConstExpr/BoolConstExpr.h"
 
 struct SuccFunc: UnaryOpExpr {
-    SuccFunc(Expr* a);
+    SuccFunc(Expr*);
     static Expr* op(Expr*);
     static int op(int);
     static bool op(bool);

@@ -11,6 +11,7 @@ struct IntConstExpr: ConstExpr {
     const int value;
     explicit IntConstExpr(int);
     std::string toString() const override;
+    RegisterPool::Register emitMips() override;
 };
 
 

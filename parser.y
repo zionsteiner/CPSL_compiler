@@ -199,7 +199,7 @@ void yyerror(const char*);
 
 %%
 /* CPSL Declarations */
-program: constDeclOpt typeDeclOpt varDeclOpt procOrFuncStar block PERIOD {$$ = new Program($1, $2, $3, $4, $5); $$->emitMips(); YYACCEPT;}
+program: constDeclOpt typeDeclOpt varDeclOpt procOrFuncStar block PERIOD {$$ = new Program($1, $2, $3, $4, $5); std::cout<<std::endl; $$->emitMips(); YYACCEPT;}
 //program: constDeclOpt typeDeclOpt varDeclOpt procOrFuncStar block PERIOD {$$ = new Program($1, $2, $3, $4, $5); std::cout << std::endl << $$->toString() << std::endl; YYACCEPT;}
 
 /* 3.1.1 Constant Rules */

@@ -8,8 +8,9 @@
 #include "Type.h"
 
 struct Primitive: Type {
+    TypeEnum typeEnum;
     std::string toString() const override;
-    Primitive(): Type() {}
+    explicit Primitive(TypeEnum);
     ~Primitive() override = default;
     int size() override;
 };

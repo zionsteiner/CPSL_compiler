@@ -13,14 +13,16 @@ class RegisterPool {
 public:
     class Register{
     private:
-        const std::string regId;
+        std::string regId;
         bool isValid;
         RegisterPool* pool;
     public:
         std::string getRegId();
+        Register& operator=(Register && a);
         Register(std::string, RegisterPool*);
         Register(Register&) = delete;
         Register(Register&&);
+        Register();
         ~Register();
     };
 

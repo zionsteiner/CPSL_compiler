@@ -4,7 +4,7 @@
 
 #include "SimpleType.h"
 
-SimpleType::SimpleType(Ident* id): id(id) {}
+SimpleType::SimpleType(Ident* id): Type(SIMPLE_T), id(id) {}
 
 std::string SimpleType::toString() const {return id->toString();}
 

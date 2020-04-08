@@ -8,10 +8,10 @@
 #include "../OpExpr.h"
 
 struct BinOpExpr: OpExpr {
-    const Expr *a;
-    const Expr* b;
+    Expr *a;
+    Expr *b;
 
-    BinOpExpr(Expr*, Expr*);
+    BinOpExpr(Expr*, Expr*, TypeEnum);
     ~BinOpExpr();
 };
 

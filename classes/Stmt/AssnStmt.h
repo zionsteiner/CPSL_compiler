@@ -10,10 +10,11 @@
 
 struct AssnStmt: Stmt {
     const LValue* lVal;
-    const Expr* expr;
+    Expr *expr;
 
     AssnStmt(LValue*, Expr*);
     std::string toString() const override;
+    void emitMips();
 };
 
 

@@ -11,8 +11,7 @@
 
 struct RecordType: Type {
     const std::vector<VarAssign*>* keys;
-
-    RecordType(std::vector<VarAssign*>*);
+    explicit RecordType(std::vector<VarAssign *> *keys);
     std::string toString() const override;
     int size() override;
 };

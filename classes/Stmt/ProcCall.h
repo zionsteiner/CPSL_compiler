@@ -6,6 +6,7 @@
 #define CPSL_COMPILER_PROCCALL_H
 
 #include <vector>
+#include <classes/Expr/Expr.h>
 #include "classes/Stmt/Stmt.h"
 #include "classes/Expr/Ident.h"
 

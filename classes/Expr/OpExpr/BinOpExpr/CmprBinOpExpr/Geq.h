@@ -11,6 +11,7 @@ struct Geq: CmprBinOpExpr {
     Geq(Expr*, Expr*);
     static bool binOp(int, int);
     std::string toString() const override;
+    RegisterPool::Register emitMips() override;
 };
 
 

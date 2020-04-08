@@ -12,6 +12,7 @@ struct WriteStmt: Stmt {
 
     explicit WriteStmt(std::vector<Expr*>* args);
     std::string toString() const override;
+    void emitMips() override;
 };
 
 

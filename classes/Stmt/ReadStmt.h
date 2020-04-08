@@ -13,6 +13,7 @@ struct ReadStmt: Stmt {
 
     explicit ReadStmt(std::vector<LValue*>*);
     std::string toString() const override;
+    void emitMips();
 };
 
 

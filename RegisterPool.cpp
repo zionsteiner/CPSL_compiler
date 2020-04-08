@@ -29,7 +29,9 @@ std::string RegisterPool::Register::getRegId() {return regId;}
 
 RegisterPool::Register::Register(std::string regId, RegisterPool* pool): regId(regId), pool(pool), isValid(true) {}
 
-RegisterPool::Register::Register(Register&& a): regId(a.regId), isValid(true) {}
+RegisterPool::Register::Register(Register&& a): regId(a.regId), isValid(true) {a.isValid = false;}
+
+RegisterPool::Register::Register(): isValid(false) {}
 
 RegisterPool::Register::~Register() {
     if (isValid) {
@@ -37,3 +39,10 @@ RegisterPool::Register::~Register() {
     }
 }
 
+RegisterPool::Register &RegisterPool::Register::operator=(RegisterPool::Register &&a) {
+    regId = a.regId;
+    pool = a.pool;
+    isValid = true;
+
+    return *this;
+}

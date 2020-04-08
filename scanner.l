@@ -79,7 +79,7 @@ WRITE|write { token++; return WRITE ;}
 \'\\t\' { token++; yylval.chrVal = '\t'; return CHR_CONST; }
 \'\\f\' { token++; yylval.chrVal = '\f'; return CHR_CONST; }
 \'[ -~]{1}\' { token++; yylval.chrVal = yytext[1]; return CHR_CONST; }
-\"[ -~]*\" { token++; yylval.strVal = strdup(yytext); return STR_CONST; }
+\"[ -~][^"]*\" { token++; yylval.strVal = strdup(yytext); return STR_CONST; }
 \$.*\n { token++; return COMMENT; }
 \n {line++; token = 1;}
 

@@ -9,6 +9,7 @@
 
 
 struct ConstExpr: Expr {
+    explicit ConstExpr(TypeEnum);
     bool isCompVal() override;
 };
 

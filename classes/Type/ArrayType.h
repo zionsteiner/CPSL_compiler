@@ -9,7 +9,7 @@
 #include "Type.h"
 
 struct ArrayType: Type {
-    const Type* type;
+    const Type* arrayType;
     const Expr* begin;
     const Expr* end;
 

@@ -13,6 +13,7 @@ struct Block {
 
     explicit Block(std::vector<Stmt*>*);
     std::string toString() const;
+    void emitMips();
 };
 
 

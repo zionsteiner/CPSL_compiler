@@ -10,6 +10,7 @@
 
 struct StopStmt: Stmt {
     std::string toString() const override;
+    void emitMips() override;
 };
 
 

@@ -6,3 +6,5 @@
 
 std::string Primitive::toString() const {return "primitiveType";}
 int Primitive::size() {return 4;}
+
+Primitive::Primitive(TypeEnum typeEnum) : Type(typeEnum) {}

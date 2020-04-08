@@ -4,4 +4,4 @@
 
 #include "CmprBinOpExpr.h"
 
-CmprBinOpExpr::CmprBinOpExpr(Expr* a, Expr* b): BinOpExpr(a, b) {}
+CmprBinOpExpr::CmprBinOpExpr(Expr* a, Expr* b): BinOpExpr(a, b, BOOL_T) {}

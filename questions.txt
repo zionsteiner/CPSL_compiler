@@ -18,3 +18,48 @@ offset? assign to permanent memory?
 what to store? lval? what does lval have? a type and
 
 how to store strings? use string buffer? is string primitive with size 4?
+
+what emits registers and what does not?
+the write statement does not.
+variableExprs do (need to load word from address and store to temp reg)
+constExprs do (need to be loaded immediate to temp reg)
+
+what opExprs do?
+binOp for sure
+
+WRITE statement mips code emission
+-----------------------------------
+Hard|
+-----
+1. store all string constants in .data
+2. calculate string buffer space by
+    * if stringConst or stringVar:
+        get length of string in bytes
+        def strlen()
+    * elif chrConst or chrVar:
+        add 1
+    * elif intConst or intVar:
+        def intlen()
+        add intlen()
+    * elif boolConst or boolVar:
+        add 1
+3. store string buffer in .data
+4. join strings to string buffer
+5. load string
+6. syscall
+
+-----
+Medium?|
+-----
+1. store all string constants in .data
+2. allocate 1000 bytes to string buffer in .data
+3. join strings to string buffer
+4. load string buffer
+5. syscall
+6. clear string buffer
+
+-----
+Easy|
+-----
+1. store all string constants in .data
+2. print using mips calls

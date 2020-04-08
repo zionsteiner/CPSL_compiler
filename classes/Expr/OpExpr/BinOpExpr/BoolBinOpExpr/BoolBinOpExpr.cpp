@@ -4,4 +4,4 @@
 
 #include "BoolBinOpExpr.h"
 
-BoolBinOpExpr::BoolBinOpExpr(Expr* a, Expr* b): BinOpExpr(a, b) {}
+BoolBinOpExpr::BoolBinOpExpr(Expr* a, Expr* b): BinOpExpr(a, b, BOOL_T) {}

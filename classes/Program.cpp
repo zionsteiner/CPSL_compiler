@@ -26,10 +26,22 @@ std::string Program::toString() const {
 
 void Program::emitMips() {
     std::cout << "\t.text\n.globl main\nmain:" << std::endl;
-    constDecl->emitMips();
-    typeDecl->emitMips();
-    varDecl->emitMips();
+    if (constDecl != nullptr) {constDecl->emitMips();}
+    if (typeDecl != nullptr) {typeDecl->emitMips();}
+    if (varDecl != nullptr) {varDecl->emitMips();}
+    // Callable emissions
+    /*******************/
 
+    block->emitMips();
 
-//    symbolTable.listSymbols();
+    std::cout << "# Exit" << std::endl;
+    std::cout << "li $v0, 10" << std::endl;
+    std::cout << "syscall" << std::endl;
+
+    // Emit string constants
+    std::cout << "\t.data\n" << std::endl;
+    auto strings = symbolTable.getStrings();
+    for (auto str = strings->begin(); str != strings->end(); ++str) {
+        std::cout << str->first << ": .asciiz " << "\"" << str->second << "\"" << std::endl;
+    }
 }

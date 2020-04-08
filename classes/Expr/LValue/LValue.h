@@ -8,6 +8,7 @@
 #include <vector>
 #include <RegisterPool.h>
 #include <classes/Type/Type.h>
+#include <Symbol.h>
 #include "Ext.h"
 #include "../Expr.h"
 #include "../Ident.h"
@@ -20,6 +21,8 @@ struct LValue: Expr {
 
     std::string toString() const override;
     bool isCompVal() override;
+    Symbol* getSymbol();
+    RegisterPool::Register emitMips() override;
 };
 
 

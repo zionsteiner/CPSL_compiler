@@ -10,9 +10,10 @@
 #include "ConstExpr.h"
 
 struct StrConstExpr: ConstExpr {
-    const std::string value;
+    std::string value;
     StrConstExpr(const char*);
     std::string toString() const override;
+    RegisterPool::Register emitMips() override;
 };
 
 

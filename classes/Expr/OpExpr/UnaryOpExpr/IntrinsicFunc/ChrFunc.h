@@ -12,6 +12,7 @@ struct ChrFunc: UnaryOpExpr {
     static Expr* op(Expr*);
     static char op(int);
     std::string toString() const override;
+    RegisterPool::Register emitMips() override;
 };
 
 

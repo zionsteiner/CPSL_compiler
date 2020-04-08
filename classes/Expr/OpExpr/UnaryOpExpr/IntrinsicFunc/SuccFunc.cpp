@@ -5,7 +5,15 @@
 
 #include "SuccFunc.h"
 
-SuccFunc::SuccFunc(Expr* expr): UnaryOpExpr(expr) {}
+SuccFunc::SuccFunc(Expr* expr): UnaryOpExpr(expr) {
+    if (expr->typeEnum == INT_T) {
+        this->typeEnum = INT_T;
+    } else if (expr->typeEnum == BOOL_T) {
+        this->typeEnum = BOOL_T;
+    } else {
+        throw "Error in PredFunc: expected either int or bool";
+    }
+}
 
 Expr* SuccFunc::op(Expr* expr) {
     auto expr_new = dynamic_cast<BoolConstExpr*>(expr);

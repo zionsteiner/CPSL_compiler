@@ -4,4 +4,4 @@
 
 #include "ArithBinOpExpr.h"
 
-ArithBinOpExpr::ArithBinOpExpr(Expr* a, Expr* b): BinOpExpr(a, b) {}
+ArithBinOpExpr::ArithBinOpExpr(Expr* a, Expr* b): BinOpExpr(a, b, INT_T) {}

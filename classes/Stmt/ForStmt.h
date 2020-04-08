@@ -6,6 +6,7 @@
 #define CPSL_COMPILER_FORSTMT_H
 
 #include <vector>
+#include <classes/Expr/Expr.h>
 #include "Stmt.h"
 
 struct ForStmt: Stmt {

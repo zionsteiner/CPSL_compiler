@@ -40,7 +40,7 @@ void SymbolTable::addType(std::string id, Type* type) {
 }
 
 void SymbolTable::enterScope() {
-    scopeLevels.push_back(Scope());
+    scopeLevels.push_back(Scope("$gp"));
 }
 
 void SymbolTable::listSymbols() {
@@ -71,15 +71,25 @@ std::string SymbolTable::getBaseReg() {
     return topLevel.getBaseReg();
 }
 
+std::string SymbolTable::addString(std::string s) {
+    int n = strings.size() + 1;
+    std::string strId = "str" + std::to_string(n);
+    strings[strId] = s;
+
+    return strId;
+}
+
+std::map<std::string, std::string>* SymbolTable::getStrings() {return &strings;}
+
 SymbolTable::SymbolTable() {
 //    Enter scope
     this->enterScope();
 //    Init predefined identifiers
-    this->addType("integer", new Primitive());
-    this->addType("char", new Primitive());
-    Type* boolType = new Primitive();
+    this->addType("integer", new Primitive(INT_T));
+    this->addType("char", new Primitive(CHR_T));
+    Type* boolType = new Primitive(BOOL_T);
     this->addType("boolean", boolType);
-    this->addType("string", new Primitive());
+    this->addType("string", new Primitive(STR_T));
 
     Symbol* true_const = new Symbol(new BoolConstExpr(true), boolType);
     this->addSymbol("true", true_const);

@@ -4,4 +4,5 @@
 
 #include "ConstExpr.h"
 
+ConstExpr::ConstExpr(TypeEnum t): Expr(t) {}
 bool ConstExpr::isCompVal() {return true;}

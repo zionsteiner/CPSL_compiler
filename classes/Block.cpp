@@ -2,6 +2,7 @@
 // Created by zion on 2/28/20.
 //
 
+#include <iostream>
 #include "Block.h"
 
 Block::Block(std::vector<Stmt*>* stmts): stmts(stmts) {}
@@ -17,4 +18,10 @@ std::string Block::toString() const {
     retStr += "\nEND";
 
     return retStr;
+}
+
+void Block::emitMips() {
+    for (auto stmt = stmts->begin(); stmt != stmts->end(); ++stmt) {
+        (*stmt)->emitMips();
+    }
 }
