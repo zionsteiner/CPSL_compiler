@@ -44,5 +44,7 @@ RegisterPool::Register &RegisterPool::Register::operator=(RegisterPool::Register
     pool = a.pool;
     isValid = true;
 
+    a.isValid = false;
+
     return *this;
 }

@@ -20,7 +20,7 @@ RegisterPool::Register Neq::emitMips() {
     auto regC = registerPool.get();
 
     std::cout << "# Neq" << std::endl;
-    std::cout << "sne " + regC.getRegId() + ", " + regB.getRegId() + ", " + regC.getRegId() << std::endl;
+    std::cout << "sne " + regC.getRegId() + ", " + regA.getRegId() + ", " + regB.getRegId() << std::endl;
 
     return regC;
 }
