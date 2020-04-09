@@ -179,7 +179,7 @@ void yyerror(const char*);
 %type <exprListPtr> exprPlus
 %type <procCallPtr> procCall
 %type <exprListPtr> exprPlusOpt
-%type <nullVal> nullStmt
+%type <stmtPtr> nullStmt
 %type <exprPtr> expr
 %type <lValPtr> lVal
 %type <extListPtr> dotOrIndexPlusOpt
@@ -199,8 +199,8 @@ void yyerror(const char*);
 
 %%
 /* CPSL Declarations */
-program: constDeclOpt typeDeclOpt varDeclOpt procOrFuncStar block PERIOD {$$ = new Program($1, $2, $3, $4, $5); std::cout<<std::endl; $$->emitMips(); YYACCEPT;}
-//program: constDeclOpt typeDeclOpt varDeclOpt procOrFuncStar block PERIOD {$$ = new Program($1, $2, $3, $4, $5); std::cout << std::endl << $$->toString() << std::endl; YYACCEPT;}
+//program: constDeclOpt typeDeclOpt varDeclOpt procOrFuncStar block PERIOD {$$ = new Program($1, $2, $3, $4, $5); std::cout<<std::endl; $$->emitMips(); YYACCEPT;}
+program: constDeclOpt typeDeclOpt varDeclOpt procOrFuncStar block PERIOD {$$ = new Program($1, $2, $3, $4, $5); std::cout << std::endl << $$->toString() << std::endl; YYACCEPT;}
 
 /* 3.1.1 Constant Rules */
 constDeclOpt: constDecl {$$ = $1;}
@@ -319,7 +319,7 @@ stmt: assnStmt {$$ = $1;}
     | readStmt {$$ = $1;}
     | writeStmt {$$ = $1;}
     | procCall {$$ = $1;}
-    | nullStmt {$$ = nullptr;}
+    | nullStmt {$$ = $1;}
     ;
 
 assnStmt: lVal ASSIGN expr {$$ = new AssnStmt($1, $3);}
@@ -381,7 +381,7 @@ exprPlusOpt: exprPlus {$$ = $1;}
            | {$$ = nullptr;}
            ;
 
-nullStmt: {}
+nullStmt: {$$ = new NullStmt();}
         ;
 
 /* 3.3 Expressions */

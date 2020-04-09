@@ -8,6 +8,7 @@
 Block::Block(std::vector<Stmt*>* stmts): stmts(stmts) {}
 std::string Block::toString() const {
     std::string retStr = "BEGIN";
+    auto t = (*stmts)[0];
     retStr += "\n\t" + (*stmts)[0]->toString();
 
     if (stmts->size() > 1) {

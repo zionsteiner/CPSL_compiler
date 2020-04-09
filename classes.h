@@ -85,6 +85,7 @@
 #include "classes/Stmt/ElseIfStmt.h"
 #include "classes/Stmt/ElseStmt.h"
 #include "classes/Stmt/ForStmt.h"
+#include "classes/Stmt/NullStmt.h"
 #include "classes/Stmt/ProcCall.h"
 #include "classes/Stmt/ReadStmt.h"
 #include "classes/Stmt/RepeatStmt.h"
