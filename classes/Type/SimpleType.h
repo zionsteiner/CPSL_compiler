@@ -1,5 +1,5 @@
 //
-// Created by zion on 2/18/20.
+// Created by zion on 4/11/20.
 //
 
 #ifndef CPSL_COMPILER_SIMPLETYPE_H
@@ -9,11 +9,10 @@
 #include "../Expr/Ident.h"
 
 struct SimpleType: Type {
-    const Ident* id;
-
-    SimpleType(Ident*);
+    Ident* id;
     std::string toString() const override;
-    int size() override;
+    SimpleType(Ident* id);
+    int size();
 };
 
 

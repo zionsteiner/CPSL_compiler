@@ -13,11 +13,13 @@ struct Symbol {
     int offset;
     Expr* expr;
     Type* type;
+    std::string base;
 
     explicit Symbol(int, Type*);
     explicit Symbol(Expr*, Type*);
     Symbol(const Expr* Expr, Type*);
     RegisterPool::Register emitMips();
+    Type* getType();
 };
 
 

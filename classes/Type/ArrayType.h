@@ -6,12 +6,13 @@
 #define CPSL_COMPILER_ARRAYTYPE_H
 
 #include <classes/Expr/Expr.h>
+#include <classes/Expr/ConstExpr/ConstExpr.h>
 #include "Type.h"
 
 struct ArrayType: Type {
-    const Type* arrayType;
-    const Expr* begin;
-    const Expr* end;
+    const ConstExpr* begin;
+    const ConstExpr* end;
+    Type* arrayType;
 
     ArrayType(Expr*, Expr*, Type*);
     std::string toString() const override;

@@ -51,6 +51,7 @@ void ConstDecl::emitMips() {
                 constSymbol = new Symbol(b_expr, type);
                 break;
             }
+            // Runs through while loop again if this is the case (should be changed to switch stmt using TypeEnum)
             const auto symbol = dynamic_cast<LValue*>(expr)->getSymbol();
             if (symbol != nullptr) {
                 expr = symbol->expr;

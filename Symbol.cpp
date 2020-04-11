@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <classes/Expr/ConstExpr/ConstExpr.h>
+#include <classes/Type/SimpleType.h>
 #include "Symbol.h"
 #include "globals.h"
 
@@ -38,11 +39,21 @@ RegisterPool::Register Symbol::emitMips() {
     // Variable
     } else if (offset != -1) {
         reg = registerPool.get();
-        std::string mips = "lw " + reg.getRegId() + ", " + std::to_string(offset) + "(" + symbolTable.getBaseReg() + ")";
+        std::string mips = "lw " + reg.getRegId() + ", " + std::to_string(offset) + "(" + base + ")";
         std::cout << mips << std::endl;
+
     } else {
         throw "Not const nor variable stored in symbol";
     }
 
     return reg;
+}
+
+Type* Symbol::getType() {
+    auto s_type = dynamic_cast<SimpleType*>(type);
+    if (s_type != nullptr) {
+        return symbolTable.lookupType(s_type->id->id);
+    } else {
+        return type;
+    }
 }

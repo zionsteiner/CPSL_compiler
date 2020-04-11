@@ -22,7 +22,11 @@ struct LValue: Expr {
     std::string toString() const override;
     bool isCompVal() override;
     Symbol* getSymbol();
+    Type* lookupType();
+    int lookupBaseOffset();
+    std::string lookupBase();
     RegisterPool::Register emitMips() override;
+    RegisterPool::Register emitAddr();
 };
 
 

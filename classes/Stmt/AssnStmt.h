@@ -9,7 +9,7 @@
 #include "../Expr/LValue/LValue.h"
 
 struct AssnStmt: Stmt {
-    const LValue* lVal;
+    LValue *lVal;
     Expr *expr;
 
     AssnStmt(LValue*, Expr*);

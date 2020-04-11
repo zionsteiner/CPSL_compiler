@@ -5,7 +5,9 @@
 #include <classes/Type/Primitive.h>
 #include <classes/Expr/ConstExpr/BoolConstExpr.h>
 #include <iostream>
+#include <classes/Type/SimpleType.h>
 #include "SymbolTable.h"
+#include "globals.h"
 
 Symbol* SymbolTable::lookupSymbol(std::string id) {
     for (auto level = scopeLevels.rbegin(); level != scopeLevels.rend(); ++level) {
@@ -20,6 +22,12 @@ Symbol* SymbolTable::lookupSymbol(std::string id) {
 
 void SymbolTable::addSymbol(std::string id, Symbol* symbol) {
     auto& topScope = scopeLevels.back();
+
+    auto s_type = dynamic_cast<SimpleType*>(symbol->type);
+    if (s_type != nullptr) {
+        symbol->type = symbolTable.lookupType(s_type->id->id);
+    }
+
     topScope.addSymbol(id, symbol);
 }
 
@@ -66,9 +74,20 @@ int SymbolTable::getNextOffset() {
     return topLevel.getNextOffset();
 }
 
-std::string SymbolTable::getBaseReg() {
+std::string SymbolTable::getCurrBaseReg() {
     Scope topLevel = scopeLevels.back();
     return topLevel.getBaseReg();
+}
+
+std::string SymbolTable::getBaseRegById(std::string id) {
+    for (auto scope = scopeLevels.rbegin(); scope != scopeLevels.rend(); ++scope) {
+        auto symbol = scope->lookupSymbol(id);
+        if (symbol != nullptr) {
+            return scope->getBaseReg();
+        } else {
+            throw std::runtime_error("Symbol not found in table");
+        }
+    }
 }
 
 std::string SymbolTable::addString(std::string s) {

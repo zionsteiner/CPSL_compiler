@@ -19,7 +19,8 @@ public:
     void listSymbols();
     void listTypes();
     int getNextOffset();
-    std::string getBaseReg();
+    std::string getCurrBaseReg();
+    std::string getBaseRegById(std::string);
     std::string addString(std::string);
     std::map<std::string, std::string>* getStrings();
     SymbolTable();

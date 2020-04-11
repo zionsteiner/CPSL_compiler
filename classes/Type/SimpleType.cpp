@@ -1,11 +1,29 @@
 //
-// Created by zion on 2/18/20.
+// Created by zion on 4/11/20.
 //
 
 #include "SimpleType.h"
+#include "globals.h"
 
-SimpleType::SimpleType(Ident* id): Type(SIMPLE_T), id(id) {}
+std::string SimpleType::toString() const {
+    return id->id;
+}
 
-std::string SimpleType::toString() const {return id->toString();}
+SimpleType::SimpleType(Ident* id): Type(SIMPLE_T), id(id) {
+    auto type = symbolTable.lookupType(id->id);
+    if (type != nullptr) {
+        this->typeEnum = type->typeEnum;
+    }
+}
 
-int SimpleType::size() {return id->toString().size();}
+int SimpleType::size() {
+    auto t_type = symbolTable.lookupType(id->id);
+    if (t_type != nullptr) {
+        return t_type->size();
+    } else {
+        return 0;
+    }
+}
+
+// ToDo: figure out how to replace simpletype with lookup
+

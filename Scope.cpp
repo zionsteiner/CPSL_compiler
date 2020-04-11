@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Scope.h"
 #include "Symbol.h"
+#include "globals.h"
 
 Scope::Scope(std::string baseReg): baseReg(baseReg) {}
 
@@ -27,6 +28,7 @@ Type * Scope::lookupType(std::string key) {
 }
 
 void Scope::addSymbol(std::string key, Symbol* symbol) {
+    symbol->base = symbolTable.getCurrBaseReg();
     symbols[key] = symbol;
     if (symbol->offset != -1) {
         if (symbol->offset == nextOffset) {

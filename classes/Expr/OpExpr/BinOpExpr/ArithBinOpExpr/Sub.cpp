@@ -25,3 +25,23 @@ RegisterPool::Register Sub::emitMips() {
 
     return regC;
 }
+
+RegisterPool::Register Sub::emitMips(Expr* expr1, Expr* expr2) {
+    auto regA = expr1->emitMips();
+    auto regB = expr2->emitMips();
+    auto regC = registerPool.get();
+
+    std::cout << "# Sub" << std::endl;
+    std::cout << "sub " + regC.getRegId() + ", " + regA.getRegId() + ", " + regB.getRegId() << std::endl;
+
+    return regC;
+}
+
+RegisterPool::Register Sub::emitMips(RegisterPool::Register& regA, RegisterPool::Register& regB) {
+    auto regC = registerPool.get();
+
+    std::cout << "# Sub" << std::endl;
+    std::cout << "sub " + regC.getRegId() + ", " + regA.getRegId() + ", " + regB.getRegId() << std::endl;
+
+    return regC;
+}

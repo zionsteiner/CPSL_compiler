@@ -24,3 +24,11 @@ RegisterPool::Register Add::emitMips() {
 
     return regC;
 }
+
+RegisterPool::Register Add::emitMips(RegisterPool::Register& regA, RegisterPool::Register& regB) {
+    auto regC = registerPool.get();
+    std::cout << "# Add" << std::endl;
+    std::cout << "add " + regC.getRegId() + ", " + regA.getRegId() + ", " + regB.getRegId() << std::endl;
+
+    return regC;
+}

@@ -3,12 +3,66 @@
 //
 
 #include "ArrayType.h"
-#include <cstdio>
+#include "SimpleType.h"
+#include <classes/Expr/ConstExpr/ConstExpr.h>
+#include <stdexcept>
+#include <classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.h>
+#include <classes/Expr/ConstExpr/IntConstExpr.h>
+#include <classes/Expr/ConstExpr/ChrConstExpr.h>
 
-ArrayType::ArrayType(Expr* begin, Expr* end, Type* arrayType): Type(ARRAY_T), begin(begin), end(end), arrayType(arrayType) {}
+ArrayType::ArrayType(Expr* begin, Expr* end, Type* arrayType): Type(ARRAY_T), arrayType(arrayType) {
+    auto constBegin = dynamic_cast<ConstExpr*>(begin);
+    if (constBegin == nullptr) {
+        throw std::invalid_argument("ERROR: Array bounds must be constant expressions");
+    } else {
+        this->begin = constBegin;
+    }
+
+    auto constEnd = dynamic_cast<ConstExpr*>(end);
+    if (constEnd == nullptr) {
+        throw std::invalid_argument("ERROR: Array bounds must be constant expressions");
+    } else {
+        this->end = constEnd;
+    }
+}
 
 std::string ArrayType::toString() const {
     return "array [" + begin->toString() + ":" + end->toString() + "] of " + arrayType->toString();
 }
 
-int ArrayType::size() {return 0;}
+int ArrayType::size() {
+    int beginVal = -1;
+    int endVal = -1;
+
+    auto chrBegin = dynamic_cast<const ChrConstExpr*>(begin);
+    if (chrBegin != nullptr) {
+        beginVal = OrdFunc::op(chrBegin->value);
+    }
+    auto intBegin = dynamic_cast<const IntConstExpr*>(begin);
+    if (intBegin != nullptr) {
+        beginVal = intBegin->value;
+    }
+    if (beginVal == -1) {
+        throw std::runtime_error("ERROR: invalid const expression used for setting array bounds");
+    }
+
+    auto chrEnd = dynamic_cast<const ChrConstExpr*>(end);
+    if (chrEnd != nullptr) {
+        endVal = OrdFunc::op(chrEnd->value);
+    }
+    auto intEnd = dynamic_cast<const IntConstExpr*>(end);
+    if (intEnd != nullptr) {
+        endVal = intEnd->value;
+    }
+    if (endVal == -1) {
+        throw std::runtime_error("ERROR: invalid const expression used for setting array bounds");
+    }
+
+    int size = arrayType->size() * (endVal - beginVal + 1);
+
+    if (size < 0 || beginVal == -1 || endVal == -1) {
+        throw std::invalid_argument("ERROR: invalid array size (negative)");
+    }
+
+    return size;
+}

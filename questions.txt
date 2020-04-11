@@ -63,3 +63,16 @@ Easy|
 -----
 1. store all string constants in .data
 2. print using mips calls
+
+ARRAYS
+---------
+How should lval lookup vars stored in an array?
+
+Lval stores array id:
+    If no exts, return symbol (expr, offset)
+
+Lval stores exts:
+    If exts, return temp symbol with offset
+
+
+SimpleType is like -> id : (array begin end type)

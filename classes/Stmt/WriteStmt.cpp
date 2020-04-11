@@ -67,8 +67,8 @@ void WriteStmt::emitMips() {
                     if (lval == nullptr) {
                         throw std::invalid_argument("Expected lval, got something else in WRITE");
                     }
-                    Symbol symbol = *symbolTable.lookupSymbol(lval->id->id);
-                    argType = symbol.type->typeEnum;
+                    argType = lval->lookupType()->typeEnum;
+
                     break;
                 }
                 default: {

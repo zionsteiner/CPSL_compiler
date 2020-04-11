@@ -2,6 +2,8 @@
 // Created by zion on 2/19/20.
 //
 
+#include <classes/Type/SimpleType.h>
+#include <globals.h>
 #include "VarAssign.h"
 
 VarAssign::VarAssign(std::vector<Ident*>* idList, Type* type): idList(idList), type(type) {}
@@ -17,6 +19,4 @@ std::string VarAssign::toString() const {
     return retStr;
 }
 
-VarAssign::~VarAssign() {
-    delete idList;
-}
+VarAssign::~VarAssign() {}
