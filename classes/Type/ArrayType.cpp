@@ -11,6 +11,7 @@
 #include <classes/Expr/ConstExpr/ChrConstExpr.h>
 
 ArrayType::ArrayType(Expr* begin, Expr* end, Type* arrayType): Type(ARRAY_T), arrayType(arrayType) {
+    // Type check array bounds
     auto constBegin = dynamic_cast<ConstExpr*>(begin);
     if (constBegin == nullptr) {
         throw std::invalid_argument("ERROR: Array bounds must be constant expressions");
@@ -24,13 +25,8 @@ ArrayType::ArrayType(Expr* begin, Expr* end, Type* arrayType): Type(ARRAY_T), ar
     } else {
         this->end = constEnd;
     }
-}
 
-std::string ArrayType::toString() const {
-    return "array [" + begin->toString() + ":" + end->toString() + "] of " + arrayType->toString();
-}
-
-int ArrayType::size() {
+    // Calculate array size
     int beginVal = -1;
     int endVal = -1;
 
@@ -58,11 +54,17 @@ int ArrayType::size() {
         throw std::runtime_error("ERROR: invalid const expression used for setting array bounds");
     }
 
-    int size = arrayType->size() * (endVal - beginVal + 1);
+    m_size = arrayType->size() * (endVal - beginVal + 1);
 
-    if (size < 0 || beginVal == -1 || endVal == -1) {
+    if (m_size < 0 || beginVal == -1 || endVal == -1) {
         throw std::invalid_argument("ERROR: invalid array size (negative)");
     }
+}
 
-    return size;
+std::string ArrayType::toString() const {
+    return "array [" + begin->toString() + ":" + end->toString() + "] of " + arrayType->toString();
+}
+
+int ArrayType::size() {
+    return m_size;
 }

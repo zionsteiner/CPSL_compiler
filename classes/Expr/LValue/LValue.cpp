@@ -9,6 +9,7 @@
 #include <classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Mult.h>
 #include <iostream>
 #include <classes/Expr/OpExpr/BinOpExpr/ArithBinOpExpr/Add.h>
+#include <classes/Type/RecordType.h>
 #include "LValue.h"
 #include "IndexExt.h"
 #include "DotExt.h"
@@ -58,7 +59,7 @@ Type* LValue::lookupType() {
             if (indexExt != nullptr) {
                 // CASE: ARRAY
                 if (currType->typeEnum == ARRAY_T) {
-                    ArrayType* arrayType = dynamic_cast<ArrayType *>(currType);
+                    ArrayType* arrayType = dynamic_cast<ArrayType*>(currType);
                     currType = arrayType->arrayType;
                 } else {
                     throw std::runtime_error("ERROR: array indexing can only be used on arrays");
@@ -69,7 +70,8 @@ Type* LValue::lookupType() {
             if (dotExt != nullptr) {
                 // CASE: RECORD
                 if (currType->typeEnum == RECORD_T) {
-                    // Do stuff
+                    auto recordType = dynamic_cast<RecordType*>(currType);
+                    currType = recordType->lookupType(dotExt->id->id);
                 } else {
                     throw std::runtime_error("ERROR: dot accessing can only be used on records");
                 }
@@ -140,12 +142,20 @@ RegisterPool::Register LValue::emitMips() {
                     }
                 }
 
-                auto dotExt = dynamic_cast<DotExt *>((*ext));
+                auto dotExt = dynamic_cast<DotExt*>((*ext));
 
                 if (dotExt != nullptr) {
                     // CASE: RECORD
                     if (currType->typeEnum == RECORD_T) {
-                        // Do stuff
+                        RecordType* recordType = dynamic_cast<RecordType*>(currType);
+                        std::string dotId = dotExt->id->id;
+                        currOffset = recordType->lookupOffset(dotId);
+
+                        // Add offset to reg
+                        auto tempCurrOffsetReg = registerPool.get();
+                        std::cout << "li " + tempCurrOffsetReg.getRegId() + ", " + std::to_string(currOffset) << std::endl;
+                        std::cout << "add " + currOffsetReg.getRegId() + ", " + currOffsetReg.getRegId() + ", " + tempCurrOffsetReg.getRegId() << std::endl;
+
                     } else {
                         throw std::runtime_error("ERROR: dot accessing can only be used on records");
                     }
@@ -217,7 +227,15 @@ RegisterPool::Register LValue::emitAddr() {
             if (dotExt != nullptr) {
                 // CASE: RECORD
                 if (currType->typeEnum == RECORD_T) {
-                    // Do stuff
+                    RecordType* recordType = dynamic_cast<RecordType*>(currType);
+                    std::string dotId = dotExt->id->id;
+                    currOffset = recordType->lookupOffset(dotId);
+
+                    // Add offset to reg
+                    auto tempCurrOffsetReg = registerPool.get();
+                    std::cout << "li " + tempCurrOffsetReg.getRegId() + ", " + std::to_string(currOffset) << std::endl;
+                    std::cout << "add " + currOffsetReg.getRegId() + ", " + currOffsetReg.getRegId() + ", " + tempCurrOffsetReg.getRegId() << std::endl;
+
                 } else {
                     throw std::runtime_error("ERROR: dot accessing can only be used on records");
                 }

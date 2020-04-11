@@ -13,6 +13,7 @@ struct ArrayType: Type {
     const ConstExpr* begin;
     const ConstExpr* end;
     Type* arrayType;
+    int m_size;
 
     ArrayType(Expr*, Expr*, Type*);
     std::string toString() const override;
