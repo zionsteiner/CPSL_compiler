@@ -9,20 +9,38 @@
 #include <classes/Expr/OpExpr/UnaryOpExpr/IntrinsicFunc/OrdFunc.h>
 #include <classes/Expr/ConstExpr/IntConstExpr.h>
 #include <classes/Expr/ConstExpr/ChrConstExpr.h>
+#include <classes/Expr/LValue/LValue.h>
+#include <globals.h>
 
 ArrayType::ArrayType(Expr* begin, Expr* end, Type* arrayType): Type(ARRAY_T), arrayType(arrayType) {
     // Type check array bounds
+    auto lValBegin = dynamic_cast<LValue*>(begin);
+    if (lValBegin != nullptr) {
+        if (lValBegin != nullptr) {
+            auto symbol = lValBegin->getSymbol();
+            begin = symbol->expr;
+        } else {
+            throw std::invalid_argument("Array bounds must be known at compile time");
+        }
+    }
+
+    auto lValEnd = dynamic_cast<LValue*>(end);
+    if (lValEnd != nullptr) {
+        if (lValEnd != nullptr) {
+            auto symbol = lValEnd->getSymbol();
+            end = symbol->expr;
+        } else {
+            throw std::invalid_argument("Array bounds must be known at compile time");
+        }
+    }
+
     auto constBegin = dynamic_cast<ConstExpr*>(begin);
-    if (constBegin == nullptr) {
-        throw std::invalid_argument("ERROR: Array bounds must be constant expressions");
-    } else {
+    if (constBegin != nullptr) {
         this->begin = constBegin;
     }
 
     auto constEnd = dynamic_cast<ConstExpr*>(end);
-    if (constEnd == nullptr) {
-        throw std::invalid_argument("ERROR: Array bounds must be constant expressions");
-    } else {
+    if (constEnd != nullptr) {
         this->end = constEnd;
     }
 

@@ -179,7 +179,7 @@ RegisterPool::Register LValue::emitAddr() {
     Symbol* symbol = getSymbol();
 
     // 1. Find address of first word
-    Type* currType = symbol->type;
+    Type* currType = symbol->getType();
     std::cout << "# LVal" << std::endl;
     auto currOffsetReg = registerPool.get();
     int currOffset = lookupBaseOffset();

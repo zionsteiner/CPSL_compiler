@@ -5,7 +5,12 @@
 #include <globals.h>
 #include "TypeDecl.h"
 
-TypeDecl::TypeDecl(std::vector<TypeAssign*>* typeAssignPlus): typeAssignPlus(typeAssignPlus) {}
+TypeDecl::TypeDecl(std::vector<TypeAssign*>* typeAssignPlus): typeAssignPlus(typeAssignPlus) {
+    for (auto typeAssign = typeAssignPlus->begin(); typeAssign != typeAssignPlus->end(); ++typeAssign) {
+        Type* type = const_cast<Type*>((*typeAssign)->type);
+        symbolTable.addType((*typeAssign)->id->id, type);
+    }
+}
 std::string TypeDecl::toString() const {
     std::string retStr = "TYPE";
     for (auto typeAssign = typeAssignPlus->begin(); typeAssign != typeAssignPlus->end(); ++typeAssign) {
@@ -15,9 +20,4 @@ std::string TypeDecl::toString() const {
     return retStr;
 }
 
-void TypeDecl::emitMips() {
-    for (auto typeAssign = typeAssignPlus->begin(); typeAssign != typeAssignPlus->end(); ++typeAssign) {
-        Type* type = const_cast<Type*>((*typeAssign)->type);
-        symbolTable.addType((*typeAssign)->id->id, type);
-    }
-}
+void TypeDecl::emitMips() {}

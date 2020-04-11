@@ -10,17 +10,7 @@
 #include "globals.h"
 #include "ConstDecl.h"
 
-ConstDecl::ConstDecl(std::vector<ConstAssign*>* constAssignList): constAssignList(constAssignList) {}
-std::string ConstDecl::toString() const {
-    std::string retStr = "CONST";
-    for (auto constAssign = constAssignList->begin(); constAssign != constAssignList->end(); ++constAssign) {
-        retStr += "\n\t" + (*constAssign)->toString();
-    }
-
-    return retStr;
-}
-
-void ConstDecl::emitMips() {
+ConstDecl::ConstDecl(std::vector<ConstAssign*>* constAssignList): constAssignList(constAssignList) {
     for (auto constAssign = constAssignList->begin(); constAssign != constAssignList->end(); ++constAssign) {
         // Identify and lookup type of expr
         auto expr = (*constAssign)->expr;
@@ -66,3 +56,13 @@ void ConstDecl::emitMips() {
         }
     }
 }
+std::string ConstDecl::toString() const {
+    std::string retStr = "CONST";
+    for (auto constAssign = constAssignList->begin(); constAssign != constAssignList->end(); ++constAssign) {
+        retStr += "\n\t" + (*constAssign)->toString();
+    }
+
+    return retStr;
+}
+
+void ConstDecl::emitMips() {}
