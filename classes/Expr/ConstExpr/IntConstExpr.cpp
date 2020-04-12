@@ -15,7 +15,7 @@ std::string IntConstExpr::toString() const {
 
 RegisterPool::Register IntConstExpr::emitMips() {
     auto reg = registerPool.get();
-s    std::string mips = "li " + reg.getRegId() + ", " + toString();
+    std::string mips = "li " + reg.getRegId() + ", " + toString();
     std::cout << mips << std::endl;
 
     return reg;
