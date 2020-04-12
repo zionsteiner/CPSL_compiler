@@ -11,6 +11,7 @@
 struct SimpleType: Type {
     Ident* id;
     std::string toString() const override;
+    Type* lookupType();
     SimpleType(Ident* id);
     int size();
 };

@@ -29,6 +29,7 @@ public:
     RegisterPool();
     Register get();
     void push(std::string);
+    int getAvailableCount();
 
 private:
     std::vector<std::string> availableRegs;

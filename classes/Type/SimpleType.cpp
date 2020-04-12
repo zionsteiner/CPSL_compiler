@@ -25,5 +25,11 @@ int SimpleType::size() {
     }
 }
 
+Type * SimpleType::lookupType() {
+    Type* type = symbolTable.lookupType(id->id);
+
+    return type;
+}
+
 // ToDo: figure out how to replace simpletype with lookup
 

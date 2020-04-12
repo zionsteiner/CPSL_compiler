@@ -8,6 +8,7 @@
 #include "VarDecl.h"
 
 VarDecl::VarDecl(std::vector<VarAssign*>* varAssignList): varAssignList(varAssignList) {}
+
 std::string VarDecl::toString() const {
     std::string retStr = "VAR";
     for (auto varAssign = varAssignList->begin(); varAssign != varAssignList->end(); ++varAssign) {
@@ -17,16 +18,4 @@ std::string VarDecl::toString() const {
     return retStr;
 }
 
-void VarDecl::emitMips() {
-    for (auto varAssign = varAssignList->begin(); varAssign != varAssignList->end(); ++varAssign) {
-        auto idList = (*varAssign)->idList;
-        Type* type = (*varAssign)->type;
-
-        // Add all ids to table and emit
-        for (auto id = idList->begin(); id != idList->end(); ++id) {
-            int offset = symbolTable.getNextOffset();
-            Symbol* varSymbol = new Symbol(offset, type);
-            symbolTable.addSymbol((*id)->id, varSymbol);
-        }
-    }
-}
+void VarDecl::emitMips() {}

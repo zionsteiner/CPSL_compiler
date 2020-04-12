@@ -12,7 +12,6 @@ Expr* UnaryMinus::op(Expr* a) {
     if (a->isCompVal()) {
         IntConstExpr* a_new = dynamic_cast<IntConstExpr*> (a);
         auto val = UnaryMinus::op(a_new->value);
-        delete a_new;
 
         return new IntConstExpr(val);
     } else {

@@ -23,13 +23,11 @@ Expr* SuccFunc::op(Expr* expr) {
              throw std::invalid_argument("Argument must be of type 'BoolConstExpr' or 'IntConstExpr'");
         } else {
             auto val = SuccFunc::op(expr_new->value);
-            delete expr_new;
 
             return new IntConstExpr(val);
         }
     } else {
         auto val = SuccFunc::op(expr_new->value);
-        delete expr_new;
 
         return new BoolConstExpr(val);
     }

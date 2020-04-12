@@ -14,7 +14,6 @@ Expr* Not::op(Expr* a) {
     if (a->isCompVal()) {
         auto a_new = dynamic_cast<BoolConstExpr*> (a);
         auto val = Not::op(a_new->value);
-        delete a_new;
 
         return new BoolConstExpr(val);
     } else {

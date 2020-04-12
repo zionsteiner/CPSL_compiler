@@ -19,8 +19,6 @@ struct CmprBinOpExpr: BinOpExpr {
             auto a_new = dynamic_cast<IntConstExpr*> (a);
             auto b_new = dynamic_cast<IntConstExpr*> (b);
             bool val = T::binOp(a_new->value, b_new->value);
-            delete a_new;
-            delete b_new;
 
             return new BoolConstExpr(val);
         } else {

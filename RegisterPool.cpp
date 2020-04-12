@@ -3,9 +3,9 @@
 //
 
 #include <string>
+#include <iostream>
 #include "RegisterPool.h"
 
-// ToDo: split register pool by register type?
 RegisterPool::RegisterPool() {
     // $t0-$t7, $s0-$s7, $t8-$t9
     for (int i = 8; i <= 25; ++i) {
@@ -17,12 +17,14 @@ RegisterPool::RegisterPool() {
 RegisterPool::Register RegisterPool::get() {
     std::string regId = availableRegs.back();
     availableRegs.pop_back();
+//    std::cout << "GET\nSIZE: " << availableRegs.size() << std::endl;
 
     return Register(regId, this);
 }
 
 void RegisterPool::push(std::string regId) {
     availableRegs.push_back(regId);
+//    std::cout << "PUT\nSIZE: " << availableRegs.size() << std::endl;
 }
 
 std::string RegisterPool::Register::getRegId() {return regId;}
@@ -49,4 +51,8 @@ RegisterPool::Register &RegisterPool::Register::operator=(RegisterPool::Register
     a.isValid = false;
 
     return *this;
+}
+
+int RegisterPool::getAvailableCount() {
+    return availableRegs.size();
 }

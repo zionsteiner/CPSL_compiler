@@ -12,7 +12,6 @@ Expr* ChrFunc::op(Expr* a) {
     if (a->isCompVal()) {
         auto a_new = dynamic_cast<IntConstExpr*> (a);
         auto val = ChrFunc::op(a_new->value);
-        delete a_new;
 
         return new ChrConstExpr(val);
     } else {

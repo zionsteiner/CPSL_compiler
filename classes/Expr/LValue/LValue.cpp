@@ -176,6 +176,7 @@ RegisterPool::Register LValue::emitMips() {
 }
 
 RegisterPool::Register LValue::emitAddr() {
+    std::cout<<"BEG: " << registerPool.getAvailableCount() << std::endl;
     Symbol* symbol = getSymbol();
 
     // 1. Find address of first word
@@ -195,23 +196,27 @@ RegisterPool::Register LValue::emitAddr() {
                 // CASE: ARRAY
                 if (currType->typeEnum == ARRAY_T) {
                     ArrayType* arrayType = dynamic_cast<ArrayType*>(currType);
-                    const ConstExpr *lowIndex = arrayType->begin;
+                     const ConstExpr *lowIndex = arrayType->begin;
 
                     // 2. Compute indexing expression
                     Expr *indexExpr = const_cast<Expr *>(indexExt->a);
 
                     // 3. Find position of element (nth)
+                    std::cout << "# Calc array index" << std::endl;
                     auto indexReg = Sub::emitMips(indexExpr, (Expr *) lowIndex);
 
                     // 4. Find offset from array base
                     // Load array element from size
                     auto elementSizeReg = registerPool.get();
                     int elementSize = arrayType->arrayType->size();
+                    std::cout << "# Load element size" << std::endl;
                     std::cout << "li " + elementSizeReg.getRegId() + ", " + std::to_string(elementSize) << std::endl;
                     // Calculate offset
+                    std::cout << "# Calculate array offset" << std::endl;
                     auto offsetReg = Mult::emitMips(indexReg, elementSizeReg);
 
                     // 5. Add offset to array base
+                    std::cout << "Add offset to base" << std::endl;
                     currOffsetReg = Add::emitMips(currOffsetReg, offsetReg);
 
                     // Update currType
@@ -242,6 +247,6 @@ RegisterPool::Register LValue::emitAddr() {
             }
         }
     }
-
+    std::cout<<"END: " << registerPool.getAvailableCount() << std::endl;
     return currOffsetReg;
 }

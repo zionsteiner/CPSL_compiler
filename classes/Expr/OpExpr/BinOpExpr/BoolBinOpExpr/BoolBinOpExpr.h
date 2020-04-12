@@ -17,8 +17,6 @@ struct BoolBinOpExpr: BinOpExpr {
             auto a_new = dynamic_cast<BoolConstExpr*> (a);
             auto b_new = dynamic_cast<BoolConstExpr*> (b);
             auto val = T::binOp(a_new->value, b_new->value);
-            delete a;
-            delete b;
 
             return new BoolConstExpr(val);
         } else {

@@ -10,6 +10,10 @@ TypeAssign::TypeAssign(Ident* id, Type* type): id(id) {
     auto s_type = dynamic_cast<SimpleType*>(type);
     if (s_type != nullptr) {
         this->type = symbolTable.lookupType(s_type->id->id);
+    } else {
+        this->type = type;
     }
+
+    symbolTable.addType(id->id, const_cast<Type *>(this->type));
 }
 std::string TypeAssign::toString() const {return id->toString() + " = " + type->toString() + ';';}

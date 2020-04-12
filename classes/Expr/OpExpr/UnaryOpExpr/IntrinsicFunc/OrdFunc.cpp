@@ -11,7 +11,6 @@ Expr* OrdFunc::op(Expr* a) {
     if (a->isCompVal()) {
         auto a_new = dynamic_cast<ChrConstExpr*>(a);
         auto val = OrdFunc::op(a_new->value);
-        delete a_new;
 
         return new IntConstExpr(val);
     } else {

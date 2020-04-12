@@ -12,16 +12,13 @@
 #include <classes/Expr/LValue/LValue.h>
 #include <globals.h>
 
-ArrayType::ArrayType(Expr* begin, Expr* end, Type* arrayType): Type(ARRAY_T), arrayType(arrayType) {
+ArrayType::ArrayType(Expr* begin, Expr* end, Type* arrayType): Type(ARRAY_T) {
     // Type check array bounds
     auto lValBegin = dynamic_cast<LValue*>(begin);
     if (lValBegin != nullptr) {
-        if (lValBegin != nullptr) {
-            auto symbol = lValBegin->getSymbol();
-            begin = symbol->expr;
-        } else {
-            throw std::invalid_argument("Array bounds must be known at compile time");
-        }
+        auto symbol = lValBegin->getSymbol();
+        begin = symbol->expr;
+
     }
 
     auto lValEnd = dynamic_cast<LValue*>(end);
@@ -72,10 +69,19 @@ ArrayType::ArrayType(Expr* begin, Expr* end, Type* arrayType): Type(ARRAY_T), ar
         throw std::runtime_error("ERROR: invalid const expression used for setting array bounds");
     }
 
+    // Set size
     m_size = arrayType->size() * (endVal - beginVal + 1);
 
     if (m_size < 0 || beginVal == -1 || endVal == -1) {
         throw std::invalid_argument("ERROR: invalid array size (negative)");
+    }
+
+    // Set type
+    auto s_type = dynamic_cast<SimpleType*>(arrayType);
+    if (s_type == nullptr) {
+        this->arrayType = arrayType;
+    } else {
+        this->arrayType = s_type->lookupType();
     }
 }
 

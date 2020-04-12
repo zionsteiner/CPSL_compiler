@@ -23,6 +23,7 @@ Symbol* SymbolTable::lookupSymbol(std::string id) {
 void SymbolTable::addSymbol(std::string id, Symbol* symbol) {
     auto& topScope = scopeLevels.back();
 
+    // ToDo: might need to refactor to allow for multiple type redirection
     auto s_type = dynamic_cast<SimpleType*>(symbol->type);
     if (s_type != nullptr) {
         symbol->type = symbolTable.lookupType(s_type->id->id);
