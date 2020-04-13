@@ -136,39 +136,60 @@ RegisterPool::Register LValue::emitMips() {
 
                         // Update currType
                         currType = arrayType->arrayType;
+
+//                        {
+//                            auto t = dynamic_cast<IntConstExpr*>(indexExpr);
+//                            if (t != nullptr) {
+//                                int t1 = t->value;
+//                                if (t1 == 3) {
+//                                    std::string strId = symbolTable.addString("ADDR: ");
+//                                    std::cout << "la $a0, " + strId << std::endl;
+//                                    std::cout << "li $v0, 4" << std::endl;
+//                                    std::cout << "syscall" << std::endl;
+//                                    std::cout << "move $a0, " + currOffsetReg.getRegId() << std::endl;
+//                                    std::cout << "li $v0, 1" << std::endl;
+//                                    std::cout << "syscall" << std::endl;
+//                                    std::cout << "li $a0, '\\n'" << std::endl;
+//                                    std::cout << "li $v0, 11" << std::endl;
+//                                    std::cout << "syscall" << std::endl;
+//                                }
+//                            }
+//                        }
                     } else {
                         // ToDo: record errors and print in mips
                         throw std::runtime_error("ERROR: array indexing can only be used on arrays");
                     }
                 }
 
-                auto dotExt = dynamic_cast<DotExt*>((*ext));
+                auto dotExt = dynamic_cast<DotExt *>((*ext));
 
                 if (dotExt != nullptr) {
                     // CASE: RECORD
                     if (currType->typeEnum == RECORD_T) {
-                        RecordType* recordType = dynamic_cast<RecordType*>(currType);
+                        RecordType *recordType = dynamic_cast<RecordType *>(currType);
                         std::string dotId = dotExt->id->id;
                         currOffset = recordType->lookupOffset(dotId);
 
                         // Add offset to reg
                         auto tempCurrOffsetReg = registerPool.get();
-                        std::cout << "li " + tempCurrOffsetReg.getRegId() + ", " + std::to_string(currOffset) << std::endl;
-                        std::cout << "add " + currOffsetReg.getRegId() + ", " + currOffsetReg.getRegId() + ", " + tempCurrOffsetReg.getRegId() << std::endl;
+                        std::cout << "li " + tempCurrOffsetReg.getRegId() + ", " + std::to_string(currOffset)
+                                  << std::endl;
+                        std::cout << "add " + currOffsetReg.getRegId() + ", " + currOffsetReg.getRegId() + ", " +
+                                     tempCurrOffsetReg.getRegId() << std::endl;
 
+                        // Update currType
+                        currType = recordType->lookupType(dotId);
                     } else {
                         throw std::runtime_error("ERROR: dot accessing can only be used on records");
                     }
                 }
             }
-            // Emit
-            std::cout << "lw " + currOffsetReg.getRegId() + ", (" + currOffsetReg.getRegId() + ")" << std::endl;
-
-            return currOffsetReg;
-        } else {
-            auto reg = symbol->emitMips();
-            return reg;
         }
+
+        // Emit
+        std::cout << "lw " + currOffsetReg.getRegId() + ", (" + currOffsetReg.getRegId() + ")" << std::endl;
+
+        return currOffsetReg;
     } else {
         auto reg = symbol->emitMips();
         return reg;
@@ -176,7 +197,7 @@ RegisterPool::Register LValue::emitMips() {
 }
 
 RegisterPool::Register LValue::emitAddr() {
-    std::cout<<"BEG: " << registerPool.getAvailableCount() << std::endl;
+//    std::cout<<"BEG: " << registerPool.getAvailableCount() << std::endl;
     Symbol* symbol = getSymbol();
 
     // 1. Find address of first word
@@ -216,7 +237,7 @@ RegisterPool::Register LValue::emitAddr() {
                     auto offsetReg = Mult::emitMips(indexReg, elementSizeReg);
 
                     // 5. Add offset to array base
-                    std::cout << "Add offset to base" << std::endl;
+                    std::cout << "# Add offset to base" << std::endl;
                     currOffsetReg = Add::emitMips(currOffsetReg, offsetReg);
 
                     // Update currType
@@ -241,6 +262,8 @@ RegisterPool::Register LValue::emitAddr() {
                     std::cout << "li " + tempCurrOffsetReg.getRegId() + ", " + std::to_string(currOffset) << std::endl;
                     std::cout << "add " + currOffsetReg.getRegId() + ", " + currOffsetReg.getRegId() + ", " + tempCurrOffsetReg.getRegId() << std::endl;
 
+                    // Update currType
+                    currType = recordType->lookupType(dotId);
                 } else {
                     throw std::runtime_error("ERROR: dot accessing can only be used on records");
                 }
@@ -248,6 +271,6 @@ RegisterPool::Register LValue::emitAddr() {
         }
     }
 
-    std::cout<<"END: " << registerPool.getAvailableCount() << std::endl;
+//   std::cout<<"END: " << registerPool.getAvailableCount() << std::endl;
     return currOffsetReg;
 }

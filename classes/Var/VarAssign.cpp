@@ -6,14 +6,7 @@
 #include <globals.h>
 #include "VarAssign.h"
 
-VarAssign::VarAssign(std::vector<Ident*>* idList, Type* type): idList(idList), type(type) {
-    // Add all ids to table
-    for (auto id = idList->begin(); id != idList->end(); ++id) {
-        int offset = symbolTable.getNextOffset();
-        Symbol* varSymbol = new Symbol(offset, type);
-        symbolTable.addSymbol((*id)->id, varSymbol);
-    }
-}
+VarAssign::VarAssign(std::vector<Ident*>* idList, Type* type): idList(idList), type(type) {}
 
 std::string VarAssign::toString() const {
     std::string retStr;

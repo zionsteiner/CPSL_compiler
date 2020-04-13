@@ -7,11 +7,11 @@
 #include "SimpleType.h"
 
 RecordType::RecordType(std::vector<VarAssign*>* keys) : Type(RECORD_T), keys(keys) {
+    int currOffset = 0;
     for (auto key = keys->begin(); key != keys->end(); ++key) {
         auto idList = (*key)->idList;
         auto type = (*key)->type;
 
-        int currOffset = 0;
         for (auto id: *idList) {
             offsetMap[id->id] = currOffset;
             currOffset += type->size();

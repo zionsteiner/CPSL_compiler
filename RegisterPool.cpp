@@ -17,14 +17,14 @@ RegisterPool::RegisterPool() {
 RegisterPool::Register RegisterPool::get() {
     std::string regId = availableRegs.back();
     availableRegs.pop_back();
-    std::cout << "GET " << regId << "\nSIZE: " << availableRegs.size() << std::endl;
+//    std::cout << "GET " << regId << "\nSIZE: " << availableRegs.size() << std::endl;
 
     return Register(regId, this);
 }
 
 void RegisterPool::push(std::string regId) {
     availableRegs.push_back(regId);
-    std::cout << "PUT " << regId << "\nSIZE: " << availableRegs.size() << std::endl;
+//    std::cout << "PUT " << regId << "\nSIZE: " << availableRegs.size() << std::endl;
 }
 
 std::string RegisterPool::Register::getRegId() {return regId;}

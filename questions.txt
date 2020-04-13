@@ -87,3 +87,20 @@ LVAL
 ----
 $25 currOffsetReg
 $21 add for currOffset
+
+$25 45044 c
+$23 1
+$22 22476
+
+
+crazy: 224760
+record: 22476
+a: 22472
+g: 22464
+array: 2496
+record: 96
+d: 84
+
+BUG: VarAssign IN RECORD IS STILL ADDING TO SYMBOL TABLE
+
+First assignment is working correctly
