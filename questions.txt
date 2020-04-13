@@ -76,3 +76,14 @@ Lval stores exts:
 
 
 SimpleType is like -> id : (array begin end type)
+
+
+
+
+REGISTERS
+---------
+
+LVAL
+----
+$25 currOffsetReg
+$21 add for currOffset

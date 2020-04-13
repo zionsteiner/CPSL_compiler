@@ -31,5 +31,3 @@ Type * SimpleType::lookupType() {
     return type;
 }
 
-// ToDo: figure out how to replace simpletype with lookup
-

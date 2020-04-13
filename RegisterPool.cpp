@@ -17,14 +17,14 @@ RegisterPool::RegisterPool() {
 RegisterPool::Register RegisterPool::get() {
     std::string regId = availableRegs.back();
     availableRegs.pop_back();
-//    std::cout << "GET\nSIZE: " << availableRegs.size() << std::endl;
+    std::cout << "GET " << regId << "\nSIZE: " << availableRegs.size() << std::endl;
 
     return Register(regId, this);
 }
 
 void RegisterPool::push(std::string regId) {
     availableRegs.push_back(regId);
-//    std::cout << "PUT\nSIZE: " << availableRegs.size() << std::endl;
+    std::cout << "PUT " << regId << "\nSIZE: " << availableRegs.size() << std::endl;
 }
 
 std::string RegisterPool::Register::getRegId() {return regId;}
@@ -44,6 +44,11 @@ RegisterPool::Register::~Register() {
 }
 
 RegisterPool::Register &RegisterPool::Register::operator=(RegisterPool::Register &&a) {
+    if (isValid) {
+        pool->push(regId);
+        regId = "";
+    }
+
     this->regId = a.regId;
     this->pool = a.pool;
     this->isValid = true;

@@ -203,7 +203,7 @@ RegisterPool::Register LValue::emitAddr() {
 
                     // 3. Find position of element (nth)
                     std::cout << "# Calc array index" << std::endl;
-                    auto indexReg = Sub::emitMips(indexExpr, (Expr *) lowIndex);
+                    auto indexReg = Sub::emitMips(indexExpr, (Expr*)lowIndex);
 
                     // 4. Find offset from array base
                     // Load array element from size
@@ -247,6 +247,7 @@ RegisterPool::Register LValue::emitAddr() {
             }
         }
     }
+
     std::cout<<"END: " << registerPool.getAvailableCount() << std::endl;
     return currOffsetReg;
 }
