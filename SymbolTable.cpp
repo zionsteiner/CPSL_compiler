@@ -124,7 +124,7 @@ SymbolTable::SymbolTable() {
     this->addSymbol("false", false_const);
 }
 
-std::string SymbolTable::getLabel() {
+std::string SymbolTable::getNextLabel() {
     std::string label = "l" + std::to_string(labelCount);
     labelCount++;
 

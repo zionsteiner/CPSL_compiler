@@ -10,11 +10,12 @@
 #include "../Expr/Expr.h"
 
 struct WhileStmt: Stmt {
-    const Expr* expr;
+    Expr *expr;
     const std::vector<Stmt*>* stmts;
 
     WhileStmt(Expr*, std::vector<Stmt*>*);
     std::string toString() const override;
+    void emitMips() override;
 };
 
 

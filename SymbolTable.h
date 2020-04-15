@@ -22,7 +22,7 @@ public:
     std::string getCurrBaseReg();
     std::string getBaseRegById(std::string);
     std::string addString(std::string);
-    std::string getLabel();
+    std::string getNextLabel();
     std::map<std::string, std::string>* getStrings();
     SymbolTable();
 

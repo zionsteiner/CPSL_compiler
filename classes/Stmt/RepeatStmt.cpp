@@ -18,8 +18,9 @@ std::string RepeatStmt::toString() const {
 }
 
 void RepeatStmt::emitMips() {
-    std::string label = symbolTable.getLabel();
+    std::string label = symbolTable.getNextLabel();
 
+    std::cout << "# Repeat stmt" << std::endl;
     std::cout << label + ":" << std::endl;
     for (auto stmt: *stmts) {
         stmt->emitMips();
