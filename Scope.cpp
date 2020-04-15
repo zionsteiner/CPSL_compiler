@@ -64,3 +64,7 @@ void Scope::listTypes() {
 
 int Scope::getNextOffset() {return nextOffset;}
 std::string Scope::getBaseReg() {return baseReg;}
+
+void Scope::removeSymbol(std::string id) {
+    symbols.erase(id);
+}

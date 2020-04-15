@@ -13,6 +13,7 @@ class SymbolTable {
 public:
     Symbol* lookupSymbol(std::string);
     void addSymbol(std::string, Symbol*);
+    void removeSymbol(std::string);
     Type* lookupType(std::string);
     void addType(std::string, Type*);
     void enterScope();

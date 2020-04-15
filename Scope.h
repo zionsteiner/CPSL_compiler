@@ -17,6 +17,7 @@ public:
     Type* lookupType(std::string);
     void addType(std::string, Type*);
     void addSymbol(std::string, Symbol*);
+    void removeSymbol(std::string);
     void listSymbols();
     void listTypes();
     int getNextOffset();

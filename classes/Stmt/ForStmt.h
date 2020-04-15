@@ -12,13 +12,14 @@
 
 struct ForStmt: Stmt {
     const Ident* id;
-    const Expr* from;
-    const std::string iterDirection;
-    const Expr* to;
+    Expr *from;
+    const bool incrUp;
+    Expr *to;
     const std::vector<Stmt*>* stmts;
 
-    ForStmt(Ident*, Expr*, std::string, Expr*, std::vector<Stmt*>*);
+    ForStmt(Ident*, Expr*, bool, Expr*, std::vector<Stmt*>*);
     std::string toString() const override;
+    void emitMips() override;
 };
 
 

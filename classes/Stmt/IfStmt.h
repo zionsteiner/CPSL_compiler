@@ -10,13 +10,14 @@
 #include "ElseIfStmt.h"
 
 struct IfStmt: Stmt {
-    const Expr* condition;
+    Expr *condition;
     const std::vector<Stmt*>* stmts;
     const std::vector<ElseIfStmt*>* elseIfStmts;
     const ElseStmt* elseStmt;
 
     IfStmt(Expr*, std::vector<Stmt*>*, std::vector<ElseIfStmt*>*, ElseStmt*);
     std::string toString() const override;
+    void emitMips() override;
 };
 
 

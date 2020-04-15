@@ -349,8 +349,8 @@ whileStmt: WHILE expr DO stmts END {$$ = new WhileStmt($2, $4);}
 repeatStmt: REPEAT stmts UNTIL expr {$$ = new RepeatStmt($2, $4);}
           ;
 
-forStmt: FOR ID ASSIGN expr TO expr DO stmts END {$$ = new ForStmt($2, $4, "to", $6, $8);}
-       | FOR ID ASSIGN expr DOWNTO expr DO stmts END {$$ = new ForStmt($2, $4, "downto", $6, $8);}
+forStmt: FOR ID ASSIGN expr TO expr DO stmts END {$$ = new ForStmt($2, $4, true, $6, $8);}
+       | FOR ID ASSIGN expr DOWNTO expr DO stmts END {$$ = new ForStmt($2, $4, false, $6, $8);}
        ;
 
 stopStmt: STOP {$$ = new StopStmt();}

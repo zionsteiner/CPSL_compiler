@@ -130,3 +130,13 @@ std::string SymbolTable::getNextLabel() {
 
     return label;
 }
+
+void SymbolTable::removeSymbol(std::string id) {
+    for (auto level = scopeLevels.rbegin(); level != scopeLevels.rend(); ++level) {
+        auto symbol = level->lookupSymbol(id);
+        if (symbol != nullptr) {
+            level->removeSymbol(id);
+            break;
+        }
+    }
+}

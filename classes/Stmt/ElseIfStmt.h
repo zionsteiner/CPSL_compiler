@@ -10,8 +10,8 @@
 #include "../Expr/Expr.h"
 
 struct ElseIfStmt: Stmt {
-    const Expr* expr;
-    const std::vector<Stmt*>* stmts;
+    Expr* expr;
+    std::vector<Stmt*>* stmts;
 
     ElseIfStmt(Expr*, std::vector<Stmt*>*);
     std::string toString() const override;
