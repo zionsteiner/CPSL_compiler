@@ -5,13 +5,13 @@
 #include "../Expr/Ident.h"
 #include "ForStmt.h"
 
-ForStmt::ForStmt(Ident* id, Expr* from, std::string iterDir, Expr* to, std::vector<Stmt*>* stmtList):
+ForStmt::ForStmt(Ident* id, Expr* from, std::string iterDirection, Expr* to, std::vector<Stmt*>* stmts):
     id(id), from(from), iterDirection(iterDirection), to(to), stmts(stmts) {}
 
 std::string ForStmt::toString() const {
-    std::string retStr = "for " + id->toString() + '=' + from->toString() + iterDirection + to->toString();
+    std::string retStr = "for " + id->toString() + " := " + from->toString() + " " + iterDirection + " " + to->toString() + " do" + "\n";
     for (auto stmt = stmts->begin(); stmt != stmts->end(); ++stmt) {
-        retStr += (*stmt)->toString();
+        retStr += "\t" + (*stmt)->toString() + "\n";
     }
     retStr += " end";
     return retStr;

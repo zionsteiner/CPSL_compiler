@@ -22,12 +22,14 @@ public:
     std::string getCurrBaseReg();
     std::string getBaseRegById(std::string);
     std::string addString(std::string);
+    std::string getLabel();
     std::map<std::string, std::string>* getStrings();
     SymbolTable();
 
 private:
     std::vector<Scope> scopeLevels;
     std::map<std::string, std::string> strings;
+    int labelCount = 0;
 };
 
 

@@ -105,14 +105,28 @@ SymbolTable::SymbolTable() {
 //    Enter scope
     this->enterScope();
 //    Init predefined identifiers
-    this->addType("integer", new Primitive(INT_T));
-    this->addType("char", new Primitive(CHR_T));
+    Type* intType = new Primitive(INT_T);
+    this->addType("integer", intType);
+    this->addType("INTEGER", intType);
+    Type* chrType = new Primitive(CHR_T);
+    this->addType("char", chrType);
+    this->addType("CHAR", chrType);
     Type* boolType = new Primitive(BOOL_T);
     this->addType("boolean", boolType);
-    this->addType("string", new Primitive(STR_T));
+    this->addType("BOOLEAN", boolType);
+    Type* strType = new Primitive(STR_T);
+    this->addType("string", strType);
+    this->addType("STRING", strType);
 
     Symbol* true_const = new Symbol(new BoolConstExpr(true), boolType);
     this->addSymbol("true", true_const);
     Symbol* false_const = new Symbol(new BoolConstExpr(false), boolType);
     this->addSymbol("false", false_const);
+}
+
+std::string SymbolTable::getLabel() {
+    std::string label = "l" + std::to_string(labelCount);
+    labelCount++;
+
+    return label;
 }

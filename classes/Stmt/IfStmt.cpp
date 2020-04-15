@@ -11,7 +11,7 @@ std::string IfStmt::toString() const {
     std::string elseIfStmtsStr;
     if (elseIfStmts != nullptr) {
         for (auto elseIfStmt = elseIfStmts->begin(); elseIfStmt != elseIfStmts->end(); ++elseIfStmt) {
-            elseIfStmtsStr += (*elseIfStmt)->toString();
+            elseIfStmtsStr += "\n" + (*elseIfStmt)->toString() + ";";
         }
     } else {
         elseIfStmtsStr = "";
@@ -19,14 +19,16 @@ std::string IfStmt::toString() const {
 
     std::string elseStmtStr;
     if (elseStmt != nullptr) {
-        elseStmtStr = ' ' + elseStmt->toString();
+        elseStmtStr = "\n" + elseStmt->toString() + ";";
     } else {
         elseStmtStr = "";
     }
 
-    std::string retStr = "if " + condition->toString() + " then";
+    std::string retStr = "if (" + condition->toString() + ")" + " then";
     for (auto stmt = stmts->begin(); stmt != stmts->end(); ++stmt) {
-        retStr += ' ' + (*stmt)->toString();
+        retStr += "\n\t" + (*stmt)->toString() + ";";
     }
-    retStr += ' ' + elseIfStmtsStr + ' ' + elseStmtStr;
+    retStr += elseIfStmtsStr + elseStmtStr + " end;";
+
+    return retStr;
 }

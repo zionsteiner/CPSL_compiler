@@ -11,10 +11,11 @@
 
 struct RepeatStmt: Stmt {
     const std::vector<Stmt*>* stmts;
-    const Expr* expr;
+    Expr *expr;
 
     RepeatStmt(std::vector<Stmt*>*, Expr*);
     std::string toString() const override;
+    void emitMips() override;
 };
 
 
