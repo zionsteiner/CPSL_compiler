@@ -3,17 +3,17 @@ VAR
 
 BEGIN
 
-i:= 0;
-j:= 0;
+i:= 10;
+j:= 10;
 
-while(i <= 6) do
-  while(j <= i) do
+while(i >= 6) do
+  while(j >= i) do
     write(i, ":",j,' ');
-    j := j+1;
+    j := j-1;
   end;
   write('\n');
-  i := succ(i);
-  j := 0;
+  i := pred(i);
+  j := 10;
 end;
 write("Expected: list pairs of [0-6]\n");
 

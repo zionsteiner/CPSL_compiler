@@ -16,6 +16,7 @@ struct SuccFunc: UnaryOpExpr {
     static int op(int);
     static bool op(bool);
     std::string toString() const override;
+    RegisterPool::Register emitMips() override;
 };
 
 

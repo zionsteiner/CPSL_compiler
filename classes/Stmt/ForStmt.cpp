@@ -75,6 +75,7 @@ void ForStmt::emitMips() {
     std::cout << "j " + testLabel << std::endl;
 
     // Next
+    // ToDo: fix memory leak (never unallocated)
     symbolTable.removeSymbol(id->id);
     std::cout << nextLabel + ":" << std::endl;
 }
