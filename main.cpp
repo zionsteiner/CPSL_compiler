@@ -3,7 +3,6 @@
 //
 
 #include <globals.h>
-#include <iostream>
 
 extern int yyparse();
 int line = 1;

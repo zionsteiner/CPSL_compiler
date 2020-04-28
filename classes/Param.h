@@ -12,7 +12,7 @@
 struct Param {
     const bool isPassByRef;
     const std::vector<Ident*>* idList;
-    const Type* type;
+    Type* type;
 
     Param(bool, std::vector<Ident*>*, Type*);
     std::string toString() const;

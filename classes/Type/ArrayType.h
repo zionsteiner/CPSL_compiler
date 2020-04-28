@@ -10,14 +10,15 @@
 #include "Type.h"
 
 struct ArrayType: Type {
-    const ConstExpr* begin;
-    const ConstExpr* end;
+    Expr* begin;
+    Expr* end;
     Type* arrayType;
     int m_size;
 
     ArrayType(Expr*, Expr*, Type*);
     std::string toString() const override;
     int size() override;
+    void emitMips();
 };
 
 

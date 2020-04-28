@@ -11,10 +11,10 @@
 #include <classes/Block.h>
 
 struct Body {
-    const ConstDecl* constDecl;
-    const TypeDecl* typeDecl;
-    const VarDecl* varDecl;
-    const Block* block;
+    ConstDecl* constDecl;
+    TypeDecl* typeDecl;
+    VarDecl* varDecl;
+    Block* block;
 
     Body(ConstDecl*, TypeDecl*, VarDecl*, Block*);
     std::string toString() const;

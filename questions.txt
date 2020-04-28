@@ -104,3 +104,105 @@ d: 84
 BUG: VarAssign IN RECORD IS STILL ADDING TO SYMBOL TABLE
 
 First assignment is working correctly
+
+
+FUNCTIONS
+---------
+* Activation record
+    ** saved local registers
+    ** actual parameters
+    ** return address
+    ** old frame pointer
+    ** local variables
+
+* Prolog
+    ** save local registers
+        *** caller should save off all registers OR all registers it knows it currently has in use
+    ** generate label for procedure
+    ** push return address on stack
+        *** caller: add return address to one of the caller saved registers
+        *** callee:
+    ** push frame pointer on stack
+        *** before function call, run through all currently allocated registers
+    ** update the frame pointer to point to new record
+    ** allocate space for local variables for local variables
+        *** last two have to be done by caller
+
+* Epilog
+    ** generate epilog label
+    ** update frame pointer
+    ** replace value of return address from stack
+    ** deallocate parameters
+    ** restore local registers
+    ** jump to return address
+
+* Return
+    ** allocate space on stack for return value
+    ** jump to return address
+
+* Formal params
+    ** dual definitions
+        *** part of signature
+        *** identifiers at local scope
+    ** identifiers have positive offsets from frame pointer (caller puts them there)
+        *** caller positive from fp, callee negative
+        *** formal params positive from fp
+        *** add params to signature, push new scope, add all params AGAIN with positive offsets
+
+* Actual params
+    ** Found at call site
+    ** add to top of stack then move frame pointer
+
+
+MIPS
+--------------------
+add:
+    # move frame to current stack pointer
+    ori $fp, $sp, 0
+    # load params
+    lw $t0, 4($fp)
+    lw $t1, 8($fp)
+    # add
+    add $t0, $t0, $t1
+    # sw for return value
+    sw $t0, 0($fp)
+    # return
+    jr $ra
+
+main:
+    # assignment
+    li $t0, 1
+    sw $t0, 0($gp)
+    li $t0, 2
+    sw $t0, 4($gp)
+    ...
+    # load params
+    lw $t0, 0($gp)
+    lw $t1, 4($gp)
+    # add current reg, ra, and fp to stack
+    addi $sp, $sp, -16
+    sw $t0, 0($sp)
+    sw $t1, 4($sp)
+    sw $ra, 8($sp)
+    sw $fp, 12($sp)
+    # local scope
+    addi $sp, $sp, -12
+    sw $t0, 4($sp)
+    sw $t1, 8($sp)
+    # add function
+    jal add
+    # load return value
+    lw t2, 0($sp)
+    # clear add function stack
+    addi $sp, $sp, 12
+    # restore regs, ra, fp
+    lw $t0, 0($sp)
+    lw $t1, 4($sp)
+    lw $ra, 8($sp)
+    lw $fp, 12($sp)
+    addi $sp, $sp, 16
+
+1. How to refer to stack variables in outer scope?
+2. How to handle function signatures?
+3. How to change procCall to expr?
+4. How to pass by reference?

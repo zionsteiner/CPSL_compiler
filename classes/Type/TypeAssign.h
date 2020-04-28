@@ -11,10 +11,11 @@
 
 struct TypeAssign {
     const Ident* id;
-    const Type* type;
+    Type* type;
 
     TypeAssign(Ident*, Type*);
     std::string toString() const;
+    void emitMips();
 };
 
 

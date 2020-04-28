@@ -8,21 +8,25 @@
 
 #include <classes/Type/Type.h>
 #include <map>
-#include <classes/Expr/LValue/LValue.h>
 #include "Symbol.h"
 
 class Scope {
 public:
     Symbol* lookupSymbol(std::string);
     Type* lookupType(std::string);
-    void addType(std::string, Type*);
+
     void addSymbol(std::string, Symbol*);
+    void addType(std::string, Type*);
+
     void removeSymbol(std::string);
+
     void listSymbols();
     void listTypes();
+
     int getNextOffset();
     std::string getBaseReg();
-    Scope(std::string);
+
+    explicit Scope(std::string);
 
 private:
     std::map<std::string, Symbol*> symbols;

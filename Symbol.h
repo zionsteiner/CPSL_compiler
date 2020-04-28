@@ -15,8 +15,8 @@ struct Symbol {
     Type* type;
     std::string base;
 
-    explicit Symbol(int, Type*);
-    explicit Symbol(Expr*, Type*);
+    Symbol(int, Type*);
+    Symbol(Expr*, Type*);
     Symbol(const Expr* Expr, Type*);
     RegisterPool::Register emitMips();
     Type* getType();

@@ -16,6 +16,7 @@ struct ProcCall: Stmt {
 
     ProcCall(Ident*, std::vector<Expr*>*);
     std::string toString() const override;
+    void emitMips() override;
 };
 
 

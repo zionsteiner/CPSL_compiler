@@ -20,4 +20,8 @@ std::string ConstDecl::toString() const {
     return retStr;
 }
 
-void ConstDecl::emitMips() {}
+void ConstDecl::emitMips() const {
+    for (auto constAssign : *constAssignList) {
+        constAssign->emitMips();
+    }
+}

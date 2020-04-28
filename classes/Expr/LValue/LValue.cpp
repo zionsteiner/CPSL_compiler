@@ -114,7 +114,7 @@ RegisterPool::Register LValue::emitMips() {
                     // CASE: ARRAY
                     if (currType->typeEnum == ARRAY_T) {
                         ArrayType *arrayType = dynamic_cast<ArrayType *>(currType);
-                        const ConstExpr *lowIndex = arrayType->begin;
+                        ConstExpr *lowIndex = dynamic_cast<ConstExpr *>(arrayType->begin);
 
                         // 2. Compute indexing expression
                         Expr *indexExpr = const_cast<Expr *>(indexExt->a);
@@ -217,7 +217,7 @@ RegisterPool::Register LValue::emitAddr() {
                 // CASE: ARRAY
                 if (currType->typeEnum == ARRAY_T) {
                     ArrayType* arrayType = dynamic_cast<ArrayType*>(currType);
-                     const ConstExpr *lowIndex = arrayType->begin;
+                     const ConstExpr *lowIndex = dynamic_cast<const ConstExpr *>(arrayType->begin);
 
                     // 2. Compute indexing expression
                     Expr *indexExpr = const_cast<Expr *>(indexExt->a);

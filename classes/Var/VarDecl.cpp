@@ -7,7 +7,18 @@
 #include <classes/Type/ArrayType.h>
 #include "VarDecl.h"
 
-VarDecl::VarDecl(std::vector<VarAssign*>* varAssignList): varAssignList(varAssignList) {
+VarDecl::VarDecl(std::vector<VarAssign*>* varAssignList): varAssignList(varAssignList) {}
+
+std::string VarDecl::toString() const {
+    std::string retStr = "VAR";
+    for (auto varAssign = varAssignList->begin(); varAssign != varAssignList->end(); ++varAssign) {
+        retStr += "\n\t" + (*varAssign)->toString();
+    }
+
+    return retStr;
+}
+
+void VarDecl::emitMips() {
     for (auto varAssign: *varAssignList) {
         auto idList = varAssign->idList;
         auto type = varAssign->type;
@@ -20,14 +31,3 @@ VarDecl::VarDecl(std::vector<VarAssign*>* varAssignList): varAssignList(varAssig
         }
     }
 }
-
-std::string VarDecl::toString() const {
-    std::string retStr = "VAR";
-    for (auto varAssign = varAssignList->begin(); varAssign != varAssignList->end(); ++varAssign) {
-        retStr += "\n\t" + (*varAssign)->toString();
-    }
-
-    return retStr;
-}
-
-void VarDecl::emitMips() {}

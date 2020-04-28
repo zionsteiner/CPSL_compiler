@@ -2,12 +2,7 @@
 // Created by zion on 3/28/20.
 //
 
-#include <classes/Type/Primitive.h>
-#include <classes/Expr/ConstExpr/BoolConstExpr.h>
-#include <iostream>
-#include <classes/Type/SimpleType.h>
 #include "SymbolTable.h"
-#include "globals.h"
 
 Symbol* SymbolTable::lookupSymbol(std::string id) {
     for (auto level = scopeLevels.rbegin(); level != scopeLevels.rend(); ++level) {
@@ -23,13 +18,12 @@ Symbol* SymbolTable::lookupSymbol(std::string id) {
 void SymbolTable::addSymbol(std::string id, Symbol* symbol) {
     auto& topScope = scopeLevels.back();
 
-    // ToDo: might need to refactor to allow for multiple type redirection
     auto s_type = dynamic_cast<SimpleType*>(symbol->type);
     if (s_type != nullptr) {
         symbol->type = symbolTable.lookupType(s_type->id->id);
     }
 
-    topScope.addSymbol(id, symbol);
+    topScope.addSymbol(std::move(id), symbol);
 }
 
 Type* SymbolTable::lookupType(std::string id) {
@@ -45,11 +39,11 @@ Type* SymbolTable::lookupType(std::string id) {
 
 void SymbolTable::addType(std::string id, Type* type) {
     auto& topScope = scopeLevels.back();
-    topScope.addType(id, type);
+    topScope.addType(std::move(id), type);
 }
 
-void SymbolTable::enterScope() {
-    scopeLevels.push_back(Scope("$gp"));
+void SymbolTable::enterScope(std::string base) {
+    scopeLevels.push_back(Scope(base));
 }
 
 void SymbolTable::listSymbols() {
@@ -103,7 +97,7 @@ std::map<std::string, std::string>* SymbolTable::getStrings() {return &strings;}
 
 SymbolTable::SymbolTable() {
 //    Enter scope
-    this->enterScope();
+    this->enterScope("$gp");
 //    Init predefined identifiers
     Type* intType = new Primitive(INT_T);
     this->addType("integer", intType);
@@ -139,4 +133,17 @@ void SymbolTable::removeSymbol(std::string id) {
             break;
         }
     }
+}
+
+Callable *SymbolTable::lookupCallable(std::string sig) {
+     auto callable = callables.find(sig);
+     if (callable != callables.end()) {
+         return callable->second;
+     } else {
+         return nullptr;
+     }
+}
+
+void SymbolTable::addCallable(std::string sig, Callable* callable) {
+    callables[sig] = callable;
 }

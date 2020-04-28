@@ -9,9 +9,15 @@
 #include <classes/Expr/ConstExpr/ChrConstExpr.h>
 #include <classes/Expr/ConstExpr/StrConstExpr.h>
 #include <classes/Expr/ConstExpr/BoolConstExpr.h>
+#include <classes/Expr/LValue/LValue.h>
 #include "ConstAssign.h"
 
-ConstAssign::ConstAssign(Ident* id, Expr* expr): id(id), expr(expr) {
+ConstAssign::ConstAssign(Ident* id, Expr* expr): id(id), expr(expr) {}
+std::string ConstAssign::toString() const {
+    return  id->toString() + " = " + expr->toString() + ';';
+}
+
+void ConstAssign::emitMips() {
     if (!expr->isCompVal()) {
         throw std::invalid_argument("ERROR: Non-compile value used in CONST assignment");
     }
@@ -51,13 +57,9 @@ ConstAssign::ConstAssign(Ident* id, Expr* expr): id(id), expr(expr) {
         }
     }
 
-
     if (constSymbol == nullptr) {
         throw std::runtime_error("Something weird happened.");
     } else {
         symbolTable.addSymbol(id->id, constSymbol);
     }
-}
-std::string ConstAssign::toString() const {
-    return  id->toString() + " = " + expr->toString() + ';';
 }

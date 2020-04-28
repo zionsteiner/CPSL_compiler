@@ -7,6 +7,7 @@
 #include <globals.h>
 #include <iostream>
 #include <classes/Expr/ConstExpr/ConstExpr.h>
+#include <classes/Expr/LValue/LValue.h>
 #include "WriteStmt.h"
 
 WriteStmt::WriteStmt(std::vector<Expr*>* args) : args(args) {}

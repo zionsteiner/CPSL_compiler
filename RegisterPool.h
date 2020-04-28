@@ -30,9 +30,11 @@ public:
     Register get();
     void push(std::string);
     int getAvailableCount();
+    std::vector<std::string> getUsedRegs();
 
 private:
     std::vector<std::string> availableRegs;
+    std::vector<std::string> unavailableRegs;
 };
 
 

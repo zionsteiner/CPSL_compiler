@@ -12,7 +12,17 @@
 #include <classes/Expr/LValue/LValue.h>
 #include <globals.h>
 
-ArrayType::ArrayType(Expr* begin, Expr* end, Type* arrayType): Type(ARRAY_T) {
+ArrayType::ArrayType(Expr* begin, Expr* end, Type* arrayType): Type(ARRAY_T), begin(begin), end(end), arrayType(arrayType) {}
+
+std::string ArrayType::toString() const {
+    return "array [" + begin->toString() + ":" + end->toString() + "] of " + arrayType->toString();
+}
+
+int ArrayType::size() {
+    return m_size;
+}
+
+void ArrayType::emitMips() {
     // Type check array bounds
     auto lValBegin = dynamic_cast<LValue*>(begin);
     if (lValBegin != nullptr) {
@@ -83,12 +93,4 @@ ArrayType::ArrayType(Expr* begin, Expr* end, Type* arrayType): Type(ARRAY_T) {
     } else {
         this->arrayType = s_type->lookupType();
     }
-}
-
-std::string ArrayType::toString() const {
-    return "array [" + begin->toString() + ":" + end->toString() + "] of " + arrayType->toString();
-}
-
-int ArrayType::size() {
-    return m_size;
 }

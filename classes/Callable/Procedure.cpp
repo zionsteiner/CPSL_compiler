@@ -2,17 +2,15 @@
 // Created by zion on 3/9/20.
 //
 
+#include <globals.h>
 #include "Procedure.h"
 
 // Forward decl
-Procedure::Procedure(Ident* id, std::vector<Param*>* params)
-        : id(id), params(params), forward(true), body(nullptr)
-{}
+Procedure::Procedure(Ident* id, std::vector<Param*>* params): Callable(id, params) {}
 
 // Procedure definition
-Procedure::Procedure(Ident* id, std::vector<Param*>* params, Body* body)
-        : id(id), params(params), forward(false), body(body)
-{}
+Procedure::Procedure(Ident* id, std::vector<Param*>* params, Body* body): Callable(id, params, body) {}
+
 
 std::string Procedure::toString() const {
     std::string retStr = "Procedure";
@@ -30,4 +28,24 @@ std::string Procedure::toString() const {
         retStr += ' ' + body->toString();
     }
     retStr += ';';
+
+    return retStr;
 }
+
+void Procedure::emitMips() {
+    if (forward) {
+        throw std::invalid_argument("Procedure " + id->toString() + " has not been defined");
+    }
+
+    std::cout << "# Procedure" << std::endl;
+    std::cout << label + ":" << std::endl;
+    std::cout << "move $fp, $sp" << std::endl;
+
+    if (body->constDecl != nullptr) {body->constDecl->emitMips();}
+    if (body->typeDecl != nullptr) {body->typeDecl->emitMips();}
+    if (body->varDecl != nullptr) {body->varDecl->emitMips();}
+    for (auto stmt : *body->block->stmts) {
+        stmt->emitMips();
+    }
+}
+

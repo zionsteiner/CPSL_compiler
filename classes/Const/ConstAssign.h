@@ -15,6 +15,7 @@ struct ConstAssign {
 
     ConstAssign(Ident*, Expr*);
     std::string toString() const;
+    void emitMips();
 };
 
 

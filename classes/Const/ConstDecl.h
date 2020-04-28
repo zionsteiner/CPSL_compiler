@@ -13,7 +13,7 @@ struct ConstDecl {
 
     explicit ConstDecl(std::vector<ConstAssign*>*);
     std::string toString() const;
-    void emitMips();
+    void emitMips() const;
 };
 
 

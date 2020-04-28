@@ -18,7 +18,7 @@ Symbol* Scope::lookupSymbol(std::string key) {
     }
 }
 
-Type * Scope::lookupType(std::string key) {
+Type* Scope::lookupType(std::string key) {
     auto type = types.find(key);
     if (type != types.end()) {
         return type->second;

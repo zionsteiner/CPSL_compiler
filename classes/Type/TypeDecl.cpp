@@ -15,4 +15,8 @@ std::string TypeDecl::toString() const {
     return retStr;
 }
 
-void TypeDecl::emitMips() {}
+void TypeDecl::emitMips() {
+    for (auto typeAssign : *typeAssignPlus) {
+        typeAssign->emitMips();
+    }
+}

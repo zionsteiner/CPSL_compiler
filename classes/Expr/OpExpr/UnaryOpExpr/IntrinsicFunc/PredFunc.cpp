@@ -5,6 +5,7 @@
 #include <stdexcept>
 #include <iostream>
 #include <globals.h>
+#include <classes/Expr/LValue/LValue.h>
 #include "PredFunc.h"
 
 PredFunc::PredFunc(Expr* expr): UnaryOpExpr(expr) {

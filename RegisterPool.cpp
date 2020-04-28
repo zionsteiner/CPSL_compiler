@@ -4,6 +4,7 @@
 
 #include <string>
 #include <iostream>
+#include <algorithm>
 #include "RegisterPool.h"
 
 RegisterPool::RegisterPool() {
@@ -17,6 +18,7 @@ RegisterPool::RegisterPool() {
 RegisterPool::Register RegisterPool::get() {
     std::string regId = availableRegs.back();
     availableRegs.pop_back();
+    unavailableRegs.push_back(regId);
 //    std::cout << "GET " << regId << "\nSIZE: " << availableRegs.size() << std::endl;
 
     return Register(regId, this);
@@ -40,6 +42,9 @@ RegisterPool::Register::Register(): isValid(false) {
 RegisterPool::Register::~Register() {
     if (isValid) {
         pool->push(regId);
+
+        auto unavailableRegs = pool->unavailableRegs;
+        unavailableRegs.erase(std::remove(unavailableRegs.begin(), unavailableRegs.end(), regId), unavailableRegs.end());
     }
 }
 
@@ -60,4 +65,8 @@ RegisterPool::Register &RegisterPool::Register::operator=(RegisterPool::Register
 
 int RegisterPool::getAvailableCount() {
     return availableRegs.size();
+}
+
+std::vector<std::string> RegisterPool::getUsedRegs() {
+    return unavailableRegs;
 }

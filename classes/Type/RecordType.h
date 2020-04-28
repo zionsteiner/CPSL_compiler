@@ -20,6 +20,7 @@ struct RecordType: Type {
     Type* lookupType(std::string);
     std::string toString() const override;
     int size() override;
+    void emitMips();
 };
 
 

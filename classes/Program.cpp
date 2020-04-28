@@ -25,12 +25,15 @@ std::string Program::toString() const {
 }
 
 void Program::emitMips() {
+    // Output MIPS code for functions
+    for (auto callable : *callableList) {
+        callable->emitMips();
+    }
+
     std::cout << "\t.text\n.globl main\nmain:" << std::endl;
     if (constDecl != nullptr) {constDecl->emitMips();}
     if (typeDecl != nullptr) {typeDecl->emitMips();}
     if (varDecl != nullptr) {varDecl->emitMips();}
-    // Callable emissions
-    /*******************/
 
     block->emitMips();
 
