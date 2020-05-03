@@ -200,6 +200,14 @@ RegisterPool::Register LValue::emitAddr() {
 //    std::cout<<"BEG: " << registerPool.getAvailableCount() << std::endl;
     Symbol* symbol = getSymbol();
 
+    // If isRef, just load and return address
+    if (symbol->isRef) {
+        auto reg = registerPool.get();
+        std::cout << "lw " + reg.getRegId() + ", " + std::to_string(symbol->offset) + "(" + lookupBase() + ")" << std::endl;
+
+        return reg;
+    }
+
     // 1. Find address of first word
     Type* currType = symbol->getType();
     std::cout << "# LVal" << std::endl;

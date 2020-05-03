@@ -105,7 +105,7 @@ std::map<std::string, std::string>* SymbolTable::getStrings() {return &strings;}
 
 SymbolTable::SymbolTable() {
 //    Enter scope
-    this->enterScope("$gp");
+    this->enterScope();
 //    Init predefined identifiers
     Type* intType = new Primitive(INT_T);
     this->addType("integer", intType);

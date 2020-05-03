@@ -218,3 +218,29 @@ main:
     a. pop scope
     b. restore regpool state
     c. load spilled regs
+
+
+1. procCall
+    a. emit function mips here (all vars and params will be in proper place in symboltable for function to see)
+
+* pass by ref
+save address to stack
+* how will the statements inside the function know how to access that variable by ref?
+    * pass base address
+    * have symbol for storing address
+    if symbol is address:
+
+
+
+[$fp1]
+
+var
+var
+arg
+arg
+
+[$fp2]
+
+var
+var
+$sp

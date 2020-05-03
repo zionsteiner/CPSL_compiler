@@ -38,8 +38,6 @@ void Procedure::emitMips() {
     }
 
     std::cout << "# Procedure" << std::endl;
-    std::cout << label + ":" << std::endl;
-
     if (body->constDecl != nullptr) {body->constDecl->emitMips();}
     if (body->typeDecl != nullptr) {body->typeDecl->emitMips();}
     if (body->varDecl != nullptr) {body->varDecl->emitMips();}

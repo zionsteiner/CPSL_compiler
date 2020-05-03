@@ -14,10 +14,11 @@ struct Symbol {
     Expr* expr;
     Type* type;
     std::string base;
+    bool isRef;
 
-    Symbol(int, Type*);
-    Symbol(Expr*, Type*);
-    Symbol(const Expr* Expr, Type*);
+    Symbol(int, Type*, bool);
+    Symbol(Expr*, Type*, bool);
+    Symbol(const Expr* Expr, Type*, bool);
     RegisterPool::Register emitMips();
     Type* getType();
 };

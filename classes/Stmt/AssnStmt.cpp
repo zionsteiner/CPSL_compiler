@@ -47,11 +47,7 @@ void AssnStmt::emitMips() {
                     std::cout << "sw " + copyReg.getRegId() + ", " + std::to_string(i) + "(" + lValAddrReg.getRegId() + ")" << std::endl;
                 }
             } else if (lValType->typeEnum == RECORD_T) {
-                auto lValRecordType = dynamic_cast<RecordType*>(lValType);
-                auto assnRecordType = dynamic_cast<RecordType*>(exprType);
-
-
-                std::cout << "# Copy record" << std::endl;
+               std::cout << "# Copy record" << std::endl;
 
                 // Get base addresses
                 auto lValAddrReg = lVal->emitAddr();

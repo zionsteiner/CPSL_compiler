@@ -8,7 +8,7 @@
 #include "globals.h"
 
 Scope::Scope(int offset) {
-    this->baseReg = "$fp";
+    this->baseReg = "$gp";
     this->scopeOffset = offset;
 }
 
@@ -35,7 +35,7 @@ void Scope::addSymbol(std::string key, Symbol* symbol) {
     symbols[key] = symbol;
     if (symbol->offset != -1) {
         if (symbol->offset == nextOffset) {
-            nextOffset -= symbol->type->size();
+            nextOffset += symbol->type->size();
         } else {
             throw "ERROR: Invalid symbol offset";
         }

@@ -8,22 +8,25 @@
 #include "Symbol.h"
 #include "globals.h"
 
-Symbol::Symbol(Expr* expr, Type* type) {
+Symbol::Symbol(Expr* expr, Type* type, bool isRef) {
     this->expr = expr;
     this->offset = -1;
     this->type = type;
+    this->isRef = isRef;
 }
 
-Symbol::Symbol(int offset, Type* type) {
+Symbol::Symbol(int offset, Type* type, bool isRef) {
     this->offset = offset;
     this->expr = nullptr;
     this->type = type;
+    this->isRef = isRef;
 }
 
-Symbol::Symbol(const Expr* expr, Type* type) {
+Symbol::Symbol(const Expr* expr, Type* type, bool isRef) {
     this->expr = const_cast<Expr *>(expr);
     this->offset = -1;
     this->type = type;
+    this->isRef = isRef;
 }
 
 RegisterPool::Register Symbol::emitMips() {
