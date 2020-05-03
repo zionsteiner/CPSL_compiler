@@ -206,3 +206,15 @@ main:
 2. How to handle function signatures?
 3. How to change procCall to expr?
 4. How to pass by reference?
+
+1. symboltable.enterScope()
+    a. save reg pool state
+    b. save regs, locations w/ dict
+    c. move args to stack
+    d. push scope
+    e. load params to new scope symboltable
+
+2. symboltable.exitscope()
+    a. pop scope
+    b. restore regpool state
+    c. load spilled regs

@@ -26,13 +26,20 @@ public:
     int getNextOffset();
     std::string getBaseReg();
 
-    explicit Scope(std::string);
+    void saveState();
+
+    explicit Scope(int);
 
 private:
     std::map<std::string, Symbol*> symbols;
     std::map<std::string, Type*> types;
     std::string baseReg;
+    int scopeOffset;
     int nextOffset = 0;
+
+    std::map<std::string, int> regSpillAddrs;
+    std::vector<std::string> availableRegState;
+    std::vector<std::string> usedRegState;
 };
 
 

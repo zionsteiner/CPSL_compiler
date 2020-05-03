@@ -19,6 +19,8 @@ std::string VarDecl::toString() const {
 }
 
 void VarDecl::emitMips() {
+    int totalOffset = 0;
+
     for (auto varAssign: *varAssignList) {
         auto idList = varAssign->idList;
         auto type = varAssign->type;
@@ -28,6 +30,10 @@ void VarDecl::emitMips() {
             int offset = symbolTable.getNextOffset();
             Symbol *varSymbol = new Symbol(offset, type);
             symbolTable.addSymbol((*id)->id, varSymbol);
+
+            totalOffset += type->size();
         }
     }
+
+    std::cout << "addi $sp, $sp, " + std::to_string(totalOffset) << std::endl;
 }

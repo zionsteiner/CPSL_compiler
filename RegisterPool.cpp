@@ -67,6 +67,26 @@ int RegisterPool::getAvailableCount() {
     return availableRegs.size();
 }
 
+void RegisterPool::restoreState(std::vector<std::string> availableRegState, std::vector<std::string> usedRegState) {
+    this->availableRegs = availableRegState;
+    this->unavailableRegs = usedRegState;
+}
+
+std::vector<std::string> RegisterPool::getAvailableRegs() {
+    return availableRegs;
+}
+
 std::vector<std::string> RegisterPool::getUsedRegs() {
     return unavailableRegs;
+}
+
+void RegisterPool::resetState() {
+    availableRegs.clear();
+    unavailableRegs.clear();
+
+    // $t0-$t7, $s0-$s7, $t8-$t9
+    for (int i = 8; i <= 25; ++i) {
+        std::string regId = "$" + std::to_string(i);
+        availableRegs.push_back(regId);
+    }
 }

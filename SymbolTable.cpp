@@ -42,8 +42,16 @@ void SymbolTable::addType(std::string id, Type* type) {
     topScope.addType(std::move(id), type);
 }
 
-void SymbolTable::enterScope(std::string base) {
-    scopeLevels.push_back(Scope(base));
+void SymbolTable::enterScope() {
+    Scope topScope = scopeLevels.back();
+    topScope.saveState();
+
+    int offset = getNextOffset();
+    scopeLevels.emplace_back(offset);
+}
+
+void SymbolTable::exitScope() {
+
 }
 
 void SymbolTable::listSymbols() {

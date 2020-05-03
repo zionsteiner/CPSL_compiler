@@ -30,7 +30,8 @@ public:
 
     void removeSymbol(std::string);
 
-    void enterScope(std::string);
+    void enterScope();
+    void exitScope();
 
     void listSymbols();
     void listTypes();
@@ -47,6 +48,7 @@ private:
     std::vector<Scope> scopeLevels;
     std::map<std::string, Callable*> callables;
     std::map<std::string, std::string> strings;
+    std::map<std::string, Symbol*> argStorage;
     int labelCount = 0;
 };
 

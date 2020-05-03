@@ -43,6 +43,13 @@ void ProcCall::emitMips() {
         throw std::invalid_argument("Callable with sig " + sig + " not found in symbol table");
     }
 
+    symbolTable.enterScope();
+
+    // Call function
+    std::cout << "jal " + callable->label << std::endl;
+
+    symbolTable.exitScope();
+
     // Save local regs
     int currOffset = 0;
     int regSpillOffset = 4 * (registerPool.getUsedRegs().size() + 2);

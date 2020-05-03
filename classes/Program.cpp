@@ -25,11 +25,6 @@ std::string Program::toString() const {
 }
 
 void Program::emitMips() {
-    // Output MIPS code for functions
-    for (auto callable : *callableList) {
-        callable->emitMips();
-    }
-
     std::cout << "\t.text\n.globl main\nmain:" << std::endl;
     if (constDecl != nullptr) {constDecl->emitMips();}
     if (typeDecl != nullptr) {typeDecl->emitMips();}
@@ -40,6 +35,11 @@ void Program::emitMips() {
     std::cout << "# Exit" << std::endl;
     std::cout << "li $v0, 10" << std::endl;
     std::cout << "syscall" << std::endl;
+
+    // Output MIPS code for functions
+    for (auto callable : *callableList) {
+        callable->emitMips();
+    }
 
     // Emit string constants
     std::cout << "\t.data\n" << std::endl;

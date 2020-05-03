@@ -30,7 +30,10 @@ public:
     Register get();
     void push(std::string);
     int getAvailableCount();
+    std::vector<std::string> getAvailableRegs();
     std::vector<std::string> getUsedRegs();
+    void restoreState(std::vector<std::string>, std::vector<std::string>);
+    void resetState();
 
 private:
     std::vector<std::string> availableRegs;
