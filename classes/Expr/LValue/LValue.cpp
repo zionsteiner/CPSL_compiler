@@ -89,7 +89,7 @@ std::string LValue::lookupBase() {
 
 int LValue::lookupBaseOffset() {
     auto symbol = getSymbol();
-    return symbol->offset;
+    return symbol->offset - symbolTable.getFpOffset();
 }
 
 RegisterPool::Register LValue::emitMips() {
@@ -99,12 +99,16 @@ RegisterPool::Register LValue::emitMips() {
     Type* currType = symbol->getType();
     std::cout << "# LVal" << std::endl;
     auto currOffsetReg = registerPool.get();
-    int currOffset = lookupBaseOffset();
 
-    if (currOffset != -1) {
+    if (symbol->isRef) {
+        std::cout << "lw " + currOffsetReg.getRegId() + ", " + std::to_string(lookupBaseOffset()) + "(" + lookupBase() + ")" << std::endl;
+    } else {
+        int currOffset = lookupBaseOffset();
         std::cout << "li " + currOffsetReg.getRegId() + ", " + std::to_string(currOffset) << std::endl;
-        std::cout << "add " + currOffsetReg.getRegId() + ", " + currOffsetReg.getRegId() + ", " + lookupBase() << std::endl;
+        std::cout << "add " + currOffsetReg.getRegId() + ", " + currOffsetReg.getRegId() + ", "  + lookupBase() << std::endl;
+    }
 
+    if (symbol->offset != -1) {
         // Lookup lVal extensions
         if (exts != nullptr) {
             for (auto ext = exts->begin(); ext != exts->end(); ++ext) {
@@ -168,7 +172,7 @@ RegisterPool::Register LValue::emitMips() {
                     if (currType->typeEnum == RECORD_T) {
                         RecordType *recordType = dynamic_cast<RecordType *>(currType);
                         std::string dotId = dotExt->id->id;
-                        currOffset = recordType->lookupOffset(dotId);
+                        int currOffset = recordType->lookupOffset(dotId);
 
                         // Add offset to reg
                         auto tempCurrOffsetReg = registerPool.get();
@@ -200,21 +204,18 @@ RegisterPool::Register LValue::emitAddr() {
 //    std::cout<<"BEG: " << registerPool.getAvailableCount() << std::endl;
     Symbol* symbol = getSymbol();
 
-    // If isRef, just load and return address
-    if (symbol->isRef) {
-        auto reg = registerPool.get();
-        std::cout << "lw " + reg.getRegId() + ", " + std::to_string(symbol->offset) + "(" + lookupBase() + ")" << std::endl;
-
-        return reg;
-    }
-
     // 1. Find address of first word
     Type* currType = symbol->getType();
     std::cout << "# LVal" << std::endl;
     auto currOffsetReg = registerPool.get();
-    int currOffset = lookupBaseOffset();
-    std::cout << "li " + currOffsetReg.getRegId() + ", " + std::to_string(currOffset) << std::endl;
-    std::cout << "add " + currOffsetReg.getRegId() + ", " + currOffsetReg.getRegId() + ", "  + lookupBase() << std::endl;
+
+    if (symbol->isRef) {
+        std::cout << "lw " + currOffsetReg.getRegId() + ", " + std::to_string(lookupBaseOffset()) + "(" + lookupBase() + ")" << std::endl;
+    } else {
+        int currOffset = lookupBaseOffset();
+        std::cout << "li " + currOffsetReg.getRegId() + ", " + std::to_string(currOffset) << std::endl;
+        std::cout << "add " + currOffsetReg.getRegId() + ", " + currOffsetReg.getRegId() + ", "  + lookupBase() << std::endl;
+    }
 
     // Lookup lVal extensions
     if (exts != nullptr) {
@@ -261,9 +262,9 @@ RegisterPool::Register LValue::emitAddr() {
             if (dotExt != nullptr) {
                 // CASE: RECORD
                 if (currType->typeEnum == RECORD_T) {
-                    RecordType* recordType = dynamic_cast<RecordType*>(currType);
+                    auto* recordType = dynamic_cast<RecordType*>(currType);
                     std::string dotId = dotExt->id->id;
-                    currOffset = recordType->lookupOffset(dotId);
+                    int currOffset = recordType->lookupOffset(dotId);
 
                     // Add offset to reg
                     auto tempCurrOffsetReg = registerPool.get();

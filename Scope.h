@@ -27,6 +27,10 @@ public:
     std::string getBaseReg();
 
     void saveState();
+    void loadArg(std::string, Symbol*);
+    void resetState();
+    int getScopeOffset();
+    void incrOffset(int);
 
     explicit Scope(int);
 

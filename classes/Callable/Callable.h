@@ -9,7 +9,6 @@
 #include <classes/Param.h>
 #include <classes/Body.h>
 #include <classes/Type/SimpleType.h>
-#include <globals.h>
 
 struct Callable {
     const Ident* id;
@@ -17,10 +16,12 @@ struct Callable {
     bool forward;
     Body* body;
 
+    bool emitted = false;
     std::string label;
 
     virtual std::string toString() const = 0;
     virtual void emitMips() = 0;
+    bool isEmitted();
 
     Callable(Ident* id, std::vector<Param*>* params);
 

@@ -3,6 +3,7 @@
 //
 
 #include "Callable.h"
+#include "globals.h"
 
 Callable::Callable(Ident *id, std::vector<Param*> *params, Body *body): id(id), params(params), forward(false), body(body) {
     std::string sig = id->toString() + "(";
@@ -29,3 +30,7 @@ Callable::Callable(Ident *id, std::vector<Param *> *params): id(id), params(para
 }
 
 Callable::~Callable() = default;
+
+bool Callable::isEmitted() {
+    return emitted;
+}

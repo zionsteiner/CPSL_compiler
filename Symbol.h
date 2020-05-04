@@ -16,9 +16,9 @@ struct Symbol {
     std::string base;
     bool isRef;
 
-    Symbol(int, Type*, bool);
-    Symbol(Expr*, Type*, bool);
-    Symbol(const Expr* Expr, Type*, bool);
+    Symbol(int, Type*, bool=false);
+    Symbol(Expr*, Type*, bool=false);
+    Symbol(const Expr* Expr, Type*, bool=false);
     RegisterPool::Register emitMips();
     Type* getType();
 };

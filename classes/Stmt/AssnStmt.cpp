@@ -43,8 +43,8 @@ void AssnStmt::emitMips() {
                 // Copy
                 for (int i = 0; i < assnSize; i += 4) {
                     auto copyReg = registerPool.get();
-                    std::cout << "lw " + copyReg.getRegId() + ", " + std::to_string(i) + "(" + assnLValAddrReg.getRegId() + ")" << std::endl;
-                    std::cout << "sw " + copyReg.getRegId() + ", " + std::to_string(i) + "(" + lValAddrReg.getRegId() + ")" << std::endl;
+                    std::cout << "lw " + copyReg.getRegId() + ", " + std::to_string(-i) + "(" + assnLValAddrReg.getRegId() + ")" << std::endl;
+                    std::cout << "sw " + copyReg.getRegId() + ", " + std::to_string(-i) + "(" + lValAddrReg.getRegId() + ")" << std::endl;
                 }
             } else if (lValType->typeEnum == RECORD_T) {
                std::cout << "# Copy record" << std::endl;
@@ -59,8 +59,8 @@ void AssnStmt::emitMips() {
                 // Copy
                 auto copyReg = registerPool.get();
                 for (int i = 0; i < assnSize; i += 4) {
-                    std::cout << "lw " + copyReg.getRegId() + ", " + std::to_string(i) + "(" + assnLValAddrReg.getRegId() + ")" << std::endl;
-                    std::cout << "sw " + copyReg.getRegId() + ", " + std::to_string(i) + "(" + lValAddrReg.getRegId() + ")" << std::endl;
+                    std::cout << "lw " + copyReg.getRegId() + ", " + std::to_string(-i) + "(" + assnLValAddrReg.getRegId() + ")" << std::endl;
+                    std::cout << "sw " + copyReg.getRegId() + ", " + std::to_string(-i) + "(" + lValAddrReg.getRegId() + ")" << std::endl;
                 }
             } else {
                     auto lValAddrReg = lVal->emitAddr();

@@ -6,16 +6,9 @@
 #define CPSL_COMPILER_SYMBOLTABLE_H
 
 
-#include <classes/Type/Type.h>
 #include <classes/Callable/Callable.h>
-#include <classes/Type/Primitive.h>
-#include <classes/Expr/ConstExpr/BoolConstExpr.h>
-#include <iostream>
-#include <utility>
-#include <classes/Type/SimpleType.h>
-#include "Symbol.h"
-#include "SymbolTable.h"
 #include "Scope.h"
+#include "Symbol.h"
 
 class SymbolTable {
 public:
@@ -31,15 +24,19 @@ public:
     void removeSymbol(std::string);
 
     void enterScope();
+    void loadArg(std::string, Expr*, Param*);
+    void saveState();
     void exitScope();
 
     void listSymbols();
     void listTypes();
 
     int getNextOffset();
+    void incrOffset(int);
     std::string getCurrBaseReg();
     std::string getBaseRegById(std::string);
     std::string getNextLabel();
+    int getFpOffset();
     std::map<std::string, std::string>* getStrings();
 
     SymbolTable();

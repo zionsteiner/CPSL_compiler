@@ -26,14 +26,14 @@ void VarDecl::emitMips() {
         auto type = varAssign->type;
 
         // Add all ids to table
-        for (auto id = idList->begin(); id != idList->end(); ++id) {
+        for (auto id : *idList) {
             int offset = symbolTable.getNextOffset();
             Symbol *varSymbol = new Symbol(offset, type);
-            symbolTable.addSymbol((*id)->id, varSymbol);
+            symbolTable.addSymbol(id->id, varSymbol);
 
             totalOffset += type->size();
         }
     }
 
-    std::cout << "addi $sp, $sp, " + std::to_string(totalOffset) << std::endl;
+    std::cout << "addi $sp, $sp, " + std::to_string(-totalOffset) << std::endl;
 }

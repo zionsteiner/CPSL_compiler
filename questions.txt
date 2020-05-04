@@ -232,12 +232,12 @@ save address to stack
 
 
 
-[$fp1]
-
-var
-var
-arg
-arg
+[$fp1] 0    20
+       -4   16
+var    -8   12
+var    -12  8
+arg    -16  4
+arg    -20  0
 
 [$fp2]
 

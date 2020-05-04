@@ -8,7 +8,7 @@
 #include "globals.h"
 
 Scope::Scope(int offset) {
-    this->baseReg = "$gp";
+    this->baseReg = "$fp";
     this->scopeOffset = offset;
 }
 
@@ -41,6 +41,7 @@ void Scope::addSymbol(std::string key, Symbol* symbol) {
         }
     }
 }
+
 
 void Scope::addType(std::string key, Type* type) {
     types[key] = type;
@@ -89,6 +90,35 @@ void Scope::saveState() {
     }
     // Save $ra and $fp
     std::cout << "sw $ra, " + std::to_string(currOffset) + "($sp)" << std::endl;
+    regSpillAddrs["$ra"] = currOffset;
     currOffset += 4;
     std::cout << "sw $fp, " + std::to_string(currOffset) + "($sp)" << std::endl;
+    regSpillAddrs["$fp"] = currOffset;
+}
+
+void Scope::loadArg(std::string id, Symbol* symbol) {
+    symbol->base = symbolTable.getCurrBaseReg();
+    symbols[id] = symbol;
+}
+
+void Scope::incrOffset(int incr) {
+    this->scopeOffset += incr;
+}
+
+void Scope::resetState() {
+    // Load regs
+    int regSpillOffset = 4 * (usedRegState.size() + 2);
+    for (auto reg : usedRegState) {
+        std::cout << "lw " + reg + ", " + std::to_string(regSpillAddrs[reg]) + "($sp)" << std::endl;
+    }
+    // Load $ra and $fp
+    std::cout << "lw $ra, " + std::to_string(regSpillAddrs["$ra"]) + "($sp)" << std::endl;
+    std::cout << "lw $fp, " + std::to_string(regSpillAddrs["$fp"]) + "($sp)" << std::endl;
+
+    // Load regPool state
+    registerPool.restoreState(availableRegState, usedRegState);
+}
+
+int Scope::getScopeOffset() {
+    return scopeOffset;
 }
