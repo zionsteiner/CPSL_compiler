@@ -1,0 +1,164 @@
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+The answer is 42
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+10
+01
+65 A
+Expected:
+10
+01
+65 A
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+5=5
+a=a
+true=1
+str=Hello world
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+2+2=4
+2*2=4
+2/2=1
+2-2=0
+Enter A:
+Enter b:
+a+b=13
+a-b=-5
+a*b=36
+a/b=0
+a%b=4
+a=b=0
+a<b=1
+a>b=0
+a<>b=1
+a<=b=1
+a>=b=0
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+Hello World!
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+Enter an integer, then a character:
+integer:   4
+character: t
+true: 1
+false: 0
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+x = 0    should be 0
+y = 136  should be 136
+z = 2944 should be 2944
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+42 should write once, not twice
+42
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+0	0
+0	0
+0	0
+0	0
+0	0
+0	0
+0	0
+0	0
+
+Expected:
+1	1
+2	2
+3	6
+4	24
+5	120
+6	720
+7	5040
+8	40320
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+0 
+0 
+0 
+0 
+0 
+0 
+ 0 0 0 0 0
+Expected:
+10
+9
+8
+7
+6
+5
+ 4 3 2 1 0
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+0 0 0 0 0 0 
+
+Expected:
+0 1 2 3 4 5
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+i is 5! (expected result)
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+i from 0 to 5
+i: 0 
+i: 1 
+i: 2 
+i: 3 
+i: 4 
+i: 5 
+should only happen once 6 
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+0123456789
+Expected
+0123456789
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+02468
+Expected:
+02468
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+10:10 
+9:10 9:9 
+8:10 8:9 8:8 
+7:10 7:9 7:8 7:7 
+6:10 6:9 6:8 6:7 6:6 
+Expected: list pairs of [0-6]
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+Result   :4
+Expected :4
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+Result   = 314
+Expected = 314
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+Result  : 42
+Expected: 42
+
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
+
+Result  : 2 6 3
+Expected: 2 6 3
+

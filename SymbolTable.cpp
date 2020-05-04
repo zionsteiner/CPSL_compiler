@@ -13,10 +13,10 @@ Symbol* SymbolTable::lookupSymbol(std::string id) {
         auto symbol = level->lookupSymbol(id);
         if (symbol != nullptr) {
             return symbol;
-        } else {
-            return nullptr;
         }
     }
+
+    return nullptr;
 }
 
 void SymbolTable::addSymbol(std::string id, Symbol* symbol) {
@@ -35,13 +35,18 @@ Type* SymbolTable::lookupType(std::string id) {
         auto type = level->lookupType(id);
         if (type != nullptr) {
             return type;
-        } else {
-            return nullptr;
         }
     }
+
+    return nullptr;
 }
 
 void SymbolTable::addType(std::string id, Type* type) {
+    auto s_type = dynamic_cast<SimpleType*>(type);
+    if (s_type != nullptr) {
+        type = lookupType(s_type->id->id);
+    }
+
     auto& topScope = scopeLevels.back();
     topScope.addType(std::move(id), type);
 }

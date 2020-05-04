@@ -46,7 +46,6 @@ void Procedure::emitMips() {
     for (auto stmt : *body->block->stmts) {
         stmt->emitMips();
     }
-
     std::cout << "ja $ra" << std::endl;
 
     emitted = true;

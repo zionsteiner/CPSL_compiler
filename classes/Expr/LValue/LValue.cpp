@@ -105,7 +105,7 @@ RegisterPool::Register LValue::emitMips() {
     } else {
         int currOffset = lookupBaseOffset();
         std::cout << "li " + currOffsetReg.getRegId() + ", " + std::to_string(currOffset) << std::endl;
-        std::cout << "add " + currOffsetReg.getRegId() + ", " + currOffsetReg.getRegId() + ", "  + lookupBase() << std::endl;
+        std::cout << "sub " + currOffsetReg.getRegId() + ", "  + lookupBase() + ", " + currOffsetReg.getRegId() << std::endl;
     }
 
     if (symbol->offset != -1) {
@@ -135,8 +135,8 @@ RegisterPool::Register LValue::emitMips() {
                         // Calculate offset
                         auto offsetReg = Mult::emitMips(indexReg, elementSizeReg);
 
-                        // 5. Add offset to array base
-                        currOffsetReg = Add::emitMips(currOffsetReg, offsetReg);
+                        // 5. Sub offset from array base
+                        currOffsetReg = Sub::emitMips(currOffsetReg, offsetReg);
 
                         // Update currType
                         currType = arrayType->arrayType;
@@ -178,7 +178,7 @@ RegisterPool::Register LValue::emitMips() {
                         auto tempCurrOffsetReg = registerPool.get();
                         std::cout << "li " + tempCurrOffsetReg.getRegId() + ", " + std::to_string(currOffset)
                                   << std::endl;
-                        std::cout << "add " + currOffsetReg.getRegId() + ", " + currOffsetReg.getRegId() + ", " +
+                        std::cout << "sub " + currOffsetReg.getRegId() + ", " + currOffsetReg.getRegId() + ", " +
                                      tempCurrOffsetReg.getRegId() << std::endl;
 
                         // Update currType
@@ -214,7 +214,7 @@ RegisterPool::Register LValue::emitAddr() {
     } else {
         int currOffset = lookupBaseOffset();
         std::cout << "li " + currOffsetReg.getRegId() + ", " + std::to_string(currOffset) << std::endl;
-        std::cout << "add " + currOffsetReg.getRegId() + ", " + currOffsetReg.getRegId() + ", "  + lookupBase() << std::endl;
+        std::cout << "sub " + currOffsetReg.getRegId() + ", "  + lookupBase() + ", " + currOffsetReg.getRegId() << std::endl;
     }
 
     // Lookup lVal extensions
@@ -245,9 +245,9 @@ RegisterPool::Register LValue::emitAddr() {
                     std::cout << "# Calculate array offset" << std::endl;
                     auto offsetReg = Mult::emitMips(indexReg, elementSizeReg);
 
-                    // 5. Add offset to array base
-                    std::cout << "# Add offset to base" << std::endl;
-                    currOffsetReg = Add::emitMips(currOffsetReg, offsetReg);
+                    // 5. Subtract offset from array base
+                    std::cout << "# Sub offset to base" << std::endl;
+                    currOffsetReg = Sub::emitMips(currOffsetReg, offsetReg);
 
                     // Update currType
                     currType = arrayType->arrayType;
@@ -266,10 +266,10 @@ RegisterPool::Register LValue::emitAddr() {
                     std::string dotId = dotExt->id->id;
                     int currOffset = recordType->lookupOffset(dotId);
 
-                    // Add offset to reg
+                    // Sub offset from reg
                     auto tempCurrOffsetReg = registerPool.get();
                     std::cout << "li " + tempCurrOffsetReg.getRegId() + ", " + std::to_string(currOffset) << std::endl;
-                    std::cout << "add " + currOffsetReg.getRegId() + ", " + currOffsetReg.getRegId() + ", " + tempCurrOffsetReg.getRegId() << std::endl;
+                    currOffsetReg = Sub::emitMips(currOffsetReg, tempCurrOffsetReg);
 
                     // Update currType
                     currType = recordType->lookupType(dotId);

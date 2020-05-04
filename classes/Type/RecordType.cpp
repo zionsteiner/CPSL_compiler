@@ -6,7 +6,22 @@
 #include "RecordType.h"
 #include "SimpleType.h"
 
-RecordType::RecordType(std::vector<VarAssign*>* keys) : Type(RECORD_T), keys(keys) {}
+RecordType::RecordType(std::vector<VarAssign*>* keys) : Type(RECORD_T), keys(keys) {
+    int currOffset = 0;
+    for (auto key = keys->begin(); key != keys->end(); ++key) {
+        auto idList = (*key)->idList;
+        auto type = (*key)->type;
+
+        for (auto id: *idList) {
+            offsetMap[id->id] = currOffset;
+            currOffset += type->size();
+
+            typeMap[id->id] = type;
+        }
+
+        m_size += idList->size() * type->size();
+    }
+}
 
 std::string RecordType::toString() const {
     std::string retStr = "record";
